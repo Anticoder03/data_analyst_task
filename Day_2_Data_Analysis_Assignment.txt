@@ -1,0 +1,112 @@
+
+Excel Data Entry, Formatting & Data Quality
+
+============================================================
+OBJECTIVE
+============================================================
+
+Create a structured student dataset in Excel, format it professionally,
+investigate data-quality issues, and demonstrate basic sorting and filtering.
+
+============================================================
+TASK 1 — CREATE THE WORKBOOK 
+============================================================
+
+Create an Excel workbook named:
+
+DA_Day02_StudentName.xlsx
+
+Create three worksheets with these exact names:
+1. Student_Data
+2. Instructions
+3. Data_Quality_Report
+
+In Student_Data, create these exact column headers:
+
+A. Student_ID
+B. First_Name
+C. Last_Name
+D. Gender
+E. Age
+F. City
+G. Course
+H. Enrollment_Date
+I. Attendance_Percentage
+J. Marks
+K. Fee_Status
+
+============================================================
+TASK 2 — ENTER THE INITIAL RECORDS ============================================================
+
+Enter the following 15 fictional sample records. Then add 15 more
+fictional records independently, using Student IDs ST016 through ST030.
+
+Student_ID,First_Name,Last_Name,Gender,Age,City,Course,Enrollment_Date,Attendance_Percentage,Marks,Fee_Status
+ST001,Aarav,Patel,Male,20,Vapi,Python,01-07-2026,92,85,Paid
+ST002,Diya,Shah,Female,19,Surat,Excel,05-07-2026,88,78,Paid
+ST003,Rohan,Mehta,Male,21,Valsad,SQL,10-07-2026,75,69,Pending
+ST004,Anaya,Desai,Female,20,Vapi,Python,12-07-2026,96,91,Paid
+ST005,Kabir,Joshi,Male,22,Ahmedabad,Power BI,15-07-2026,81,74,Pending
+ST006,Isha,Trivedi,Female,19,Surat,Excel,18-07-2026,90,87,Paid
+ST007,Vivaan,Shah,Male,20,Vapi,SQL,20-07-2026,68,61,Pending
+ST008,Meera,Patel,Female,21,Bharuch,Python,22-07-2026,94,89,Paid
+ST009,Arjun,Mehta,Male,23,Surat,Power BI,25-07-2026,72,66,Paid
+ST010,Sara,Desai,Female,20,Valsad,SQL,28-07-2026,86,80,Pending
+ST011,Dev,Joshi,Male,19,Vapi,Excel,01-08-2026,83,76,Paid
+ST012,Kiara,Shah,Female,22,Ahmedabad,Python,04-08-2026,98,95,Paid
+ST013,Reyansh,Patel,Male,21,Bharuch,Power BI,08-08-2026,77,70,Pending
+ST014,Myra,Mehta,Female,20,Surat,SQL,12-08-2026,91,84,Paid
+ST015,Advik,Desai,Male,22,Valsad,Python,15-08-2026,65,58,Pending
+
+The final dataset must contain 30 records and 11 columns.
+
+============================================================
+TASK 3 — FORMAT THE DATASET
+============================================================
+
+1. Make the header row bold and apply a background color.
+2. Adjust column widths so all content is readable.
+3. Format Enrollment_Date as DD-MM-YYYY.
+4. Format Attendance_Percentage with a percent sign. If values are
+   entered as 92, 88, etc., convert them to actual percentage values
+   correctly; do not accidentally display 9200%.
+5. Format Marks as whole numbers.
+6. Convert the dataset to an Excel Table using Ctrl+T.
+7. Enable filters and freeze the header row.
+8. Apply conditional formatting to highlight marks below 40.
+9. Use consistent capitalization for names, cities, courses and fee status.
+
+============================================================
+TASK 4 — DATA QUALITY INVESTIGATION 
+============================================================
+
+In the Data_Quality_Report worksheet, create these headers:
+
+Issue_ID | Issue_Type | Student_ID | Description | Action_Taken
+
+Inspect the dataset for:
+- Duplicate Student IDs.
+- Missing values.
+- Incorrect data types.
+- Attendance values outside 0–100.
+- Marks outside 0–100.
+- Ages that are zero, negative or implausible for this dataset.
+- Inconsistent category names, such as "python", "Python " and "PYTHON".
+- Fee statuses other than "Paid" or "Pending".
+
+Document every issue actually found. Do not deliberately change the
+provided sample records to create errors. Any added records should be
+checked honestly, and the report should reflect the issues found.
+
+============================================================
+TASK 5 — EXCEL USABILITY TEST 
+============================================================
+
+Complete these actions without help:
+1. Filter students enrolled in Python.
+2. Sort Marks from highest to lowest.
+3. Filter students whose Fee_Status is Pending.
+4. Find all students from Surat.
+5. Locate the student with the lowest marks.
+6. Explain why unique Student IDs matter.
+7. Explain why consistent column names and data types matter.
