@@ -1,0 +1,116 @@
+Excel Formulas & Basic Data Analysis
+
+
+
+
+
+============================================================
+TASK 1 — LEARN THE SIX ESSENTIAL EXCEL FUNCTIONS
+============================================================
+
+Open the Student_Data worksheet created on Day 2.
+
+Assumption: Headers are in row 1 and 30 student records are in rows 2–31.
+
+1. SUM
+   Example: =SUM(J2:J31)
+   Purpose: Calculate total marks.
+
+2. AVERAGE
+   Example: =AVERAGE(J2:J31)
+   Purpose: Calculate average marks.
+
+3. MIN
+   Example: =MIN(J2:J31)
+   Purpose: Find the lowest marks.
+
+4. MAX
+   Example: =MAX(J2:J31)
+   Purpose: Find the highest marks.
+
+5. COUNT
+   Example: =COUNT(J2:J31)
+   Purpose: Count numeric marks.
+
+6. COUNTA
+   Example: =COUNTA(B2:B31)
+   Purpose: Count non-empty first-name cells.
+
+Type each formula manually and explain what its result means.
+
+Important: COUNT counts numeric cells, while COUNTA counts non-empty cells.
+
+============================================================
+TASK 2 — CREATE A PERFORMANCE SUMMARY
+============================================================
+
+Create a new worksheet named Performance_Summary.
+
+Calculate these eight metrics:
+
+1. Total Students
+   Formula: =COUNTA(Student_Data!A2:A31)
+
+2. Total Marks
+   Formula: =SUM(Student_Data!J2:J31)
+
+3. Average Marks
+   Formula: =AVERAGE(Student_Data!J2:J31)
+
+4. Highest Marks
+   Formula: =MAX(Student_Data!J2:J31)
+
+5. Lowest Marks
+   Formula: =MIN(Student_Data!J2:J31)
+
+6. Average Attendance
+   Formula: =AVERAGE(Student_Data!I2:I31)
+
+7. Students with Numeric Marks
+   Formula: =COUNT(Student_Data!J2:J31)
+
+8. Students with First Names
+   Formula: =COUNTA(Student_Data!B2:B31)
+
+Place each metric and its formula result in the Performance_Summary
+worksheet. Format the summary professionally.
+
+Note: These formulas assume the Day 2 dataset contains 30 records in
+rows 2–31. Adjust the ranges if the dataset is different.
+
+============================================================
+TASK 3 — ANSWER BUSINESS QUESTIONS
+============================================================
+
+Answer each question using Excel formulas and the dataset.
+
+1. How many students are registered?
+2. What is the total of all student marks?
+3. What is the average mark?
+4. What are the highest and lowest marks?
+5. What is the average attendance percentage?
+6. How many student names have been entered?
+7. Are the numeric marks count and student count equal?
+8. What does a difference between those counts tell you about data
+   completeness?
+
+For every answer, provide:
+- The formula used.
+- The calculated result.
+- A one-sentence interpretation.
+
+============================================================
+TASK 4 — INDEPENDENT ASSIGNMENT
+============================================================
+
+1. Open the completed Day 2 workbook.
+2. Create the Performance_Summary worksheet.
+3. Calculate all eight metrics listed in Task 2.
+4. Use all six functions: SUM, AVERAGE, MIN, MAX, COUNT and COUNTA.
+5. Answer all eight business questions.
+6. Format the report with headings, borders and suitable number formats.
+7. Verify formulas against the source dataset.
+8. Save the updated workbook as:
+
+   DA_Day03_StudentName.xlsx
+
