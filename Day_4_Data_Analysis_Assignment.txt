@@ -1,0 +1,108 @@
+Excel Sorting, Filtering, Tables & Data Exploration
+
+
+
+
+
+
+REQUIRED FILE
+Continue using the workbook created on Day 2 and updated on Day 3.
+Expected workbook: DA_Day03_StudentName.xlsx
+Main worksheet: Student_Data
+
+Expected columns:
+Student_ID, First_Name, Last_Name, Gender, Age, City, Course,
+Enrollment_Date, Attendance_Percentage, Marks, Fee_Status
+
+If your dataset has more or fewer than 30 records, work with all available
+records and record the actual number of students.
+
+TASK 1 — VERIFY THE DATA TABLE
+1. Open the Student_Data worksheet.
+2. Confirm that each column has a clear header.
+3. Confirm that the dataset is formatted as an Excel Table.
+4. If it is not a Table, select the full dataset and press Ctrl+T.
+5. Confirm that "My table has headers" is selected.
+6. Give the Table a meaningful name, such as StudentTable, in Table Design.
+7. Freeze the top row using View > Freeze Panes > Freeze Top Row.
+
+Deliverable: A structured table with visible headers and working filters.
+
+TASK 2 — SORTING PRACTICE Perform each action and record what you observe:
+1. Sort Marks from smallest to largest.
+2. Sort Marks from largest to smallest.
+3. Sort First_Name alphabetically from A to Z.
+4. Sort Age from oldest to youngest.
+5. Sort Enrollment_Date from oldest to newest.
+6. Sort by Course alphabetically, then by Marks from largest to smallest.
+
+IMPORTANT: Sort the entire table, not just one column, so values remain
+connected to the correct student records.
+
+Record:
+- Which student has the highest marks?
+- Which student has the lowest marks?
+- Which enrollment date is the earliest?
+- Which enrollment date is the latest?
+
+TASK 3 — FILTERING PRACTICEUse the filter arrows in the table headers:
+1. Show only students enrolled in Python.
+2. Show only students from Surat.
+3. Show only students whose Fee_Status is Pending.
+4. Show students with Marks greater than or equal to 80.
+5. Show students with Attendance_Percentage below 75.
+6. Show students enrolled in SQL who have Pending fee status.
+7. Show students from Vapi or Surat.
+8. Clear all filters and confirm every record is visible again.
+
+For each task, record the number of matching students. Count data rows,
+not the header.
+
+TASK 4 — MULTI-LEVEL SORTING AND FILTERING Challenge A: Sort Course alphabetically, then Marks from highest to
+lowest within each course.
+
+Challenge B: Filter students whose Marks are between 60 and 80 inclusive.
+
+Challenge C: Filter students whose Fee_Status is Paid and Marks are at
+least 80. Apply both conditions.
+
+Challenge D: Filter students whose Attendance_Percentage is below 75.
+Record their Student_ID, Course, Attendance_Percentage and Marks.
+
+Challenge E: Clear filters after each challenge and verify the full
+dataset returns.
+
+TASK 5 — CREATE A DATA EXPLORATION REPORT
+Create a worksheet named Day4_Exploration.
+
+Create a table with these headers:
+Question | Method Used | Result | Observation
+
+Answer using sorting and filtering:
+1. Which student has the highest marks?
+2. Which student has the lowest marks?
+3. How many students are enrolled in Python?
+4. How many students have Pending fee status?
+5. How many students have marks of 80 or above?
+6. How many students have attendance below 75?
+7. Which course has the most students in your dataset?
+8. Which cities appear in the dataset?
+9. Which students have both Pending fees and marks of 80 or above?
+10. What is one data-related observation you can make?
+
+For every question, explain the sort/filter used, record the result, and
+write a short observation. Do not guess; use the actual workbook.
+
+TASK 6 — INDEPENDENT PRACTICAL TEST 
+Complete without trainer assistance:
+1. Sort students by Marks from highest to lowest.
+2. Filter only Power BI students.
+3. Filter students with Paid fee status.
+4. Find students with attendance below 75.
+5. Apply two conditions at the same time.
+6. Clear all filters and restore the complete dataset.
+7. Explain the difference between sorting and filtering.
+8. Explain why sorting only one column can damage the dataset.
+
+FINAL SUBMISSION
+Save as: DA_Day04_StudentName.xlsx
