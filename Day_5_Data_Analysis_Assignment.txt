@@ -1,0 +1,147 @@
+Review, Practical Assessment & Mini-Project
+
+REQUIRED FILE
+Continue with the workbook created on Days 2–4.
+Open: DA_Day04_StudentName.xlsx
+Save today's final workbook as: DA_Day05_StudentName.xlsx
+
+Keep the existing worksheets, including Performance_Summary and
+Day4_Exploration. Do not delete or overwrite original records.
+
+PART 1 — DATASET QUALITY CHECK 
+Inspect the Student_Data worksheet:
+1. Confirm every column has a clear header.
+2. Check for missing Student_ID values.
+3. Check for duplicate Student_ID values.
+4. Check for blank names, marks or attendance.
+5. Confirm marks are between 0 and 100.
+6. Confirm attendance is between 0 and 100.
+7. Confirm Fee_Status uses only Paid or Pending.
+8. Check date and numeric formats for consistency.
+
+Create or update a worksheet named Weekly_Audit with these columns:
+Check | Method Used | Result | Action Required
+
+Record what you checked and what you found. Do not invent problems.
+If no issue is found, write "No issue found".
+
+PART 2 — FORMULA PRACTICAL 
+In Performance_Summary, calculate or verify:
+
+1. Total students:
+   =COUNTA(Student_Data!A2:A31)
+
+2. Total marks:
+   =SUM(Student_Data!J2:J31)
+
+3. Average marks:
+   =AVERAGE(Student_Data!J2:J31)
+
+4. Lowest marks:
+   =MIN(Student_Data!J2:J31)
+
+5. Highest marks:
+   =MAX(Student_Data!J2:J31)
+
+6. Number of numeric marks:
+   =COUNT(Student_Data!J2:J31)
+
+7. Number of entered first names:
+   =COUNTA(Student_Data!B2:B31)
+
+8. Average attendance:
+   =AVERAGE(Student_Data!I2:I31)
+
+These examples assume 30 records in rows 2–31. Adjust the ranges if
+your dataset contains a different number of records.
+
+For each metric, write one sentence explaining what it tells you.
+Verify that formulas reference the correct columns.
+
+PART 3 — SORTING AND FILTERING TEST 
+Complete without trainer help:
+1. Sort the full table by Marks from highest to lowest.
+2. Identify the student with the highest marks.
+3. Identify the student with the lowest marks.
+4. Filter Course to show only Python students.
+5. Filter Fee_Status to show Pending students.
+6. Filter Marks to show values greater than or equal to 80.
+7. Filter Attendance_Percentage to show values below 75.
+8. Apply two conditions together: Course is SQL AND Fee_Status is Pending.
+9. Record the number of matching students for each filter.
+10. Clear all filters and verify all records return.
+
+Create a worksheet named Practical_Results with these columns:
+Task | Method Used | Result | Explanation
+
+IMPORTANT: Sort the entire table, not just one column. Filtering hides
+rows temporarily; do not delete records.
+
+PART 4 — WEEKLY MINI-PROJECT
+Project title: Student Performance Weekly Report
+
+Create a worksheet named Weekly_Report containing:
+
+A. Summary metrics
+- Total number of students
+- Average marks
+- Highest marks
+- Lowest marks
+- Average attendance
+
+B. Findings
+Write at least five findings supported by the actual dataset. Possible
+questions to investigate:
+- Which course appears most often?
+- Which students have marks below 60?
+- Which students have attendance below 75?
+- How many fee payments are Pending?
+- Are any values missing or inconsistent?
+
+C. Recommendations
+Write two reasonable recommendations based on the findings. Do not make
+claims the data cannot support.
+
+D. Presentation
+- Use clear headings.
+- Apply consistent number formats.
+- Keep tables readable.
+- Check spelling and verify results against the dataset.
+
+PART 5 — KNOWLEDGE CHECK 
+Answer in your own words:
+1. What is the difference between a workbook and a worksheet?
+2. What is a cell reference? Give an example.
+3. What is the difference between COUNT and COUNTA?
+4. What does SUM do?
+5. What is the difference between sorting and filtering?
+6. Why should you sort the entire table rather than one column?
+7. Why is data cleaning important before analysis?
+8. What is the purpose of an Excel Table?
+9. Why should Student_ID values be unique?
+10. Why should findings be supported by actual data?
+
+PART 6 — FINAL SUBMISSION 
+Save as: DA_Day05_StudentName.xlsx
+
+The workbook must contain:
+- Student_Data
+- Performance_Summary
+- Day4_Exploration
+- Weekly_Audit
+- Practical_Results
+- Weekly_Report
+
+Submit:
+1. The Excel workbook.
+2. A screenshot of Weekly_Report.
+3. Answers to all 10 knowledge-check questions.
+
+Before submission:
+- Save and reopen the workbook.
+- Clear filters in Student_Data.
+- Check that formulas work.
+- Confirm all required worksheets are present.
+- Ensure original records have not been deleted.
+
+
