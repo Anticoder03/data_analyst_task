@@ -1,0 +1,103 @@
+Excel Logical Functions: IF, AND, OR and IFERROR
+
+
+REQUIRED WORKBOOK
+Open DA_Day05_StudentName.xlsx and use the Student_Data worksheet.
+Column I is expected to contain Attendance_Percentage and column J Marks.
+Adjust formulas if your column order differs.
+Save final workbook as DA_Day06_StudentName.xlsx.
+Do not delete or overwrite original data.
+
+TASK 1 — IF FUNCTION (10 MINUTES)
+1. Add a column named Result.
+2. In the first data row enter:
+   =IF(J2>=40,"Pass","Fail")
+3. Fill the formula down for every student.
+4. Verify that marks >= 40 return Pass and marks < 40 return Fail.
+5. Explain how the formula works.
+
+TASK 2 — AND FUNCTION (10 MINUTES)
+1. Add a column named Eligible.
+2. Enter:
+   =IF(AND(J2>=40,I2>=75),"Eligible","Needs Review")
+3. Fill the formula down.
+A student is Eligible only if marks are at least 40 AND attendance is
+at least 75. Otherwise, return Needs Review.
+Explain why AND is appropriate.
+
+TASK 3 — OR FUNCTION (10 MINUTES)
+1. Add a column named Review_Flag.
+2. Enter:
+   =IF(OR(J2<40,I2<75),"Review","OK")
+3. Fill the formula down.
+Flag a student if marks are below 40 OR attendance is below 75.
+Compare this result with the Eligible column.
+
+TASK 4 — IFERROR FUNCTION (10 MINUTES)
+Create a worksheet named Formula_Practice with these headers:
+A1: Total
+B1: Count
+C1: Average per Record
+
+Enter:
+Row 2: Total 500, Count 5
+Row 3: Total 300, Count 0
+Row 4: Total 720, Count 8
+
+In C2 enter:
+=IFERROR(A2/B2,0)
+Fill down to C4.
+
+Expected results:
+- Row 2: 100
+- Row 3: 0 because division by zero causes an error
+- Row 4: 90
+
+Explain why IFERROR is useful and why replacing every error with zero
+may not always be appropriate in real analysis.
+
+TASK 5 — INDEPENDENT ASSIGNMENT (35 MINUTES)
+Using Student_Data:
+1. Add Result using IF.
+2. Add Eligible using IF and AND.
+3. Add Review_Flag using IF and OR.
+4. Fill formulas down for all student records.
+5. Manually verify at least three rows.
+6. Create a worksheet named Day6_Summary.
+7. Record the number of Pass, Fail, Eligible, Needs Review, Review and OK.
+8. Use COUNTIF for category counts. Example:
+   =COUNTIF(Student_Data!L2:L31,"Pass")
+   Adjust the column letter and row range to match your workbook.
+9. Write three observations about the results.
+10. Format the summary clearly.
+
+COUNTIF is an introductory preview if it has not been taught yet. The
+main assessed functions are IF, AND, OR and IFERROR.
+
+TASK 6 — PRACTICAL TEST AND VIVA (15 MINUTES)
+Complete without trainer help:
+1. Return "High" if marks are 80 or above, otherwise "Standard".
+2. Return "Meets Target" only if marks are at least 60 AND attendance
+   is at least 75.
+3. Return "Check" if marks are below 40 OR attendance is below 75.
+4. Explain the difference between AND and OR.
+5. Explain IFERROR.
+6. Explain why formulas should be checked against sample records.
+
+SUBMISSION REQUIREMENTS
+Save as DA_Day06_StudentName.xlsx.
+
+Submit:
+- Updated Excel workbook.
+- Screenshot showing Result, Eligible and Review_Flag columns.
+- Day6_Summary worksheet.
+- Answers to the six practical-test questions.
+
+Before submitting:
+- Verify formulas are filled down for all records.
+- Manually check at least three rows.
+- Ensure original data has not been changed.
+- Save and reopen the workbook.
+
+
+
