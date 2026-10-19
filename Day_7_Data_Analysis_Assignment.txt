@@ -1,0 +1,130 @@
+Excel Relative, Absolute & Mixed Cell References
+
+
+TASK 1 — RELATIVE REFERENCES (10 MINUTES)
+Create a worksheet named Reference_Practice.
+
+Enter headers:
+A1: Marks
+B1: Bonus
+C1: Final_Marks
+
+Enter:
+A2:A6 = 65, 72, 81, 45, 90
+B2:B6 = 5, 5, 3, 0, 2
+
+In C2, enter:
+=A2+B2
+
+Copy the formula down to C6.
+
+Tasks:
+1. Check the formula in each row.
+2. Explain how A2 and B2 change when copied.
+3. Confirm each final mark is calculated correctly.
+
+TASK 2 — ABSOLUTE REFERENCES (15 MINUTES)
+In E1, enter Bonus_Rate. In E2, enter 10%.
+
+Create headers G1: Marks and H1: Bonus_Amount.
+Enter 500, 750, 1000, 1250 and 1500 in G2:G6.
+
+In H2, enter:
+=G2*$E$2
+
+Copy down to H6.
+
+Tasks:
+1. Verify the bonus rate always comes from E2.
+2. Explain why $E$2 does not change when copied.
+3. Change E2 to 12% and observe the results.
+4. Restore E2 to 10%.
+
+TASK 3 — MIXED REFERENCES (15 MINUTES)
+Create a multiplication table:
+1. In B1:F1, enter 1, 2, 3, 4, 5.
+2. In A2:A6, enter 1, 2, 3, 4, 5.
+3. In B2, enter:
+   =$A2*B$1
+4. Copy across and down to fill B2:F6.
+
+Tasks:
+- Verify each multiplication result.
+- Explain why $A2 locks the column but not the row.
+- Explain why B$1 locks the row but not the column.
+- Explain what would go wrong with A2*B1 without $ symbols.
+
+TASK 4 — APPLY REFERENCES TO THE STUDENT DATASET (20 MINUTES)
+Open the workbook from Day 6: DA_Day06_StudentName.xlsx.
+Create a worksheet named Day7_Analysis.
+
+Create a settings area:
+A1: Pass_Mark
+B1: 40
+A2: Attendance_Target
+B2: 75
+
+Create columns:
+Student_ID | Marks | Attendance_Percentage | Result | Attendance_Status
+
+Bring in or reference the student IDs, marks and attendance from
+Student_Data.
+
+In Result, use a formula that refers to the fixed pass mark in B1.
+Example, if the first data row is row 5:
+=IF(B5>=$B$1,"Pass","Fail")
+
+In Attendance_Status, refer to the fixed attendance target in B2.
+Example:
+=IF(C5>=$B$2,"Meets Target","Below Target")
+
+Adjust references to match your layout. Copy formulas down for all
+students.
+
+Tasks:
+1. Confirm the pass mark is linked to the settings cell.
+2. Change the pass mark from 40 to 50 and observe the result changes.
+3. Restore the pass mark to 40.
+4. Change the attendance target from 75 to 80 and observe changes.
+5. Restore the attendance target to 75.
+6. Explain why fixed settings are better than typing 40 or 75 into every
+   formula.
+
+TASK 5 — FORMULA DEBUGGING CHALLENGE (10 MINUTES)
+For each scenario, identify the issue, write a corrected formula and
+explain why it works.
+
+A. Rate is in E2. Formula =G2*E2 is copied down, so the rate reference moves.
+B. A multiplication table uses =A2*B1, but copied formulas reference the
+   wrong headers.
+C. The column A reference must stay fixed while the row changes, but the
+   student used =A2*B$1.
+
+State whether each problem involves relative, absolute or mixed references.
+
+TASK 6 — PRACTICAL TEST (10 MINUTES)
+Complete without help:
+1. Explain the difference between A1 and $A$1.
+2. Explain the difference between $A1 and A$1.
+3. Write a formula to calculate 18% tax on B2 using a tax rate stored in
+   E1. It must be safe to copy down.
+4. Write a multiplication-table formula using mixed references.
+5. Explain what F4 does when editing a cell reference in Excel.
+
+SUBMISSION REQUIREMENTS
+Save as: DA_Day07_StudentName.xlsx
+
+Submit:
+- Updated workbook.
+- Completed Reference_Practice worksheet.
+- Completed Day7_Analysis worksheet.
+- Completed multiplication table.
+- Answers to the debugging challenge and practical test.
+- Screenshot showing copied formulas and results.
+
+Before submitting:
+- Check formulas are filled down and across correctly.
+- Test changing the fixed settings values.
+- Restore Pass_Mark = 40 and Attendance_Target = 75.
+- Verify original student records remain unchanged.
+- Save and reopen the workbook.
