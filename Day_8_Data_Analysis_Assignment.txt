@@ -1,0 +1,153 @@
+DATA ANALYSIS TRAINING — DAY 8 ASSIGNMENT
+Topic: Conditional Calculations in Excel (COUNTIF, COUNTIFS, SUMIF, SUMIFS)
+
+Duration: 2 hours | Level: Beginner
+
+OBJECTIVE
+Learn to count records and calculate totals using one or more conditions.
+
+1. REQUIRED FILE
+Continue from DA_Day07_StudentName.xlsx and save a copy as:
+DA_Day08_StudentName.xlsx
+
+Use the existing Student_Data sheet. The examples below assume:
+- Course: column G
+- Attendance_Percentage: column I
+- Marks: column J
+- Fee_Status: column K
+
+If your columns differ, use the correct columns. Preserve the original data.
+
+2. TWO-HOUR PLAN
+
+0–15 minutes — Review
+- Check the column headings and data.
+- Review COUNT, SUM, and IF.
+- Explain the difference between counting records and adding values.
+
+15–35 minutes — Learn and test the formulas
+
+COUNTIF: count cells that match one condition.
+=COUNTIF(Student_Data!K2:K31,"Paid")
+
+COUNTIFS: count rows that match multiple conditions.
+=COUNTIFS(Student_Data!G2:G31,"Python",Student_Data!K2:K31,"Paid")
+
+SUMIF: add values when one condition is met.
+=SUMIF(Student_Data!G2:G31,"Python",Student_Data!J2:J31)
+
+SUMIFS: add values when multiple conditions are met.
+=SUMIFS(Student_Data!J2:J31,Student_Data!G2:G31,"Python",Student_Data!K2:K31,"Paid")
+
+Notes:
+- These examples assume records are in rows 2–31. Adjust the ranges to match your data.
+- Text criteria go in quotation marks, such as "Paid" or "Python".
+- Numeric comparison criteria use quotation marks, such as ">=80" or "<75".
+- Summing marks is a formula exercise; a total is not the same as an average or an individual student's performance.
+
+35–75 minutes — Build the analysis sheet
+Create a worksheet named Day8_Conditional_Analysis.
+Add the heading: DAY 8 — CONDITIONAL ANALYSIS
+
+Create a table with columns: Metric | Formula | Result | Interpretation
+
+Complete these 10 metrics:
+1. Count students with Fee_Status = Paid.
+2. Count students with Fee_Status = Pending.
+3. Count students with marks greater than or equal to 80.
+4. Count students enrolled in Python.
+5. Count Python students whose Fee_Status is Paid.
+6. Count students whose attendance is below 75.
+7. Count students whose attendance is below 75 AND marks are below 60.
+8. Calculate total marks for students in Python.
+9. Calculate total marks for Python students whose fee status is Paid.
+10. Count students in a chosen course with marks greater than or equal to 70.
+
+Formula hints:
+Paid:
+=COUNTIF(Student_Data!K2:K31,"Paid")
+
+Pending:
+=COUNTIF(Student_Data!K2:K31,"Pending")
+
+Marks >= 80:
+=COUNTIF(Student_Data!J2:J31,">=80")
+
+Attendance < 75:
+=COUNTIF(Student_Data!I2:I31,"<75")
+
+Python + Paid:
+=COUNTIFS(Student_Data!G2:G31,"Python",Student_Data!K2:K31,"Paid")
+
+Attendance < 75 AND Marks < 60:
+=COUNTIFS(Student_Data!I2:I31,"<75",Student_Data!J2:J31,"<60")
+
+Total marks for Python:
+=SUMIF(Student_Data!G2:G31,"Python",Student_Data!J2:J31)
+
+Total marks for Python + Paid:
+=SUMIFS(Student_Data!J2:J31,Student_Data!G2:G31,"Python",Student_Data!K2:K31,"Paid")
+
+Write a short interpretation for each result, such as “There are 8 students with paid fees.” Use the actual result from your workbook.
+
+75–95 minutes — Practical challenge
+On Day8_Conditional_Analysis, create a second table called Course Summary with these columns:
+Course | Student Count | Paid Count | Total Marks | Average Marks
+
+List every course appearing in Student_Data and calculate:
+- Student Count with COUNTIF.
+- Paid Count with COUNTIFS.
+- Total Marks with SUMIF.
+- Average Marks with AVERAGEIF, if available. Otherwise, use:
+=IFERROR(SUMIF(Student_Data!G2:G31,A2,Student_Data!J2:J31)/COUNTIF(Student_Data!G2:G31,A2),0)
+
+Adjust A2 to the cell containing the course name in your summary table.
+
+95–110 minutes — Check and format
+- Format both tables with clear headings, borders, and sensible number formats.
+- Check that formulas return results rather than errors.
+- Confirm every range includes all student records.
+- Ensure course names and fee statuses match the source data exactly.
+- If possible, use conditional formatting to highlight courses with zero paid students.
+
+110–120 minutes — Reflection
+Create a worksheet named Day8_Reflection and answer:
+1. What is the difference between COUNTIF and COUNTIFS?
+2. What is the difference between SUMIF and SUMIFS?
+3. Why are criteria such as ">=80" written in quotation marks?
+4. Why might a formula return zero when you expect a result?
+5. Which course has the highest student count?
+6. What useful business question could conditional calculations answer?
+
+3. SUBMISSION REQUIREMENTS
+Submit DA_Day08_StudentName.xlsx containing:
+- Student_Data (original data preserved)
+- Day8_Conditional_Analysis
+- Day8_Reflection
+
+Also submit a screenshot showing the completed Course Summary table.
+
+4. MARKING RUBRIC — 100 MARKS
+- Correct COUNTIF formulas: 15
+- Correct COUNTIFS formulas: 15
+- Correct SUMIF formulas: 10
+- Correct SUMIFS formulas: 10
+- Course Summary table: 20
+- Interpretations and reflection answers: 10
+- Formatting and readability: 10
+- Correct filename and original data preserved: 10
+
+5. TRAINER CHECKLIST
+[ ] Student can explain the difference between IF and COUNTIF.
+[ ] Formula ranges cover the full dataset.
+[ ] Text criteria match the source data exactly.
+[ ] Multiple conditions use COUNTIFS or SUMIFS correctly.
+[ ] Course Summary contains every course in the dataset.
+[ ] Student can explain at least one result without reading the formula.
+[ ] Original Student_Data sheet remains unchanged.
+
+6. PREVIEW FOR DAY 9
+Day 9 introduces lookup formulas (XLOOKUP or VLOOKUP, depending on the Excel version) to find a student's details using Student_ID.
+
+TRAINER NOTE ABOUT ATTENDANCE
+If attendance is stored as a true Excel percentage (75% is stored as 0.75), use a criterion such as "<75%" rather than "<75". If the cells contain whole numbers such as 75, use "<75". Keep the data representation and formula criteria consistent.
