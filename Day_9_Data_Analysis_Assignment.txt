@@ -1,9 +1,7 @@
-DATA ANALYSIS TRAINING — DAY 9 ASSIGNMENT
-Topic: Excel Lookup Formulas — XLOOKUP and VLOOKUP
-Duration: 2 hours | Level: Beginner
 
-1. OBJECTIVE
-Learn to retrieve a student's details using Student_ID, use exact-match lookups, and handle IDs that are not found.
+Topic: Excel Lookup Formulas — XLOOKUP and VLOOKUP
+
+
 
 2. REQUIRED FILE
 Continue from DA_Day08_StudentName.xlsx and save a copy as:
@@ -16,14 +14,13 @@ J: Marks | K: Fee_Status
 
 Adjust the columns and row ranges if your workbook differs.
 
-3. TWO-HOUR PLAN
 
-0–15 MINUTES — REVIEW
+
+
 - Open Student_Data.
 - Manually find three Student_ID values.
 - Review IFERROR and the Day 8 summary tables.
 
-15–35 MINUTES — LEARN THE FORMULAS
 
 VLOOKUP syntax:
 =VLOOKUP(lookup_value, table_array, column_index_number, FALSE)
@@ -55,7 +52,7 @@ Marks:
 
 XLOOKUP separates the lookup column from the return column. If XLOOKUP is unavailable, complete the assignment using VLOOKUP.
 
-35–75 MINUTES — BUILD A STUDENT LOOKUP TOOL
+
 Create a worksheet named Day9_Student_Lookup.
 
 Create this form:
@@ -96,63 +93,3 @@ Fee Status:
 Alternatively, use XLOOKUP for each field. Example for First Name:
 =XLOOKUP($B$3,Student_Data!$A$2:$A$31,Student_Data!$B$2:$B$31,"ID not found")
 
-75–95 MINUTES — TEST YOUR TOOL
-Test at least five IDs and compare each result against Student_Data:
-- Four valid Student_ID values.
-- One invalid ID, such as ST999.
-The invalid ID should show “ID not found” instead of an error.
-
-Create a worksheet named Day9_Test_Log with columns:
-Tested Student_ID | Expected Result | Actual Result | Pass/Needs Fix
-
-Record all five tests.
-
-95–110 MINUTES — FORMAT AND DEBUG
-- Add clear labels, borders, and readable formatting.
-- Format attendance and dates appropriately.
-- Make sure formulas refer to the input cell $B$3.
-- Use FALSE for exact-match VLOOKUP.
-- Check that the lookup range includes every student.
-- Confirm IDs match the source data exactly.
-
-110–120 MINUTES — REFLECTION
-Create a worksheet named Day9_Reflection and answer:
-1. What is a lookup formula used for?
-2. What does FALSE mean in VLOOKUP?
-3. Why must Student_ID be the first column in the VLOOKUP table range?
-4. Give one advantage of XLOOKUP over VLOOKUP.
-5. Why use IFERROR or XLOOKUP's “if not found” argument?
-6. Give one workplace situation where lookup formulas would be useful.
-
-4. SUBMISSION REQUIREMENTS
-Submit DA_Day09_StudentName.xlsx containing:
-- Student_Data (original data preserved)
-- Day9_Student_Lookup
-- Day9_Test_Log
-- Day9_Reflection
-
-Also submit a screenshot of the lookup tool showing one valid practice student.
-
-5. MARKING RUBRIC — 100 MARKS
-- Correct lookup formulas: 30
-- Lookup form retrieves all requested fields: 20
-- Valid/invalid ID tests: 15
-- Error handling and debugging: 10
-- Formatting and readability: 10
-- Reflection answers: 10
-- Correct filename and original data preserved: 5
-
-6. TRAINER CHECKLIST
-[ ] Student can explain the purpose of lookup formulas.
-[ ] Correct table range and column index are used.
-[ ] Exact matching is used.
-[ ] XLOOKUP is used if available, otherwise VLOOKUP.
-[ ] Invalid IDs are handled without ugly errors.
-[ ] Five tests are recorded.
-[ ] Student_Data remains unchanged.
-
-7. PREVIEW FOR DAY 10
-Day 10 is the Week 2 Excel review and mini-project, combining formulas, conditional calculations, lookups, data checks, and a short report.
-
-TRAINER NOTE
-The formulas assume Student_ID is in column A and records are in rows 2–31. Adjust ranges for your dataset. If your Excel uses semicolons as formula separators, replace commas with semicolons.
