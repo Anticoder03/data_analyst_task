@@ -1,0 +1,115 @@
+Excel Review and Mini-Project
+
+1. REQUIRED FILE
+Continue from DA_Day09_StudentName.xlsx and save a copy as:
+DA_Day10_StudentName.xlsx
+
+Keep Student_Data unchanged. The formulas assume:
+A Student_ID, B First_Name, C Last_Name, F City, G Course, I Attendance_Percentage, J Marks, K Fee_Status.
+Examples assume records are in rows 2–31. Adjust ranges and columns if your workbook differs.
+
+
+
+ Prepare
+- Open the workbook and check Student_Data.
+- Create a worksheet named Week2_Mini_Project.
+- Review your work from Days 6–9.
+
+ Part A: Student Performance Table
+Create these columns:
+Student_ID | Student Name | Course | Attendance | Marks | Result | Support Needed
+
+Enter at least 10 Student_ID values from Student_Data. Retrieve each student's details using VLOOKUP or XLOOKUP. If using VLOOKUP, use exact matching (FALSE).
+
+Example: if Student_ID is in A5, retrieve First_Name and Last_Name:
+=IFERROR(VLOOKUP(A5,Student_Data!$A$2:$K$31,2,FALSE)&" "&VLOOKUP(A5,Student_Data!$A$2:$K$31,3,FALSE),"ID not found")
+
+Course (column index 7):
+=IFERROR(VLOOKUP(A5,Student_Data!$A$2:$K$31,7,FALSE),"ID not found")
+
+Attendance (column index 9):
+=IFERROR(VLOOKUP(A5,Student_Data!$A$2:$K$31,9,FALSE),"ID not found")
+
+Marks (column index 10):
+=IFERROR(VLOOKUP(A5,Student_Data!$A$2:$K$31,10,FALSE),"ID not found")
+
+Result: if Marks is in E5:
+=IF(E5>=40,"Pass","Fail")
+
+Support Needed: if Attendance is in D5 and Marks is in E5:
+=IF(OR(E5<40,D5<75),"Review","No immediate review")
+
+Use consistent attendance units. If 75% is stored as 0.75 in Excel, use 75% as the threshold; if attendance is stored as the number 75, use 75.
+
+Part B: Course Summary
+Create columns:
+Course | Student Count | Paid Count | Average Marks | Total Marks
+
+List every course in your dataset. If the course name is in A20, use:
+Student Count:
+=COUNTIF(Student_Data!$G$2:$G$31,A20)
+
+Paid Count:
+=COUNTIFS(Student_Data!$G$2:$G$31,A20,Student_Data!$K$2:$K$31,"Paid")
+
+Average Marks:
+=IFERROR(AVERAGEIF(Student_Data!$G$2:$G$31,A20,Student_Data!$J$2:$J$31),0)
+
+Total Marks:
+=SUMIF(Student_Data!$G$2:$G$31,A20,Student_Data!$J$2:$J$31)
+
+Adjust A20 to your course-name cell.
+
+Part C: Overall KPIs
+Calculate:
+1. Total students.
+2. Students who passed (marks >= 40).
+3. Students who failed (marks < 40).
+4. Students with paid fees.
+5. Students with pending fees.
+6. Students below the attendance target.
+7. Overall average marks.
+8. Highest marks.
+9. Lowest marks.
+
+Formula hints:
+=COUNTA(Student_Data!A2:A31)
+=COUNTIF(Student_Data!J2:J31,">=40")
+=COUNTIF(Student_Data!J2:J31,"<40")
+=COUNTIF(Student_Data!K2:K31,"Paid")
+=COUNTIF(Student_Data!K2:K31,"Pending")
+=COUNTIF(Student_Data!I2:I31,"<75")
+=AVERAGE(Student_Data!J2:J31)
+=MAX(Student_Data!J2:J31)
+=MIN(Student_Data!J2:J31)
+
+If attendance is stored as true percentages, use "<75%" instead of "<75".
+
+Part D: Data Quality Check
+Inspect and record at least three checks:
+- Blank Student_ID cells.
+- Duplicate Student_ID values.
+- Blank marks or attendance cells.
+- Unexpected Fee_Status values.
+- A lookup showing “ID not found” for a valid ID.
+
+Do not change the original Student_Data sheet; record any issues in your report.
+
+ Part E: Short Report
+Create a worksheet named Week2_Report. Write 5–8 bullet points based on your actual calculations:
+- Which course has the most students?
+- Which course has the highest average marks?
+- How many students passed and failed?
+- How many fee payments are pending?
+- How many students are below the attendance target?
+- One data-quality issue found, or say no issue was found in the checks performed.
+- Two recommendations supported by your results.
+
+Do not invent numbers; use your workbook results.
+
+Final Check
+- Verify formula ranges and references.
+- Test lookup formulas with one valid ID and one invalid ID.
+- Preserve Student_Data.
+- Format headings, borders, and number formats.
+- Save as DA_Day10_StudentName.xlsx.
