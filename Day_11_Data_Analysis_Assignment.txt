@@ -1,0 +1,96 @@
+ Excel Charts and Data Visualization
+
+Keep Student_Data unchanged. Expected columns:
+A Student_ID | B First_Name | C Last_Name | D Gender | E Age | F City
+G Course | H Enrollment_Date | I Attendance_Percentage | J Marks | K Fee_Status
+
+Adjust column letters and row ranges if your workbook differs.
+
+3. TWO-HOUR PLAN
+
+
+- Open Student_Data and check the data.
+- Create a worksheet named Day11_Chart_Analysis.
+- Review your Day 10 course summary and KPI results.
+
+
+Write one suitable use for each chart:
+- Column chart: compare values across categories, e.g. students by course.
+- Bar chart: compare categories with long labels, e.g. students by city.
+- Line chart: show trends over time, e.g. enrollments by month.
+- Pie chart: show parts of a whole, e.g. Paid vs Pending fees, using only a few categories.
+- Scatter chart: explore the relationship between two numeric variables, e.g. attendance and marks.
+
+
+On Day11_Chart_Analysis, create a table:
+Course | Student Count
+
+List every course in Student_Data. Use COUNTIF. If the course name is in A2:
+=COUNTIF(Student_Data!$G$2:$G$31,A2)
+
+Adjust the range to fit your data.
+Create a column chart titled “Students by Course”.
+- Course names must be readable on the horizontal axis.
+- Student Count must appear on the vertical axis.
+- Add data labels if helpful.
+- Remove unnecessary clutter.
+
+
+Create a table:
+Fee Status | Student Count
+
+Include Paid and Pending. Use COUNTIF. If the status is in A2:
+=COUNTIF(Student_Data!$K$2:$K$31,A2)
+
+Create a pie or bar chart titled “Student Fee Status”.
+- Show category names clearly.
+- Include a legend or data labels.
+- Verify counts against the source data.
+- Do not describe counts as percentages unless percentages are actually displayed/calculated.
+
+TASK C: MARKS DISTRIBUTION
+Create a table:
+Marks Band | Number of Students
+Below 40
+40–59
+60–79
+80–100
+
+Use these formula examples:
+Below 40:
+=COUNTIF(Student_Data!$J$2:$J$31,"<40")
+
+40–59:
+=COUNTIFS(Student_Data!$J$2:$J$31,">=40",Student_Data!$J$2:$J$31,"<60")
+
+60–79:
+=COUNTIFS(Student_Data!$J$2:$J$31,">=60",Student_Data!$J$2:$J$31,"<80")
+
+80–100:
+=COUNTIFS(Student_Data!$J$2:$J$31,">=80",Student_Data!$J$2:$J$31,"<=100")
+
+Create a bar or column chart titled “Student Marks Distribution”.
+Check that the bands do not overlap and that all valid marks are counted.
+
+TASK D: INSIGHTS
+Write 4–6 observations based on your actual results. Answer:
+1. Which course has the most students?
+2. Which fee status is more common?
+3. Which marks band contains the most students?
+4. What useful conclusion could a teacher or administrator draw?
+5. What extra information would help explain the results?
+
+Do not invent findings. Every statement must match your summary tables and charts.
+
+QUALITY CHECK
+- Verify chart source ranges and values.
+- Use meaningful titles and readable labels.
+- Avoid 3D effects and excessive colors.
+- Check that no category is missing.
+- Save with the required filename.
+
+4. SUBMISSION REQUIREMENTS
+Submit DA_Day11_StudentName.xlsx containing:
+- Student_Data (original data preserved)
+- Day11_Chart_Analysis
+Include at least three charts: Students by Course, Student Fee Status, and Student Marks Distribution.
