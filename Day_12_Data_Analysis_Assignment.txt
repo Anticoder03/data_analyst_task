@@ -1,0 +1,82 @@
+Excel PivotTables and PivotCharts
+Duration: 2 hours | Level: Beginner
+
+
+
+Keep Student_Data unchanged. Expected columns:
+A Student_ID | B First_Name | C Last_Name | D Gender | E Age
+F City | G Course | H Enrollment_Date | I Attendance_Percentage
+J Marks | K Fee_Status
+
+Adjust to match your actual workbook.
+
+
+
+ PREPARE
+- Open the workbook and inspect Student_Data.
+- Ensure each column has a heading and there are no completely blank rows inside the dataset.
+- Create a worksheet named Day12_Pivot_Analysis.
+
+TASK A: STUDENT COUNT BY COURSE
+1. Click any cell in Student_Data.
+2. Select Insert > PivotTable.
+3. Confirm the correct source range.
+4. Place the PivotTable on Day12_Pivot_Analysis or a new worksheet.
+5. Drag Course to Rows.
+6. Drag Student_ID to Values.
+7. If Excel shows Sum of Student_ID, open Value Field Settings and choose Count.
+
+Add a heading: Student Count by Course.
+Check that the course counts add up to the total number of records.
+
+TASK B: COURSE PERFORMANCE
+Create another PivotTable:
+- Course → Rows
+- Marks → Values
+- Set Value Field Settings to Average.
+- Optionally add Marks to Values a second time and set it to Max.
+
+Answer using the actual results:
+1. Which course has the highest average marks?
+2. Which course has the lowest average marks?
+3. Does the course with the most students also have the highest average?
+
+TASK C: FEE STATUS BY COURSE
+Create another PivotTable:
+- Course → Rows
+- Fee_Status → Columns
+- Student_ID → Values, summarized by Count
+
+Answer:
+1. Which course has the most Pending fee records?
+2. Which course has the most Paid fee records?
+3. Do the row and column totals make sense when compared with Student_Data?
+
+TASK D: STUDENT COUNT BY CITY
+Create another PivotTable:
+- City → Rows
+- Student_ID → Values, summarized by Count
+
+Sort counts from largest to smallest if available.
+Answer:
+1. Which city has the most students?
+2. Which city has the fewest students?
+3. What could an education administrator learn from this summary?
+
+TASK E: PIVOTCHART AND FILTERS
+1. Select the Student Count by Course PivotTable.
+2. Choose PivotTable Analyze > PivotChart, or Insert > PivotChart depending on your Excel version.
+3. Choose a column or bar chart.
+4. Title it “Student Count by Course”.
+5. Add a filter or slicer, such as City or Fee_Status, if available. Otherwise use the PivotTable field filter.
+6. Test the filter and observe how the chart changes.
+
+TASK F: REPORT
+Create a worksheet named Day12_Report.
+Write 5–7 bullet points based on your actual PivotTables:
+- Course with the largest student count.
+- Course with the highest average marks.
+- Course with the most pending fees.
+- City with the largest student count.
+- One observation from the fee status comparison.
+- One recommendation supported by the data.
