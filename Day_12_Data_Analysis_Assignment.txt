@@ -1,7 +1,4 @@
 Excel PivotTables and PivotCharts
-Duration: 2 hours | Level: Beginner
-
-
 
 Keep Student_Data unchanged. Expected columns:
 A Student_ID | B First_Name | C Last_Name | D Gender | E Age
