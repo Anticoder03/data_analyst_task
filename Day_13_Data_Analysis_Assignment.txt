@@ -1,0 +1,92 @@
+Excel Mini-Project — Analyze, Visualize, and Report
+
+REQUIRED FILE
+Continue from DA_Day12_StudentName.xlsx and save a copy as:
+DA_Day13_StudentName.xlsx
+Keep Student_Data unchanged.
+
+Expected columns:
+A Student_ID | B First_Name | C Last_Name | D Gender | E Age
+F City | G Course | H Enrollment_Date | I Attendance_Percentage
+J Marks | K Fee_Status
+Adjust columns and ranges if your workbook differs.
+
+
+
+SET UP
+- Open the workbook and check Student_Data.
+- Create worksheets named Day13_Dashboard and Day13_Report.
+- Review your charts and PivotTables from Days 11–12.
+
+TASK A: DATA QUALITY AUDIT
+On Day13_Report, create a section named Data Quality Checks. Check and record results for:
+1. Blank Student_ID values.
+2. Duplicate Student_ID values.
+3. Blank or non-numeric Marks values.
+4. Blank Attendance_Percentage values.
+5. Fee_Status values other than Paid or Pending.
+
+Use filters, COUNTBLANK, conditional formatting, or other suitable methods. For duplicate IDs, if Student_ID is in A2:
+=COUNTIF(Student_Data!$A$2:$A$31,A2)
+A result greater than 1 means that ID appears more than once in the range.
+
+Do not edit Student_Data. Record any problems and possible fixes in your report.
+
+TASK B: KPI SUMMARY
+On Day13_Dashboard, calculate:
+- Total students.
+- Students who passed (marks >= 40).
+- Students who failed (marks < 40).
+- Overall average marks.
+- Paid fee records.
+- Pending fee records.
+- Students below the attendance target of 75.
+
+Formula hints, assuming rows 2–31:
+Total students: =COUNTA(Student_Data!A2:A31)
+Passed: =COUNTIF(Student_Data!J2:J31,">=40")
+Failed: =COUNTIF(Student_Data!J2:J31,"<40")
+Average marks: =AVERAGE(Student_Data!J2:J31)
+Paid: =COUNTIF(Student_Data!K2:K31,"Paid")
+Pending: =COUNTIF(Student_Data!K2:K31,"Pending")
+Attendance below 75: =COUNTIF(Student_Data!I2:I31,"<75")
+
+If attendance is stored as a true Excel percentage (75% stored as 0.75), use "<75%" instead. Adjust ranges to fit your dataset.
+
+TASK C: VISUAL DASHBOARD
+Add at least three charts to Day13_Dashboard, using your Day 11 charts or relevant summary tables:
+1. Student Count by Course — column or bar chart.
+2. Student Fee Status — bar or pie chart.
+3. Student Marks Distribution — bar or column chart.
+
+Dashboard requirements:
+- Clear heading: STUDENT DATA ANALYSIS DASHBOARD.
+- Meaningful chart titles and readable labels.
+- Consistent number formats.
+- Avoid unnecessary 3D effects and clutter.
+- Align charts and keep KPI values visible.
+
+ TASK D: PIVOTTABLE INSIGHTS
+Use at least two PivotTables from Day 12, such as:
+- Student count by course.
+- Average marks by course.
+- Fee status by course.
+- Student count by city.
+
+Place or copy the two most useful PivotTables onto Day13_Dashboard, or reference them clearly in the report. Write one observation from each table using actual results.
+
+ TASK E: EXECUTIVE SUMMARY
+In Day13_Report, write:
+- Three findings supported by calculations or PivotTables.
+- One data quality issue found, or a note describing the checks performed if none was found.
+- Two practical recommendations based on the data.
+- One limitation of the dataset, such as its small practice size.
+
+Do not invent numbers or make unsupported claims.
+
+FINAL REVIEW
+- Verify formulas and chart source ranges.
+- Check that the dashboard matches the source summaries.
+- Refresh PivotTables if the source data changed.
+- Confirm report statements match actual results.
+- Preserve Student_Data and save the workbook.
