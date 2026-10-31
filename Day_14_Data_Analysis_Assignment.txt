@@ -1,0 +1,147 @@
+Day 14 — Excel Data Cleaning and Data Validation
+
+REQUIRED FILE
+Continue from DA_Day13_StudentName.xlsx and save a copy as:
+DA_Day14_StudentName.xlsx
+Keep the original Student_Data worksheet unchanged.
+
+Expected columns:
+A Student_ID | B First_Name | C Last_Name | D Gender | E Age
+F City | G Course | H Enrollment_Date | I Attendance_Percentage
+J Marks | K Fee_Status
+Adjust columns and ranges if your workbook differs.
+
+SET UP
+- Open the workbook and inspect Student_Data.
+- Create worksheets: Day14_Raw_Data, Day14_Cleaned_Data, Day14_Cleaning_Report.
+- Copy the original student records into Day14_Raw_Data.
+- Keep Student_Data unchanged and use Day14_Raw_Data for cleaning.
+
+TASK A: IDENTIFY DATA QUALITY ISSUES
+Inspect Day14_Raw_Data and identify:
+1. Missing Student_ID values.
+2. Duplicate Student_ID values.
+3. Extra spaces in First_Name, Last_Name, or City.
+4. Inconsistent capitalization in names and city names.
+5. Missing or invalid Marks.
+6. Attendance values outside the valid range.
+7. Inconsistent Fee_Status values.
+8. Invalid or incorrectly formatted Enrollment_Date values.
+
+Create a table in Day14_Cleaning_Report:
+Issue | Number of Records | Action Required
+Missing IDs | | 
+Duplicate IDs | |
+Missing Marks | |
+Invalid Attendance | |
+Inconsistent Fee Status | |
+
+Record actual results. If the original dataset has no example of a particular issue, create a separate practice copy with a few intentional errors. Do not modify the original data.
+
+TASK B: CLEAN TEXT DATA
+In Day14_Cleaned_Data, clean the text fields using these functions:
+
+TRIM — remove unnecessary spaces:
+=TRIM(B2)
+
+PROPER — convert text into proper case:
+=PROPER(TRIM(F2))
+
+UPPER — convert text into uppercase:
+=UPPER(TRIM(A2))
+
+LOWER — convert text into lowercase:
+=LOWER(TRIM(B2))
+
+Apply suitable functions to First_Name, Last_Name, City, Course, and Fee_Status. Keep the cleaned values consistent with the original information.
+
+TASK C: HANDLE MISSING AND DUPLICATE DATA
+On your practice dataset:
+1. Identify blank Student_ID cells.
+2. Identify duplicate Student_ID records.
+3. Identify missing Marks.
+4. Identify missing Attendance_Percentage.
+5. Identify invalid Fee_Status values.
+
+Use Filter, Conditional Formatting, Remove Duplicates, COUNTIF, COUNTBLANK, IF, or IFERROR.
+
+Example duplicate check:
+=COUNTIF($A$2:$A$31,A2)
+
+A result greater than 1 means that the Student_ID appears more than once in the range.
+
+Important:
+- Never invent missing student information.
+- Do not automatically replace missing marks with zero.
+- Do not delete records without documenting the reason.
+- Use Remove Duplicates only on your practice copy.
+- Record every correction in Day14_Cleaning_Report.
+
+TASK D: DATA VALIDATION
+Apply Excel Data Validation to prevent incorrect future entries:
+1. Marks: whole numbers between 0 and 100.
+2. Age: whole numbers between 15 and 60.
+3. Attendance_Percentage: decimal values between 0 and 100 if stored as whole numbers, or between 0 and 1 if stored as true Excel percentages.
+4. Fee_Status: dropdown containing Paid and Pending.
+5. Gender: dropdown using the categories supported by your practice dataset.
+6. Course: dropdown using the available course names.
+
+Test each rule with valid and invalid values in a separate practice area.
+
+TASK E: CONDITIONAL FORMATTING
+Apply these rules to your cleaned dataset:
+1. Marks below 40 — highlight as a warning.
+2. Marks greater than or equal to 80 — highlight as high performance.
+3. Attendance below 75 — highlight for review.
+4. Pending fee status — highlight for follow-up.
+5. Duplicate Student_ID values — highlight duplicate records.
+6. Blank Student_ID cells — highlight missing values.
+
+Keep the worksheet readable and avoid excessive formatting.
+
+TASK F: CLEANING SUMMARY REPORT
+In Day14_Cleaning_Report, create:
+
+1. Data Quality Summary
+- Total records inspected.
+- Number of duplicate records identified.
+- Number of missing values identified.
+- Number of inconsistent text values identified.
+- Number of records corrected.
+
+2. Cleaning Actions
+Explain which cleaning methods you used and why.
+
+3. Before and After Comparison
+Data Field | Before Cleaning | After Cleaning
+First_Name | |
+City | |
+Course | |
+Fee_Status | |
+
+Use actual examples from your practice dataset.
+
+4. Final Observations
+Write at least five observations about the quality of your data.
+
+FINAL REVIEW
+- Verify that Student_Data remains unchanged.
+- Check that cleaned text has no unnecessary spaces.
+- Confirm duplicate records are handled appropriately.
+- Verify missing values are documented.
+- Test all Data Validation rules.
+- Check that Conditional Formatting works.
+- Compare the cleaned dataset with the raw dataset.
+- Save as DA_Day14_StudentName.xlsx.
+
+SUBMISSION REQUIREMENTS
+Submit DA_Day14_StudentName.xlsx containing:
+- Student_Data — original data preserved.
+- Day14_Raw_Data — raw practice data.
+- Day14_Cleaned_Data — cleaned dataset.
+- Day14_Cleaning_Report — data quality report.
+
+Also include screenshots showing:
+- Before and after data cleaning.
+- Data Validation dropdowns.
+- Conditional Formatting results.
