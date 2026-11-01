@@ -1,0 +1,221 @@
+Day 15 — Python Fundamentals for Data Analysis
+
+REQUIRED SETUP
+
+- Install Python 3 if it is not already installed.
+- Use VS Code, PyCharm, or IDLE to write and run Python programs.
+- Create a project folder named Python_Data_Analysis.
+- Create a Python file named day15_python_basics.py.
+- Create a folder named Day15_Outputs to store program outputs or screenshots.
+- Run every program and check its output before submitting.
+
+A. PYTHON INTRODUCTION AND FILE SETUP
+
+[ ] Learn what Python is and why it is used in data analysis.
+[ ] Understand the difference between a programming language, an interpreter, and a script.
+[ ] Learn how to run a Python file from your code editor or terminal.
+[ ] Write your first Python program:
+
+print("Hello, Data Analysis!")
+
+[ ] Add comments to explain your code using the # symbol.
+[ ] Write a program that displays your name, course, and a short message explaining why data analysis is useful.
+
+B. VARIABLES AND DATA TYPES
+
+[ ] Learn how to create and use variables.
+[ ] Practice storing values in variables.
+[ ] Understand these basic data types:
+    - int — whole numbers
+    - float — decimal numbers
+    - str — text
+    - bool — True or False
+
+[ ] Create variables for a student's:
+    - Student_ID
+    - First_Name
+    - Age
+    - Marks
+    - Attendance_Percentage
+    - Fee_Status
+
+[ ] Display all variables using print().
+[ ] Use type() to identify the data type of each variable.
+[ ] Create at least five additional variables using different data types.
+
+C. INPUT AND OUTPUT
+
+[ ] Learn how to receive information using input().
+[ ] Learn how to display results using print().
+[ ] Create a program that asks the user to enter:
+    - Student ID
+    - Student name
+    - Age
+    - Course
+    - Marks
+
+[ ] Display the entered information in a clean and readable format.
+[ ] Use f-strings to display variable values.
+
+Example:
+name = input("Enter your name: ")
+print(f"Student name: {name}")
+
+[ ] Remember that input() returns text by default.
+[ ] Convert numeric input using int() or float() when calculations are required.
+
+D. TYPE CONVERSION
+
+[ ] Learn how to convert values between data types.
+[ ] Practice using:
+    - int()
+    - float()
+    - str()
+    - bool()
+
+[ ] Ask the user to enter two numbers.
+[ ] Convert the inputs into numeric values.
+[ ] Display their sum, difference, product, and division.
+[ ] Create a program that accepts marks as input and displays the marks as a float value.
+
+E. OPERATORS IN PYTHON
+
+[ ] Learn and practice arithmetic operators:
+    - Addition (+)
+    - Subtraction (-)
+    - Multiplication (*)
+    - Division (/)
+    - Floor division (//)
+    - Modulus (%)
+    - Exponentiation (**)
+
+[ ] Learn comparison operators:
+    - Equal to (==)
+    - Not equal to (!=)
+    - Greater than (>)
+    - Less than (<)
+    - Greater than or equal to (>=)
+    - Less than or equal to (<=)
+
+[ ] Learn logical operators:
+    - and
+    - or
+    - not
+
+[ ] Write a program that accepts marks and attendance and checks whether a student meets both conditions:
+    - Marks must be at least 40.
+    - Attendance must be at least 75.
+
+[ ] Display the result of each comparison clearly.
+
+F. CONDITIONAL STATEMENTS
+
+[ ] Learn how if, elif, and else work.
+[ ] Write a program that accepts student marks and displays:
+    - 80 or above: Excellent
+    - 60 to 79: Good
+    - 40 to 59: Pass
+    - Below 40: Fail
+
+[ ] Write a program that checks whether a student is eligible based on marks and attendance.
+[ ] Write a program that checks whether a number is even or odd.
+[ ] Write a program that identifies whether a number is positive, negative, or zero.
+
+G. LOOPS — BASIC INTRODUCTION
+
+[ ] Understand why loops are used to repeat instructions.
+[ ] Learn the for loop.
+[ ] Learn the while loop.
+[ ] Use range() to repeat a task.
+
+[ ] Write a program to print numbers from 1 to 20.
+[ ] Write a program to print the multiplication table of a number entered by the user.
+[ ] Write a program to calculate the sum of numbers from 1 to 100.
+[ ] Write a program that asks for marks of five students and displays each student's marks.
+
+H. MINI PROJECT — STUDENT RESULT CALCULATOR
+
+Create a Python program that accepts details for one student:
+
+- Student ID
+- Student Name
+- Course
+- Marks in three subjects
+- Attendance Percentage
+
+Your program must:
+
+[ ] Accept all information using input().
+[ ] Convert marks and attendance into appropriate numeric types.
+[ ] Calculate total marks.
+[ ] Calculate average marks.
+[ ] Display Pass or Fail based on the average mark (40 or above is Pass).
+[ ] Check whether attendance is at least 75%.
+[ ] Display the student's eligibility status based on both average marks and attendance.
+[ ] Display a formatted student result report using f-strings.
+
+Example output format:
+
+--------------------------------
+       STUDENT RESULT
+--------------------------------
+Student ID:
+Student Name:
+Course:
+Total Marks:
+Average Marks:
+Result:
+Attendance:
+Eligibility:
+--------------------------------
+
+I. PRACTICE QUESTIONS
+
+Write separate Python programs to solve these problems:
+
+1. Calculate the area of a rectangle using user input.
+2. Convert Celsius temperature into Fahrenheit.
+3. Calculate the percentage of five subject marks.
+4. Check whether a person is eligible to vote based on age.
+5. Find the largest of three numbers.
+6. Check whether a year is a leap year.
+7. Print all even numbers between 1 and 50.
+8. Calculate the factorial of a number using a loop.
+
+J. FINAL REVIEW
+
+[ ] Run every Python program and correct syntax or runtime errors.
+[ ] Use meaningful variable names.
+[ ] Add comments where the logic may not be obvious.
+[ ] Check that numeric inputs are converted before calculations.
+[ ] Test programs with different inputs, including boundary values.
+[ ] Keep each exercise organized and easy to understand.
+[ ] Do not copy outputs without understanding the code.
+
+SUBMISSION REQUIREMENTS
+
+Submit the complete project folder:
+
+Python_Data_Analysis/
+
+Required structure:
+
+Python_Data_Analysis/
+    day15_python_basics.py
+    student_result_calculator.py
+    practice_questions/
+        question_01.py
+        question_02.py
+        question_03.py
+        question_04.py
+        question_05.py
+        question_06.py
+        question_07.py
+        question_08.py
+    Day15_Outputs/
+        program_output_screenshots/
+
+Also submit screenshots showing:
+- Your Python environment running successfully.
+- Output of the Student Result Calculator.
+- Output of at least three practice questions.
