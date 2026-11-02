@@ -1,0 +1,113 @@
+Day 16 — Python Data Structures for Data Analysis
+
+A. Lists — Store and Manage Multiple Values
+[ ] Create a list named student_names containing at least 5 student names.
+[ ] Create a list named student_marks containing at least 5 marks.
+[ ] Print the complete lists.
+[ ] Access and print the first, third, and last elements using indexing.
+[ ] Use negative indexing to access the last element.
+[ ] Use slicing to print the first three elements and the middle elements.
+[ ] Update one student's name and one mark.
+[ ] Add values using append() and insert().
+[ ] Add multiple values using extend().
+[ ] Remove an item using remove() and pop().
+[ ] Use len(), sum(), min(), and max() with the marks list.
+[ ] Sort marks in ascending and descending order.
+
+B. Tuples — Work with Fixed Data
+[ ] Create a tuple named course_details containing a course name, duration, and level.
+[ ] Print the tuple and access individual values using indexing.
+[ ] Use len() to find the number of items.
+[ ] Unpack the tuple into separate variables.
+[ ] Try changing one tuple value and observe the error.
+[ ] Write a comment explaining why tuples are useful when values should not be changed.
+
+C. Sets — Work with Unique Values
+[ ] Create a list of city names containing at least two repeated values.
+[ ] Convert the list into a set and print the result.
+[ ] Add a new city using add().
+[ ] Remove a city using remove() or discard().
+[ ] Create two sets of course names.
+[ ] Demonstrate union(), intersection(), and difference().
+[ ] Write a comment explaining how sets help identify unique values.
+
+D. Dictionaries — Store Data as Key-Value Pairs
+[ ] Create a dictionary for one student with these keys: student_id, name, age, course, marks, attendance, and fee_status.
+[ ] Print the complete dictionary.
+[ ] Access values using their keys.
+[ ] Access a value safely using get().
+[ ] Update the student's marks and attendance.
+[ ] Add a new key named city.
+[ ] Remove one key using pop().
+[ ] Print all keys using keys().
+[ ] Print all values using values().
+[ ] Use items() in a loop to print each key and value.
+
+E. Nested Data and List of Dictionaries
+[ ] Create a list named students containing at least 5 student dictionaries.
+[ ] Each student must contain student_id, name, course, marks, attendance, and fee_status.
+[ ] Use a for loop to print each student's name and marks.
+[ ] Calculate and print the average marks of all students.
+[ ] Find and print the highest and lowest marks.
+[ ] Count how many students passed and failed. Use 40 as the passing mark.
+[ ] Display the names of students whose attendance is at least 75.
+[ ] Find a student by student_id and display their complete record.
+[ ] Count how many students have paid their fees.
+
+F. Mini Project — Student Records Analyzer
+[ ] Create a separate Python file named student_records_analyzer.py.
+[ ] Store at least 8 student records using a list of dictionaries.
+[ ] Display all student records in a readable format.
+[ ] Calculate total students, average marks, highest marks, and lowest marks.
+[ ] Display the names of students who passed and failed. Passing marks: 40.
+[ ] Display students with attendance below 75.
+[ ] Display students whose fee_status is "Paid".
+[ ] Search for a student using their student_id.
+[ ] Allow the user to enter a student_id and show the matching record.
+[ ] Display a message if the entered student_id does not exist.
+[ ] Use meaningful variable names and comments.
+
+G. Practice Questions
+[ ] 1. Create a list of 10 numbers and print only the even numbers.
+[ ] 2. Find the second-largest number in a list without using sort().
+[ ] 3. Remove duplicate values from a list using a set.
+[ ] 4. Count how many times a given name appears in a list.
+[ ] 5. Create a dictionary of 5 products with their prices and print the most expensive product.
+[ ] 6. Merge two dictionaries into a new dictionary.
+[ ] 7. Create a list of 5 temperatures and calculate the average temperature.
+[ ] 8. Create a dictionary that stores subject names and marks, then calculate total and average marks.
+
+H. Final Review
+[ ] Explain the difference between a list and a tuple in comments.
+[ ] Explain the difference between a list and a set in comments.
+[ ] Explain what a dictionary key-value pair means.
+[ ] Make sure all programs run without errors.
+[ ] Use clear variable names and comments where needed.
+[ ] Test your programs with different values.
+
+Required File Structure
+
+Python_Data_Analysis/
+|
+|-- day16_data_structures.py
+|-- student_records_analyzer.py
+|-- practice_questions/
+|   |-- question_01.py
+|   |-- question_02.py
+|   |-- question_03.py
+|   |-- question_04.py
+|   |-- question_05.py
+|   |-- question_06.py
+|   |-- question_07.py
+|   |-- question_08.py
+|
+|-- Day16_Outputs/
+    |-- program_output_screenshots/
+
+Rules
+1. Complete the tasks using Python. Do not use Excel for this assignment.
+2. Write and run the code in the required Python files.
+3. Write each practice program independently.
+4. Use sample student data. Do not include real personal information.
+5. Save screenshots of program outputs in the Day16_Outputs folder.
+6. Submit the complete Python_Data_Analysis folder.
