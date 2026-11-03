@@ -1,0 +1,105 @@
+Day 17 — Python Functions, Parameters, Return Values, and Code Reusability
+
+A. Understanding and Creating Functions
+[ ] Create a Python file named day17_functions.py.
+[ ] Write a function named greet_student() that prints a welcome message.
+[ ] Call the function at least three times.
+[ ] Create show_course_info() to print a course name and description.
+[ ] Create display_separator() to print a line between output sections.
+[ ] Add comments explaining why functions are useful.
+
+B. Function Parameters and Arguments
+[ ] Create greet_user(name) to accept a name and print a personalized greeting.
+[ ] Call it with at least three different names.
+[ ] Create calculate_square(number) to accept a number and print its square.
+[ ] Create student_details(name, course, age) to display supplied details.
+[ ] Call student_details() using positional arguments.
+[ ] Call student_details() using keyword arguments.
+[ ] Create a function with a default parameter, such as greet_user(name="Student").
+[ ] Call it once with an argument and once without an argument.
+
+C. Return Values
+[ ] Create add_numbers(a, b) that returns the sum.
+[ ] Store the returned result in a variable and print it.
+[ ] Create functions for subtraction, multiplication, and division.
+[ ] Handle division by zero without crashing.
+[ ] Create calculate_average(marks) that returns the average of a list.
+[ ] Create find_highest(marks) and find_lowest(marks) that return the highest and lowest marks.
+[ ] Explain the difference between print and return in comments.
+
+D. Conditional Logic Inside Functions
+[ ] Create check_result(marks): return "Pass" for marks >= 40; otherwise return "Fail".
+[ ] Create get_grade(marks) using these categories: 80+: Excellent; 60–79: Good; 40–59: Pass; below 40: Fail.
+[ ] Create check_attendance(attendance): return "Eligible" for attendance >= 75; otherwise "Not Eligible".
+[ ] Create check_even_odd(number) to identify even or odd numbers.
+[ ] Test every function with multiple values, including boundary values.
+
+E. Functions with Lists and Dictionaries
+[ ] Create a list containing at least 8 student marks.
+[ ] Write a function that accepts the list and returns the average.
+[ ] Write functions that return the number of passing and failing students.
+[ ] Create a list of at least 5 student dictionaries.
+[ ] Each dictionary must contain student_id, name, course, marks, attendance, and fee_status.
+[ ] Create display_students(students) to display all student records.
+[ ] Create find_student(students, student_id) to return the matching record.
+[ ] Create count_paid_students(students) to count records with fee_status "Paid".
+[ ] Create get_eligible_students(students) to return students with marks >= 40 and attendance >= 75.
+
+F. Scope of Variables
+[ ] Create a variable outside a function and access it inside a function.
+[ ] Create a local variable inside a function and print it there.
+[ ] Try accessing that local variable outside the function and observe what happens.
+[ ] Explain local and global variables in comments.
+[ ] Avoid using global variables unnecessarily.
+
+G. Mini Project — Student Result Management System
+[ ] Create a separate file named student_result_management.py.
+[ ] Store at least 8 student records in a list of dictionaries.
+[ ] Create a function to display all student records.
+[ ] Create a function to calculate each student's grade.
+[ ] Create a function to calculate the class average.
+[ ] Create functions to find the student with the highest and lowest marks.
+[ ] Create a function to count passed and failed students.
+[ ] Create a function to identify students eligible based on marks and attendance.
+[ ] Create a function to search for a student using student_id.
+[ ] Display a simple menu that lets the user choose an operation.
+[ ] Use functions to perform the selected operation.
+[ ] Show a helpful message if the searched student ID does not exist.
+[ ] Keep the project organized; do not write everything as one long block of code.
+
+H. Practice Questions
+[ ] 1. Write a function that accepts two numbers and returns the larger number.
+[ ] 2. Write a function that checks whether a number is prime.
+[ ] 3. Write a function that accepts a string and returns it in reverse.
+[ ] 4. Write a function that counts the vowels in a string.
+[ ] 5. Write a function that calculates factorial using a loop.
+[ ] 6. Write a function that accepts a list and returns a new list containing only even numbers.
+[ ] 7. Write a function that accepts a dictionary of subject marks and returns the total and average.
+[ ] 8. Write a function that accepts student dictionaries and returns the names of students who passed.
+
+I. Final Review
+[ ] Give every function a meaningful name.
+[ ] Use parameters when a function needs input.
+[ ] Use return when a function needs to send a result back.
+[ ] Test functions with normal, boundary, and invalid inputs where appropriate.
+[ ] Add comments to explain important logic.
+[ ] Make sure all Python files run without errors.
+
+Required File Structure
+
+Python_Data_Analysis/
+|
+|-- day17_functions.py
+|-- student_result_management.py
+|-- practice_questions/
+|   |-- question_01.py
+|   |-- question_02.py
+|   |-- question_03.py
+|   |-- question_04.py
+|   |-- question_05.py
+|   |-- question_06.py
+|   |-- question_07.py
+|   |-- question_08.py
+|
+|-- Day17_Outputs/
+    |-- program_output_screenshots/
