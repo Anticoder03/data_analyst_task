@@ -1,0 +1,121 @@
+Python Modules, Built-in Libraries, and Importing Code
+
+A. Understanding Python Modules
+[ ] Create a Python file named day18_modules.py.
+[ ] Write a comment explaining what a Python module is.
+[ ] Import the math module using import math.
+[ ] Use math.sqrt() to calculate the square root of a number.
+[ ] Use math.ceil() and math.floor() with decimal values.
+[ ] Use math.pi to calculate the area of a circle.
+[ ] Import math using an alias and call at least two functions through that alias.
+[ ] Import only sqrt from math and use it directly.
+[ ] Explain the difference between importing a complete module and importing a specific function in comments.
+
+B. Working with the random Module
+[ ] Import the random module.
+[ ] Generate a random integer between 1 and 100 using randint().
+[ ] Generate a random decimal value using random().
+[ ] Select a random student name from a list using choice().
+[ ] Shuffle a list of numbers using shuffle().
+[ ] Create a number-guessing program that generates a random number and asks the user to guess it.
+[ ] Display whether the guess is correct, too high, or too low.
+
+C. Working with the datetime Module
+[ ] Import the datetime module.
+[ ] Display the current date and time.
+[ ] Display only the current date.
+[ ] Display the current year, month, and day separately.
+[ ] Create a date for a sample student enrollment.
+[ ] Calculate the number of days between the enrollment date and today's date.
+[ ] Format a date using strftime(), for example day-month-year.
+[ ] Explain why date and time handling is useful in data analysis.
+
+D. Working with the statistics Module
+[ ] Import the statistics module.
+[ ] Create a list containing at least 10 student marks.
+[ ] Calculate the mean using statistics.mean().
+[ ] Calculate the median using statistics.median().
+[ ] Calculate the mode using statistics.mode() with a list that has a repeated value.
+[ ] Calculate the standard deviation using statistics.stdev().
+[ ] Print each result with a clear label.
+[ ] Add comments describing what mean, median, mode, and standard deviation tell us about data.
+
+E. Creating Your Own Python Module
+[ ] Create a file named student_utils.py.
+[ ] Add calculate_average(marks) that returns the average.
+[ ] Add calculate_grade(marks) that returns a grade category.
+[ ] Add is_eligible(marks, attendance) that checks marks >= 40 and attendance >= 75.
+[ ] Add find_student(students, student_id) that returns a matching student record.
+[ ] Create another file named use_student_utils.py.
+[ ] Import student_utils into use_student_utils.py.
+[ ] Call every function from the imported module with sample data.
+[ ] Print the returned results.
+[ ] Keep both files in the same project folder so the import works.
+
+F. Organizing Code into Multiple Modules
+[ ] Create a folder named student_app.
+[ ] Inside it, create student_data.py containing at least 5 student dictionaries.
+[ ] Create student_calculations.py containing functions for average marks, highest marks, lowest marks, and pass count.
+[ ] Create main.py.
+[ ] Import student data from student_data.py.
+[ ] Import calculation functions from student_calculations.py.
+[ ] Use the imported functions in main.py to display a student performance summary.
+[ ] Add comments explaining how separating code into modules improves organization and reuse.
+
+G. Mini Project — Student Performance Statistics Tool
+[ ] Create a separate file named student_statistics_tool.py.
+[ ] Store at least 10 sample student records using dictionaries.
+[ ] Each record must contain student_id, name, marks, attendance, and enrollment_date.
+[ ] Use statistics to calculate mean, median, and standard deviation of marks.
+[ ] Use math functions where appropriate.
+[ ] Use datetime to display the current date and calculate days since a sample enrollment date.
+[ ] Use random to select and display one sample student record.
+[ ] Display the highest and lowest marks.
+[ ] Count passed and failed students. Use 40 as the passing mark.
+[ ] Display students whose attendance is below 75.
+[ ] Organize repeated calculations into reusable functions.
+[ ] Display results in a clear, readable report.
+
+H. Practice Questions
+[ ] 1. Use math to calculate the area and circumference of a circle.
+[ ] 2. Generate a random password containing letters and digits, with at least 8 characters.
+[ ] 3. Display the current date in three different formats using datetime.
+[ ] 4. Calculate the mean, median, and mode of a list using statistics.
+[ ] 5. Create your own module with a Celsius-to-Fahrenheit function, then import and use it in another file.
+[ ] 6. Use random.choice() to select a random winner from a list of 10 names.
+[ ] 7. Calculate the number of days between two dates entered by the user.
+[ ] 8. Create a module containing two mathematical functions and import both into another Python file.
+
+I. Final Review
+[ ] Explain what a module is and why it is useful.
+[ ] Demonstrate at least three ways to import code.
+[ ] Use math, random, datetime, and statistics in your programs.
+[ ] Create and successfully import at least one custom module.
+[ ] Test all programs with different input values.
+[ ] Make sure all Python files run without errors.
+
+Required File Structure
+
+Python_Data_Analysis/
+|
+|-- day18_modules.py
+|-- student_utils.py
+|-- use_student_utils.py
+|-- student_statistics_tool.py
+|-- student_app/
+|   |-- student_data.py
+|   |-- student_calculations.py
+|   |-- main.py
+|
+|-- practice_questions/
+|   |-- question_01.py
+|   |-- question_02.py
+|   |-- question_03.py
+|   |-- question_04.py
+|   |-- question_05.py
+|   |-- question_06.py
+|   |-- question_07.py
+|   |-- question_08.py
+|
+|-- Day18_Outputs/
+    |-- program_output_screenshots/
