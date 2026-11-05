@@ -1,0 +1,139 @@
+Python File Handling: Reading, Writing, Appending, and CSV Files
+
+A. Understanding File Handling
+[ ] Create a Python file named day19_file_handling.py.
+[ ] Write comments explaining why file handling is useful in data analysis.
+[ ] Create a text file named sample_notes.txt using Python.
+[ ] Write at least 5 lines of sample text into the file using write().
+[ ] Close the file after writing.
+[ ] Open the file in read mode and display its complete contents.
+[ ] Use a with open() statement to read the same file.
+[ ] Add comments explaining why the with statement is useful.
+
+B. Reading Text Files
+[ ] Create student_records.txt with at least 5 sample student records.
+[ ] Read and print the complete file using read().
+[ ] Read one line at a time using readline().
+[ ] Read all lines into a list using readlines().
+[ ] Use a for loop to display each line separately.
+[ ] Count and display the number of lines.
+[ ] Remove extra newline characters from displayed lines using strip().
+
+C. Writing and Appending Data
+[ ] Create daily_report.txt using write mode.
+[ ] Write a title and at least 5 lines of sample report information.
+[ ] Open the same file in append mode.
+[ ] Add at least 3 new lines without deleting existing content.
+[ ] Read the file again and verify that both original and appended content are present.
+[ ] Create a second file using write mode and observe what happens when an existing file is opened in write mode.
+[ ] Explain the difference between write mode ("w") and append mode ("a") in comments.
+
+D. Working with File Paths and File Checks
+[ ] Import the os module.
+[ ] Use os.path.exists() to check whether a file exists.
+[ ] Display a message when a file exists or does not exist.
+[ ] Use os.path.getsize() to display a file's size in bytes.
+[ ] Use os.listdir() to display files in your project folder.
+[ ] Create a folder named data_files using os.makedirs().
+[ ] Save a new text file inside data_files.
+[ ] Use os.path.join() to build file paths.
+
+E. Introduction to CSV Files
+[ ] Import Python's built-in csv module.
+[ ] Create students.csv with at least 10 student records.
+[ ] Include columns: student_id, name, course, marks, attendance, and fee_status.
+[ ] Write the column names as the CSV header.
+[ ] Write records using csv.writer().
+[ ] Open the CSV file using csv.reader().
+[ ] Display the header and all student records.
+[ ] Count the total student records, excluding the header.
+
+F. Reading CSV Data Using DictReader
+[ ] Open students.csv using csv.DictReader().
+[ ] Display each student's name, course, and marks.
+[ ] Calculate the average marks of all students.
+[ ] Find the student with the highest marks.
+[ ] Find the student with the lowest marks.
+[ ] Count students who passed and failed. Use 40 as the passing mark.
+[ ] Display students whose attendance is below 75.
+[ ] Count students whose fee_status is "Paid".
+[ ] Handle a CSV file containing no student records.
+
+G. Writing and Updating CSV Reports
+[ ] Create student_analysis_report.csv.
+[ ] Write a header containing student_id, name, marks, result, and attendance_status.
+[ ] Read the original students.csv file.
+[ ] Calculate each student's result: Pass or Fail.
+[ ] Calculate attendance status: Eligible or Not Eligible, using 75 as the threshold.
+[ ] Write processed records using csv.DictWriter().
+[ ] Open the report file and display its contents.
+[ ] Keep the original students.csv file unchanged.
+
+H. Mini Project — Student CSV Data Analyzer
+[ ] Create student_csv_analyzer.py.
+[ ] Read student records from students.csv instead of hardcoding all records in the program.
+[ ] Display all student records in a readable format.
+[ ] Calculate total students, average marks, highest marks, and lowest marks.
+[ ] Display names of students who passed and failed.
+[ ] Display students with attendance below 75.
+[ ] Display students whose fee_status is "Paid".
+[ ] Ask the user to enter a student_id and search for that student.
+[ ] Display the matching record or a message if the ID does not exist.
+[ ] Generate student_analysis_report.csv.
+[ ] Use functions to organize reading, analysis, searching, and report generation.
+[ ] Handle missing files and empty CSV files with clear error messages.
+
+I. Practice Questions
+[ ] 1. Create a text file and write your name, course, and college name into it.
+[ ] 2. Read a text file and count the number of words in it.
+[ ] 3. Append five new lines to an existing text file without deleting old content.
+[ ] 4. Read a text file and count how many lines contain a given word.
+[ ] 5. Create a CSV file containing 5 products with product_id, name, and price.
+[ ] 6. Read a CSV file and calculate the average of a numeric column.
+[ ] 7. Read a CSV file and display records where marks are greater than 60.
+[ ] 8. Copy the contents of one CSV file into another using Python's csv module.
+
+J. Final Review
+[ ] Demonstrate read, write, and append modes.
+[ ] Use with open() to safely work with files.
+[ ] Read and write CSV files using csv.reader() and csv.writer().
+[ ] Read dictionary-style CSV records using csv.DictReader().
+[ ] Generate a processed CSV report using csv.DictWriter().
+[ ] Test programs with missing, empty, and valid files.
+[ ] Make sure all Python files run without errors.
+
+Required File Structure
+
+Python_Data_Analysis/
+|
+|-- day19_file_handling.py
+|-- student_records.txt
+|-- sample_notes.txt
+|-- daily_report.txt
+|-- students.csv
+|-- student_analysis_report.csv
+|-- student_csv_analyzer.py
+|-- data_files/
+|   |-- sample_file.txt
+|
+|-- practice_questions/
+|   |-- question_01.py
+|   |-- question_02.py
+|   |-- question_03.py
+|   |-- question_04.py
+|   |-- question_05.py
+|   |-- question_06.py
+|   |-- question_07.py
+|   |-- question_08.py
+|
+|-- Day19_Outputs/
+    |-- program_output_screenshots/
+
+Rules
+1. Complete the tasks using Python. Do not use Excel for this assignment.
+2. Use only Python's built-in modules; do not install external packages.
+3. Use with open() wherever possible to manage files safely.
+4. Use sample student data only. Do not include real personal information.
+5. Do not overwrite the original students.csv while generating the analysis report.
+6. Save screenshots of program outputs in the Day19_Outputs folder.
+7. Submit the complete Python_Data_Analysis folder, including generated CSV files.
