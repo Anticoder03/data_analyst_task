@@ -1,0 +1,120 @@
+Day 20 — Python Error Handling, Debugging, and Data Validation
+
+A. Understanding Errors in Python
+[ ] Create day20_error_handling.py.
+[ ] Add comments explaining why errors occur in Python programs.
+[ ] Create an example that produces a SyntaxError. Run it, observe the error, then correct the code.
+[ ] Create and correct examples of NameError, TypeError, ValueError, and ZeroDivisionError.
+[ ] Explain the difference between a syntax error and an exception in comments.
+
+B. Handling Exceptions with try and except
+[ ] Ask the user to enter two numbers and divide the first by the second.
+[ ] Use try and except to handle non-numeric input (ValueError).
+[ ] Handle division by zero (ZeroDivisionError).
+[ ] Display a helpful message instead of allowing the program to crash.
+[ ] Convert a user-entered value to an integer and handle invalid input.
+[ ] Access an item in a list by index and handle IndexError.
+[ ] Open a file and handle FileNotFoundError.
+
+C. Using else and finally
+[ ] Extend the division program to use an else block.
+[ ] Display the result in else only when no exception occurs.
+[ ] Add a finally block that prints a message indicating the operation has finished.
+[ ] Create a file-reading example using try, except, else, and finally.
+[ ] Explain in comments when each block executes.
+
+D. Handling Multiple Exceptions
+[ ] Create a division program that handles ValueError and ZeroDivisionError separately.
+[ ] Create a list of sample student marks.
+[ ] Ask the user for an index and display the corresponding mark.
+[ ] Handle invalid index input and an index outside the list.
+[ ] Make error messages explain what the user should do next.
+
+E. Validating User Input
+[ ] Create get_valid_integer() that keeps asking until the user enters an integer.
+[ ] Create get_valid_marks() that accepts marks only from 0 to 100.
+[ ] Reject negative marks and marks greater than 100.
+[ ] Create get_valid_attendance() that accepts attendance only from 0 to 100.
+[ ] Ask for a student name and reject an empty name.
+[ ] Ask for a fee status and accept only "Paid" or "Pending".
+[ ] Use loops and conditions to repeat input requests until the data is valid.
+
+F. Creating Custom Exceptions
+[ ] Create a custom exception class named InvalidMarksError.
+[ ] Create validate_marks(marks) that raises InvalidMarksError when marks are below 0 or above 100.
+[ ] Handle InvalidMarksError using try and except.
+[ ] Create InvalidAttendanceError and validate_attendance(attendance) for values outside 0 to 100.
+[ ] Test both custom exceptions with valid and invalid values.
+[ ] Explain why custom exceptions can make programs easier to understand.
+
+G. Debugging and Testing
+[ ] Create debugging_practice.py.
+[ ] Write a program containing at least 5 intentional bugs related to variables, data types, conditions, loops, or list indexing.
+[ ] Identify and correct each bug.
+[ ] Add a comment above each corrected section describing the original issue.
+[ ] Use print() statements to inspect variable values while debugging.
+[ ] Test each corrected section with more than one input.
+[ ] Remove unnecessary debugging print statements from the final version.
+
+H. Mini Project — Reliable Student Data Validator
+[ ] Create student_data_validator.py.
+[ ] Read student records from the students.csv file created on Day 19 using csv.DictReader().
+[ ] Handle FileNotFoundError if students.csv does not exist.
+[ ] Handle an empty CSV file or a file with no student records.
+[ ] Check that required columns exist: student_id, name, course, marks, attendance, and fee_status.
+[ ] Check that student_id and name are not empty.
+[ ] Check that marks and attendance are numeric values from 0 to 100.
+[ ] Check that fee_status is either "Paid" or "Pending".
+[ ] Detect duplicate student_id values.
+[ ] Store valid and invalid records separately.
+[ ] Display total records, valid records, and invalid records.
+[ ] Display a clear reason for every invalid record.
+[ ] Save valid records to validated_students.csv.
+[ ] Save invalid records and their validation reasons to invalid_students.csv.
+[ ] Do not modify the original students.csv file.
+[ ] Use functions for reading, validating, displaying, and saving records.
+[ ] Test with valid records and intentionally incorrect sample records.
+
+I. Practice Questions
+[ ] 1. Ask for two numbers and handle invalid input and division by zero.
+[ ] 2. Ask for an age and handle non-numeric input.
+[ ] 3. Access a list element using a user-provided index and handle IndexError.
+[ ] 4. Open a file entered by the user and handle FileNotFoundError.
+[ ] 5. Create a function that accepts marks from 0 to 100 only.
+[ ] 6. Create a custom exception for invalid product prices. Reject prices less than or equal to zero.
+[ ] 7. Read a CSV file and report rows where marks or attendance are outside the valid range.
+[ ] 8. Detect duplicate student IDs in a list of student dictionaries and display the duplicate IDs.
+
+J. Final Review
+[ ] Demonstrate try and except.
+[ ] Use else and finally in at least one program.
+[ ] Handle ValueError, TypeError, IndexError, ZeroDivisionError, and FileNotFoundError.
+[ ] Validate user input before processing it.
+[ ] Create and raise at least one custom exception.
+[ ] Debug and correct the intentional errors in debugging_practice.py.
+[ ] Validate student CSV records and generate separate valid and invalid output files.
+[ ] Make sure all Python files run without errors.
+
+Required File Structure
+
+Python_Data_Analysis/
+|
+|-- day20_error_handling.py
+|-- debugging_practice.py
+|-- student_data_validator.py
+|-- students.csv
+|-- validated_students.csv
+|-- invalid_students.csv
+|
+|-- practice_questions/
+|   |-- question_01.py
+|   |-- question_02.py
+|   |-- question_03.py
+|   |-- question_04.py
+|   |-- question_05.py
+|   |-- question_06.py
+|   |-- question_07.py
+|   |-- question_08.py
+|
+|-- Day20_Outputs/
+    |-- program_output_screenshots/
