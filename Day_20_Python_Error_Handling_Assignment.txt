@@ -1,4 +1,4 @@
-Day 20 — Python Error Handling, Debugging, and Data Validation
+Python Error Handling, Debugging, and Data Validation
 
 A. Understanding Errors in Python
 [ ] Create day20_error_handling.py.
