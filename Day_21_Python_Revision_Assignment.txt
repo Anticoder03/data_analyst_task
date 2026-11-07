@@ -1,0 +1,124 @@
+Python Programming Revision and Student Data Analysis Project
+
+A. Python Fundamentals Revision
+[ ] Create day21_python_revision.py.
+[ ] Create variables using integer, float, string, and boolean data types.
+[ ] Accept a student's name, age, course, marks, and attendance from the user.
+[ ] Convert numeric inputs to the correct data types.
+[ ] Use arithmetic operators to calculate a total and average from 3 subject marks.
+[ ] Use comparison and logical operators to determine whether the student passed and is eligible.
+[ ] Use if, elif, and else to assign a grade: 80+: Excellent; 60–79: Good; 40–59: Pass; below 40: Fail.
+[ ] Use a loop to collect marks for at least 5 students.
+[ ] Display student information in a readable format.
+
+B. Data Structures Revision
+[ ] Create a list containing at least 10 student marks.
+[ ] Use indexing and slicing to display selected values.
+[ ] Add, update, and remove values from the list.
+[ ] Calculate the count, total, average, highest, and lowest marks.
+[ ] Create a tuple containing fixed course information and unpack its values.
+[ ] Create a set of city names and demonstrate how it removes duplicates.
+[ ] Create a dictionary containing one student's details.
+[ ] Create a list of at least 8 student dictionaries.
+[ ] Use a loop to display each student's name, marks, and attendance.
+[ ] Search for a student using student_id.
+
+C. Functions and Reusable Code
+[ ] Create student_analysis_functions.py.
+[ ] Write calculate_average(marks) that returns the average.
+[ ] Write calculate_grade(marks) that returns a grade category.
+[ ] Write count_passed_students(students) that returns the number of students who passed.
+[ ] Write find_student(students, student_id) that returns the matching record.
+[ ] Write get_eligible_students(students) that returns students with marks >= 40 and attendance >= 75.
+[ ] Import these functions into day21_python_revision.py.
+[ ] Call the imported functions and display their results.
+
+D. Modules and Built-in Libraries Revision
+[ ] Import statistics and calculate the mean and median of student marks.
+[ ] Import math and use at least two mathematical functions.
+[ ] Import datetime and display the current date.
+[ ] Import random and select one student randomly from the sample records.
+[ ] Add comments explaining the purpose of each imported module.
+
+E. File Handling and CSV Revision
+[ ] Create day21_students.csv with at least 10 student records.
+[ ] Include these columns: student_id, name, course, marks, attendance, fee_status.
+[ ] Write records using csv.DictWriter().
+[ ] Read the file using csv.DictReader().
+[ ] Display all records in a readable format.
+[ ] Calculate the total number of students and average marks.
+[ ] Find the student with the highest marks and the student with the lowest marks.
+[ ] Count students who passed and failed. Use 40 as the passing mark.
+[ ] Count students whose attendance is below 75.
+[ ] Count students whose fee_status is "Paid".
+[ ] Save a summary to day21_analysis_report.txt.
+
+F. Error Handling and Data Validation Revision
+[ ] Handle FileNotFoundError when the CSV file is missing.
+[ ] Handle invalid numeric values in marks and attendance.
+[ ] Validate marks and attendance so values must be between 0 and 100.
+[ ] Check that student_id and name are not empty.
+[ ] Check that fee_status is either "Paid" or "Pending".
+[ ] Detect duplicate student_id values.
+[ ] Keep valid and invalid records in separate lists.
+[ ] Display the reason why each invalid record was rejected.
+[ ] Save valid records to day21_valid_students.csv.
+[ ] Save invalid records to day21_invalid_students.csv.
+[ ] Do not overwrite the original day21_students.csv file.
+
+G. Mini Project — Student Data Analysis Report
+[ ] Create student_data_analysis_project.py.
+[ ] Read student data from day21_students.csv. Do not hardcode records in the analysis program.
+[ ] Organize the project using separate functions for reading, validating, analyzing, and reporting.
+[ ] Display the complete student dataset.
+[ ] Display total students, average marks, highest marks, and lowest marks.
+[ ] Display the number and names of students who passed and failed.
+[ ] Display students with attendance below 75.
+[ ] Display students whose fee_status is "Paid" and "Pending".
+[ ] Calculate average marks for each course.
+[ ] Identify the course with the highest average marks.
+[ ] Find a student by entering their student_id.
+[ ] Display a clear message when the entered ID is not found.
+[ ] Generate student_data_analysis_report.txt.
+[ ] Generate day21_course_summary.csv containing course, student_count, average_marks, highest_marks, and lowest_marks.
+[ ] Handle missing files, empty datasets, invalid values, and duplicate IDs.
+[ ] Keep the original source CSV unchanged.
+
+
+H. Final Review
+[ ] Use variables, data types, operators, conditions, and loops correctly.
+[ ] Demonstrate lists, tuples, sets, and dictionaries.
+[ ] Write and call reusable functions.
+[ ] Import and use built-in and custom modules.
+[ ] Read and write CSV files.
+[ ] Validate data and handle common exceptions.
+[ ] Keep the project organized into separate functions and files.
+[ ] Test with valid, invalid, empty, and missing-file scenarios.
+[ ] Make sure all programs run without errors.
+
+Required File Structure
+
+Python_Data_Analysis/
+|
+|-- day21_python_revision.py
+|-- student_analysis_functions.py
+|-- student_data_analysis_project.py
+|-- day21_students.csv
+|-- day21_analysis_report.txt
+|-- student_data_analysis_report.txt
+|-- day21_valid_students.csv
+|-- day21_invalid_students.csv
+|-- day21_course_summary.csv
+|
+|-- Day21_Outputs/
+    |-- program_output_screenshots/
+
+Rules
+1. Complete the assignment using Python. Do not use Excel.
+2. Use only Python's built-in modules; do not install external packages.
+3. Use sample student data only. Do not include real personal information.
+4. Keep the original day21_students.csv file unchanged after creating it.
+5. Use functions to avoid repeating the same logic.
+6. Use meaningful variable names and comments.
+7. Save screenshots of program outputs in the Day21_Outputs folder.
+8. Submit the complete Python_Data_Analysis folder, including source files and generated reports.
