@@ -1,0 +1,134 @@
+Introduction to NumPy: Arrays, Array Operations, Indexing, and Statistics
+
+A. NumPy Setup and Introduction
+[ ] Create day22_numpy_basics.py.
+[ ] Install NumPy using: pip install numpy
+[ ] Import NumPy using: import numpy as np.
+[ ] Print the installed version using np.__version__.
+[ ] Explain in comments what NumPy is and why it is useful for data analysis.
+[ ] Create a Python list containing at least 5 numbers and convert it into a NumPy array using np.array().
+[ ] Print both values and use type() to display their types.
+
+B. Creating NumPy Arrays
+[ ] Create a 1D array containing at least 10 integers.
+[ ] Create a 1D array containing decimal values.
+[ ] Create a 2D array with 3 rows and 3 columns.
+[ ] Create arrays using np.zeros(), np.ones(), np.arange(), and np.linspace().
+[ ] Display shape, number of dimensions, size, and data type using shape, ndim, size, and dtype.
+
+C. Array Indexing and Slicing
+[ ] Create an array containing numbers from 10 to 100.
+[ ] Access and print the first, third, and last elements.
+[ ] Use negative indexing to access the last two elements.
+[ ] Use slicing to display the first five elements.
+[ ] Display elements from index 3 to index 7 using slicing.
+[ ] Create a 3x3 array and access the element in the second row and third column.
+[ ] Display the first row and second column.
+[ ] Select a smaller section of the 2D array.
+[ ] Update selected array elements using indexing.
+
+D. NumPy Array Operations
+[ ] Create two NumPy arrays containing at least 5 numbers each.
+[ ] Perform addition, subtraction, multiplication, and division.
+[ ] Multiply an array by a single number (scalar operation).
+[ ] Calculate the square of every element.
+[ ] Calculate square roots using np.sqrt().
+[ ] Calculate sum, minimum, and maximum using np.sum(), np.min(), and np.max().
+[ ] Sort an array using np.sort().
+[ ] Join two arrays using np.concatenate().
+[ ] Explain in comments how NumPy performs operations on entire arrays.
+
+E. Filtering and Conditional Selection
+[ ] Create an array containing at least 15 student marks.
+[ ] Display marks greater than 60.
+[ ] Display marks below 40.
+[ ] Display marks between 40 and 75.
+[ ] Count how many students scored at least 40 and how many scored below 40.
+[ ] Replace marks below 40 with 40 using conditional assignment.
+[ ] Create an array of student attendance values.
+[ ] Display students with attendance of at least 75.
+[ ] Combine two conditions using np.logical_and().
+
+F. NumPy Statistical Functions
+[ ] Create an array containing at least 10 student marks.
+[ ] Calculate mean using np.mean().
+[ ] Calculate median using np.median().
+[ ] Calculate standard deviation using np.std().
+[ ] Calculate variance using np.var().
+[ ] Find highest and lowest marks.
+[ ] Calculate total marks and range.
+[ ] Print each result with a meaningful label.
+[ ] Explain in comments what each statistical measure tells us.
+
+G. Working with Two-Dimensional Arrays
+[ ] Create a 2D array representing marks of 5 students in 3 subjects.
+[ ] Display the complete array.
+[ ] Display marks of the first student.
+[ ] Display marks of all students in the second subject.
+[ ] Calculate total and average marks for each student using axis=1.
+[ ] Calculate average marks for each subject using axis=0.
+[ ] Find the highest and lowest mark in each subject.
+[ ] Explain the difference between axis=0 and axis=1 in comments.
+
+H. Mini Project — Student Marks Analysis Using NumPy
+[ ] Create student_numpy_analysis.py.
+[ ] Create a NumPy array containing marks of at least 15 students across 3 subjects.
+[ ] Create a separate array containing student IDs.
+[ ] Calculate each student's total and average marks.
+[ ] Calculate the class average for each subject.
+[ ] Find the highest and lowest marks for each subject.
+[ ] Identify students whose overall average is at least 40 and students below 40.
+[ ] Identify students whose average is greater than the class average.
+[ ] Calculate the standard deviation of marks for each subject.
+[ ] Display a report with student IDs, total marks, and average marks.
+[ ] Use NumPy operations wherever possible instead of manual loops.
+
+I. Practice Questions
+[ ] 1. Create an array from 1 to 20 and display only even numbers.
+[ ] 2. Create an array of 10 random integers and find mean, median, minimum, and maximum.
+[ ] 3. Create two arrays and perform all four basic arithmetic operations.
+[ ] 4. Create a 3x3 matrix and calculate the sum of each row and column.
+[ ] 5. Create an array of 20 marks and count how many are above 75.
+[ ] 6. Replace all negative values in an array with zero.
+[ ] 7. Create a 4x4 matrix and display its first two rows and last two columns.
+[ ] 8. Create a 2D array of student marks and calculate each student's average and each subject's average.
+
+J. Final Review
+[ ] Import NumPy using the alias np.
+[ ] Create 1D and 2D arrays.
+[ ] Use indexing and slicing to access elements.
+[ ] Perform arithmetic and scalar operations.
+[ ] Filter arrays using conditions.
+[ ] Calculate mean, median, variance, and standard deviation.
+[ ] Understand axis=0 and axis=1.
+[ ] Complete the Student Marks Analysis mini-project.
+[ ] Make sure all Python files run without errors.
+
+Required File Structure
+
+Python_Data_Analysis/
+|
+|-- day22_numpy_basics.py
+|-- student_numpy_analysis.py
+|-- practice_questions/
+|   |-- question_01.py
+|   |-- question_02.py
+|   |-- question_03.py
+|   |-- question_04.py
+|   |-- question_05.py
+|   |-- question_06.py
+|   |-- question_07.py
+|   |-- question_08.py
+|
+|-- Day22_Outputs/
+    |-- program_output_screenshots/
+
+Rules
+1. Complete the assignment using Python and NumPy.
+2. Install NumPy in your Python environment before starting.
+3. Do not use pandas for this assignment; it will be covered later.
+4. Use sample student data only. Do not include real personal information.
+5. Use NumPy functions for calculations wherever possible.
+6. Add comments explaining important operations, especially indexing and axis values.
+7. Save screenshots of program outputs in the Day22_Outputs folder.
+8. Submit the complete Python_Data_Analysis folder.
