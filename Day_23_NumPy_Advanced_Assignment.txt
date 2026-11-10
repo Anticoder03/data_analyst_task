@@ -1,0 +1,124 @@
+NumPy Advanced Operations: Reshaping, Joining, Splitting, Sorting, and Random Data
+
+A. Reshaping NumPy Arrays
+[ ] Create day23_numpy_advanced.py and import NumPy as np.
+[ ] Create a 1D array containing numbers from 1 to 12.
+[ ] Reshape it into 3x4 and 4x3 matrices using reshape().
+[ ] Convert a 1D array into a 2D row array and a 2D column array.
+[ ] Convert a 2D array into 1D using flatten() and ravel().
+[ ] Display the shape before and after each transformation.
+[ ] Try reshaping with an incompatible number of elements and observe the error.
+[ ] Explain in comments why the element count must remain compatible when reshaping.
+
+B. Joining and Stacking Arrays
+[ ] Create two 1D arrays containing at least 5 values each.
+[ ] Join them using np.concatenate().
+[ ] Create two 2D arrays with the same number of columns and join them using np.vstack().
+[ ] Create two 2D arrays with the same number of rows and join them using np.hstack().
+[ ] Use np.stack() to combine two arrays along a new axis.
+[ ] Display the shape of each resulting array.
+[ ] Explain the difference between concatenation and stacking in comments.
+
+C. Splitting NumPy Arrays
+[ ] Create a 1D array containing numbers from 1 to 12.
+[ ] Split it into 3 equal parts using np.split().
+[ ] Create a 4x4 array and split it vertically using np.vsplit().
+[ ] Split the same array horizontally using np.hsplit().
+[ ] Display every resulting section.
+[ ] Use np.array_split() to split an array into unequal sections.
+[ ] Explain when array_split() is useful.
+
+D. Sorting and Searching Arrays
+[ ] Create an unsorted array containing at least 10 numbers.
+[ ] Sort it in ascending and descending order using np.sort().
+[ ] Create a 2D array and sort each row.
+[ ] Sort the 2D array by columns using the appropriate axis.
+[ ] Use np.argsort() to get the indices that would sort an array.
+[ ] Use np.where() to find positions of values greater than 50.
+[ ] Use np.unique() to display unique values.
+[ ] Use np.count_nonzero() to count values satisfying a condition.
+
+E. NumPy Random Data Generation
+[ ] Use np.random.randint() to generate at least 10 random integers.
+[ ] Use np.random.rand() to generate random decimal values.
+[ ] Use np.random.choice() to select random marks from a list.
+[ ] Use np.random.shuffle() to shuffle an array.
+[ ] Set a random seed using np.random.seed() and observe repeatable results.
+[ ] Generate random marks for 10 students in 3 subjects.
+[ ] Display the generated data clearly.
+[ ] Explain why random data is useful for testing and simulation.
+
+F. Copying and Views
+[ ] Create an array and assign it to another variable using normal assignment.
+[ ] Change an element through the second variable and observe the original array.
+[ ] Create an independent copy using copy().
+[ ] Change the copied array and verify that the original remains unchanged.
+[ ] Create a slice and observe how changes may affect the original.
+[ ] Explain the difference between a view and a copy in comments.
+
+G. Broadcasting and Conditional Operations
+[ ] Create a 2D array representing marks of 4 students in 3 subjects.
+[ ] Add 5 bonus marks to every element using broadcasting.
+[ ] Create a 1D array containing subject-wise bonus marks and add them to every student row.
+[ ] Use np.maximum() and np.clip() to keep adjusted marks within 0 to 100.
+[ ] Use np.where() to label marks as Pass or Fail using 40 as the passing mark.
+[ ] Explain how broadcasting works between compatible array shapes.
+
+H. Mini Project — Student Marks Data Preparation with NumPy
+[ ] Create student_numpy_data_preparation.py.
+[ ] Generate marks for at least 20 students across 3 subjects using NumPy random functions.
+[ ] Create a separate array of student IDs.
+[ ] Reshape marks into a 2D matrix with students as rows and subjects as columns.
+[ ] Calculate each student's total and average marks.
+[ ] Calculate average marks for each subject.
+[ ] Sort students by average marks using np.argsort().
+[ ] Display the top 5 students based on average marks.
+[ ] Identify students whose average is below 40.
+[ ] Apply subject-wise bonus marks using broadcasting.
+[ ] Keep adjusted marks between 0 and 100 using np.clip().
+[ ] Find unique marks and count how many marks are below 40.
+[ ] Split the student dataset into two groups using NumPy splitting functions.
+[ ] Display a before-and-after summary.
+[ ] Save student IDs, subject marks, total marks, and average marks to student_numpy_report.csv using Python's built-in csv module.
+[ ] Use NumPy for calculations; do not use pandas.
+
+I. Practice Questions
+[ ] 1. Create an array from 1 to 24 and reshape it into a 4x6 matrix.
+[ ] 2. Join three arrays into one using np.concatenate().
+[ ] 3. Split an array of 20 numbers into 4 equal parts.
+[ ] 4. Sort a 2D array by rows and then by columns.
+[ ] 5. Generate 15 random integers between 1 and 100 and find the top 5 values.
+[ ] 6. Use np.where() to replace all marks below 40 with zero.
+[ ] 7. Demonstrate the difference between copy() and a view using a sample array.
+[ ] 8. Create a 2D marks array and add different bonus marks to each subject using broadcasting.
+
+J. Final Review
+[ ] Reshape arrays and convert between 1D and 2D arrays.
+[ ] Join arrays using concatenate(), vstack(), hstack(), and stack().
+[ ] Split arrays using split(), array_split(), vsplit(), and hsplit().
+[ ] Sort and search arrays using sort(), argsort(), where(), and unique().
+[ ] Generate repeatable random data using NumPy.
+[ ] Explain the difference between a view and a copy.
+[ ] Demonstrate broadcasting with 1D and 2D arrays.
+[ ] Complete the Student Marks Data Preparation mini-project.
+[ ] Make sure all Python files run without errors.
+
+Required File Structure
+
+Python_Data_Analysis/
+|
+|-- day23_numpy_advanced.py
+|-- student_numpy_data_preparation.py
+|-- student_numpy_report.csv
+|-- practice_questions/
+|   |-- question_01.py
+|   |-- question_02.py
+|   |-- question_03.py
+|   |-- question_04.py
+|   |-- question_05.py
+|   |-- question_06.py
+|   |-- question_07.py
+|   |-- question_08.py
+|
+|-- Day23_Outputs/
+    |-- program_output_screenshots/
