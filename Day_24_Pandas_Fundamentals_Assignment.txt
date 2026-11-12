@@ -1,0 +1,141 @@
+Pandas Fundamentals: Series, DataFrames, Reading CSV Files, and Data Selection
+
+A. Pandas Setup and Introduction
+[ ] Create day24_pandas_basics.py.
+[ ] Install Pandas using: pip install pandas
+[ ] Import Pandas using: import pandas as pd.
+[ ] Print the installed version using pd.__version__.
+[ ] Explain in comments what Pandas is and why it is useful in data analysis.
+[ ] Create a Python list containing at least 5 student marks and convert it into a Pandas Series using pd.Series().
+[ ] Display the Series, its values, and its index.
+[ ] Access Series values using index labels and positions.
+
+B. Creating and Understanding DataFrames
+[ ] Create a dictionary containing student_id, name, course, marks, and attendance.
+[ ] Convert the dictionary into a DataFrame using pd.DataFrame().
+[ ] Create a DataFrame containing at least 8 student records.
+[ ] Display the complete DataFrame.
+[ ] Display rows and columns using shape.
+[ ] Display column names using columns and data types using dtypes.
+[ ] Use info() to inspect the DataFrame structure.
+[ ] Use describe() to view summary statistics for numeric columns.
+[ ] Use head() and tail() to display the first and last records.
+
+C. Reading CSV Files with Pandas
+[ ] Use the students.csv file from earlier assignments if available.
+[ ] If it is unavailable, create day24_students.csv with at least 15 sample records.
+[ ] Include columns: student_id, name, course, marks, attendance, fee_status, and city.
+[ ] Read the CSV file using pd.read_csv().
+[ ] Display the first 5 and last 5 records.
+[ ] Display the total number of records and columns.
+[ ] Inspect the DataFrame using info() and describe().
+[ ] Display column names and data types.
+[ ] Save a copy as day24_students_copy.csv using to_csv().
+[ ] Do not overwrite the original source CSV file.
+
+D. Selecting Columns and Rows
+[ ] Select a single column, such as name.
+[ ] Select multiple columns: student_id, name, and marks.
+[ ] Select a row using loc[] with its index label.
+[ ] Select rows using iloc[] with integer positions.
+[ ] Display the first 5 rows and selected columns together.
+[ ] Select a range of rows using iloc[].
+[ ] Set student_id as the index in a separate DataFrame copy.
+[ ] Use loc[] to retrieve a student using student_id.
+[ ] Reset the index using reset_index() and display the result.
+
+E. Filtering DataFrames
+[ ] Display students whose marks are greater than 60.
+[ ] Display students whose marks are below 40.
+[ ] Display students whose attendance is at least 75.
+[ ] Display students whose fee_status is "Paid".
+[ ] Display students belonging to a selected course.
+[ ] Filter students whose marks are between 40 and 80.
+[ ] Combine conditions using & (AND) and | (OR).
+[ ] Use isin() to filter students belonging to multiple courses.
+[ ] Use between() to filter a numeric range.
+[ ] Display the number of records returned by each filter.
+
+F. Adding, Updating, and Removing Columns
+[ ] Add a result column: Pass for marks >= 40, otherwise Fail.
+[ ] Add a grade column: 80+: Excellent; 60–79: Good; 40–59: Pass; below 40: Fail.
+[ ] Add attendance_status: Eligible for attendance >= 75, otherwise Not Eligible.
+[ ] Add a total_score column using marks and attendance; explain your formula in a comment.
+[ ] Update one selected student's value in a copied DataFrame.
+[ ] Rename one column using rename().
+[ ] Remove a temporary column using drop().
+[ ] Display the updated DataFrame after each operation.
+[ ] Keep the original loaded DataFrame unchanged by modifying a copy where appropriate.
+
+G. Sorting and Basic DataFrame Operations
+[ ] Sort students by marks in ascending and descending order using sort_values().
+[ ] Sort by course and then marks.
+[ ] Sort the DataFrame by its index using sort_index().
+[ ] Use value_counts() to count students in each course.
+[ ] Use value_counts() to count Paid and Pending fee statuses.
+[ ] Use unique() and nunique() to inspect course values.
+[ ] Use count() to count non-missing values in selected columns.
+[ ] Display average, maximum, and minimum marks using Pandas methods.
+
+H. Mini Project — Student Dataset Explorer with Pandas
+[ ] Create student_pandas_explorer.py.
+[ ] Read student records from day24_students.csv using pd.read_csv().
+[ ] Display dataset shape, column names, data types, and first 5 records.
+[ ] Display descriptive statistics for numeric columns.
+[ ] Display total students, average marks, highest marks, and lowest marks.
+[ ] Display the top 5 students based on marks.
+[ ] Display students who passed and failed. Use 40 as the passing mark.
+[ ] Display students whose attendance is below 75.
+[ ] Display the number of students in each course.
+[ ] Display the number of students with Paid and Pending fee status.
+[ ] Ask the user for a course name and display students in that course.
+[ ] Ask the user for a student_id and display the matching record.
+[ ] Add result and grade columns to an analysis copy of the DataFrame.
+[ ] Save processed data to student_pandas_analysis.csv.
+[ ] Save a short analysis summary to student_pandas_summary.txt.
+[ ] Handle a missing CSV file with a clear error message.
+[ ] Keep the code organized and do not modify the original source CSV file.
+
+I. Practice Questions
+[ ] 1. Create a Pandas Series from 10 numbers and display its index, values, and data type.
+[ ] 2. Create a DataFrame from a dictionary containing 5 employees, departments, and salaries.
+[ ] 3. Read a CSV file and display only its first 10 records.
+[ ] 4. Select two columns and the first 5 rows from a DataFrame.
+[ ] 5. Filter students who scored above 75 and have attendance of at least 75.
+[ ] 6. Sort a student DataFrame by marks from highest to lowest.
+[ ] 7. Use value_counts() to count students in each course.
+[ ] 8. Add a Pass/Fail column based on marks and export the result to a new CSV file.
+
+J. Final Review
+[ ] Import Pandas using the alias pd.
+[ ] Create and inspect Series and DataFrames.
+[ ] Read and write CSV files using read_csv() and to_csv().
+[ ] Select data using columns, loc[], and iloc[].
+[ ] Filter rows using conditions, isin(), and between().
+[ ] Add, update, rename, and remove DataFrame columns.
+[ ] Sort data and use value_counts(), unique(), and nunique().
+[ ] Complete the Student Dataset Explorer mini-project.
+[ ] Make sure all Python files run without errors.
+
+Required File Structure
+
+Python_Data_Analysis/
+|
+|-- day24_pandas_basics.py
+|-- student_pandas_explorer.py
+|-- day24_students.csv
+|-- day24_students_copy.csv
+|-- student_pandas_analysis.csv
+|-- student_pandas_summary.txt
+|-- practice_questions/
+|   |-- question_01.py
+|   |-- question_02.py
+|   |-- question_03.py
+|   |-- question_04.py
+|   |-- question_05.py
+|   |-- question_06.py
+|   |-- question_07.py
+|   |-- question_08.py
+|
+|-- Day24_Outputs/
+    |-- program_output_screenshots/
