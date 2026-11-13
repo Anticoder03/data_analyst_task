@@ -1,0 +1,143 @@
+Pandas Data Cleaning: Missing Values, Duplicates, Data Types, and String Operations
+
+A. Prepare a Dataset for Cleaning
+[ ] Create day25_data_cleaning.py.
+[ ] Import pandas as pd and NumPy as np.
+[ ] Create a sample DataFrame containing at least 15 student records.
+[ ] Include columns: student_id, name, course, city, marks, attendance, fee_status, and enrollment_date.
+[ ] Intentionally include missing values in at least 4 columns.
+[ ] Include at least 2 duplicate records.
+[ ] Include inconsistent text values, such as different capitalization or extra spaces.
+[ ] Include invalid numeric values in marks or attendance, including text or values outside 0–100.
+[ ] Include dates in more than one text format.
+[ ] Save the original dataset as day25_students_raw.csv.
+[ ] Keep this raw dataset unchanged throughout the assignment.
+
+B. Identify Missing Values
+[ ] Read day25_students_raw.csv using pd.read_csv().
+[ ] Display the first 10 rows and inspect the dataset using info().
+[ ] Use isna() and isnull() to identify missing values.
+[ ] Count missing values in each column using isna().sum().
+[ ] Calculate the total number of missing values.
+[ ] Display rows containing at least one missing value.
+[ ] Calculate the percentage of missing values in each column.
+[ ] Explain in comments why missing values should be investigated before cleaning.
+
+C. Handle Missing Values
+[ ] Create a separate copy of the raw DataFrame named cleaned_df.
+[ ] Remove rows where student_id is missing.
+[ ] Fill missing names and course values with "Unknown".
+[ ] Fill missing city values with "Not Provided".
+[ ] Fill missing marks with the median of valid marks.
+[ ] Fill missing attendance with the median of valid attendance values.
+[ ] Fill missing fee_status values with "Pending".
+[ ] Use fillna() and dropna() where appropriate.
+[ ] Verify that required columns no longer contain missing values.
+[ ] Explain in comments why different columns may need different missing-value strategies.
+
+D. Detect and Remove Duplicate Records
+[ ] Use duplicated() to identify duplicate rows.
+[ ] Display all duplicate rows and count them.
+[ ] Remove exact duplicate rows using drop_duplicates().
+[ ] Check for duplicate student_id values separately.
+[ ] Keep the first record for each student_id after reviewing duplicates.
+[ ] Display the number of records before and after duplicate removal.
+[ ] Explain the difference between duplicate rows and duplicate student IDs.
+
+E. Correct Data Types and Invalid Values
+[ ] Inspect column types using dtypes.
+[ ] Convert marks and attendance using pd.to_numeric().
+[ ] Use errors="coerce" to turn invalid numeric values into missing values.
+[ ] Identify marks outside 0–100.
+[ ] Identify attendance outside 0–100.
+[ ] Correct invalid values using a reasonable approach, or mark them missing and handle them.
+[ ] Convert student_id, name, course, city, and fee_status to suitable types.
+[ ] Convert enrollment_date using pd.to_datetime().
+[ ] Use errors="coerce" for invalid dates and identify affected records.
+[ ] Display final data types using dtypes.
+[ ] Explain why correct data types matter for analysis.
+
+F. Clean Text Data Using String Operations
+[ ] Remove leading and trailing spaces from name, course, city, and fee_status using str.strip().
+[ ] Convert student names and city names into consistent title case using str.title().
+[ ] Standardize course names using consistent capitalization.
+[ ] Standardize fee_status values so they contain only "Paid" or "Pending".
+[ ] Use str.lower(), str.upper(), str.title(), and str.replace() on sample text columns.
+[ ] Identify empty strings that may need to be treated as missing values.
+[ ] Replace empty strings with missing values and handle them appropriately.
+[ ] Display examples of values before and after text cleaning.
+
+G. Validate the Cleaned Dataset
+[ ] Check that student_id is not missing and is unique.
+[ ] Check that marks are numeric and between 0 and 100.
+[ ] Check that attendance is numeric and between 0 and 100.
+[ ] Check that fee_status contains only "Paid" or "Pending".
+[ ] Check that enrollment_date contains valid dates.
+[ ] Create a validation report showing the number of records that pass and fail each check.
+[ ] Store invalid records separately in day25_invalid_records.csv.
+[ ] Store valid cleaned records in day25_students_cleaned.csv.
+[ ] Do not overwrite day25_students_raw.csv.
+
+H. Mini Project — Student Dataset Cleaning Pipeline
+[ ] Create student_data_cleaning_pipeline.py.
+[ ] Read the raw dataset from day25_students_raw.csv.
+[ ] Create separate functions for loading, inspecting, cleaning, validating, and saving data.
+[ ] Display a data quality summary before cleaning.
+[ ] Handle missing values using suitable strategies for each column.
+[ ] Detect and remove duplicate records.
+[ ] Standardize text columns.
+[ ] Convert numeric and date columns to appropriate data types.
+[ ] Validate marks, attendance, student IDs, fee status, and enrollment dates.
+[ ] Separate valid and invalid records.
+[ ] Save valid records to day25_students_cleaned.csv.
+[ ] Save invalid records to day25_invalid_records.csv with a column explaining the validation issue.
+[ ] Generate day25_cleaning_report.txt.
+[ ] Include original row count, cleaned row count, duplicate count, missing-value counts, and invalid-record count.
+[ ] Display a before-and-after comparison of the dataset.
+[ ] Keep the original raw CSV unchanged.
+[ ] Make sure the pipeline can be run again without corrupting the raw dataset.
+
+I. Practice Questions
+[ ] 1. Create a DataFrame with missing values and display the missing-value count for each column.
+[ ] 2. Replace missing numeric values in a column with its median.
+[ ] 3. Replace missing text values with "Unknown".
+[ ] 4. Detect and remove duplicate rows from a DataFrame.
+[ ] 5. Convert a column containing numeric text into numbers using pd.to_numeric().
+[ ] 6. Convert a date column into datetime values and identify invalid dates.
+[ ] 7. Remove extra spaces from a name column and convert names to title case.
+[ ] 8. Validate a student DataFrame and save records with invalid marks or attendance to a separate CSV file.
+
+J. Final Review
+[ ] Identify and count missing values using isna() and isnull().
+[ ] Handle missing values using fillna() and dropna().
+[ ] Detect and remove duplicates using duplicated() and drop_duplicates().
+[ ] Convert columns using astype(), pd.to_numeric(), and pd.to_datetime().
+[ ] Clean text using Pandas string methods.
+[ ] Validate numeric ranges, IDs, fee statuses, and dates.
+[ ] Save cleaned and invalid records separately.
+[ ] Generate a data cleaning report.
+[ ] Make sure all Python files run without errors.
+
+Required File Structure
+
+Python_Data_Analysis/
+|
+|-- day25_data_cleaning.py
+|-- student_data_cleaning_pipeline.py
+|-- day25_students_raw.csv
+|-- day25_students_cleaned.csv
+|-- day25_invalid_records.csv
+|-- day25_cleaning_report.txt
+|
+|-- practice_questions/
+|   |-- question_01.py
+|   |-- question_02.py
+|   |-- question_03.py
+|   |-- question_04.py
+|   |-- question_05.py
+|   |-- question_06.py
+|   |-- question_07.py
+|   |-- question_08.py
+|
+|-- Day25_Outputs/
+    |-- program_output_screenshots/
