@@ -1,0 +1,163 @@
+PANDAS DATA TRANSFORMATION AND ANALYSIS
+Topics: GroupBy, Aggregation, Merge, Concatenation, and Pivot Tables
+
+OBJECTIVE
+Use Pandas to combine related datasets, summarize information, and answer practical questions about student performance, courses, and fee payments.
+
+A. PREPARE THE PROJECT
+[ ] Create a folder named Python_Data_Analysis.
+[ ] Create a Python file named day26_pandas_analysis.py.
+[ ] Import pandas as pd.
+[ ] Load the cleaned student dataset from Day 25 (day25_students_cleaned.csv).
+[ ] If the Day 25 file is unavailable, create a sample dataset with at least 15 student records.
+[ ] Prepare two additional datasets:
+    1. courses.csv: course_id, course_name, instructor, course_fee
+    2. payments.csv: payment_id, student_id, amount_paid, payment_date, payment_status
+[ ] Make sure student records contain course_id so they can be linked to courses.
+[ ] Save any newly created raw datasets as CSV files.
+
+B. EXPLORE AND GROUP DATA
+[ ] Read the student, course, and payment CSV files using pd.read_csv().
+[ ] Display the first five rows of each dataset.
+[ ] Display the shape, columns, and data types of each DataFrame.
+[ ] Use groupby() to calculate the number of students in each course.
+[ ] Calculate the average marks for each course.
+[ ] Calculate the highest and lowest marks for each course.
+[ ] Calculate the average attendance for each city.
+[ ] Count students by fee_status.
+[ ] Use reset_index() to convert grouped results back into regular DataFrames.
+
+C. PERFORM MULTIPLE AGGREGATIONS
+[ ] Use agg() to calculate multiple statistics in one operation.
+[ ] For each course, calculate student count, average marks, minimum marks, maximum marks, and average attendance.
+[ ] Group by both course_id and city and calculate average marks.
+[ ] Use named aggregation to give clear names to output columns.
+[ ] Save the course summary as course_performance_summary.csv.
+
+D. TRANSFORM DATA
+[ ] Use transform() to calculate the average marks for each student's course.
+[ ] Add a column named course_average to the student DataFrame.
+[ ] Add marks_difference to show each student's marks minus their course average.
+[ ] Create performance_category:
+    - Marks 75 and above: Excellent
+    - Marks 60 to 74: Good
+    - Marks 40 to 59: Average
+    - Marks below 40: Needs Improvement
+[ ] Display students whose marks are above their course average.
+[ ] Save the transformed dataset as students_transformed.csv.
+
+E. MERGE RELATED DATASETS
+[ ] Use merge() to combine students with courses using course_id.
+[ ] Use an inner merge and display the result.
+[ ] Use a left merge and identify student records without a matching course.
+[ ] Merge the student-course result with payments using student_id.
+[ ] Display the number of rows before and after each merge.
+[ ] Inspect the result for missing course or payment information.
+[ ] Use appropriate suffixes when columns have the same name.
+[ ] Add a comment explaining the difference between inner and left joins.
+[ ] Save the combined result as student_course_payment_details.csv.
+
+F. CONCATENATE DATA
+[ ] Create a second small student DataFrame containing at least three new student records.
+[ ] Use pd.concat() to append the new records to the existing student DataFrame.
+[ ] Use ignore_index=True to create a clean index.
+[ ] Display the shape before and after concatenation.
+[ ] Save the combined records as all_students.csv.
+[ ] Try concatenating two DataFrames with different columns and observe how Pandas handles missing values.
+
+G. CREATE PIVOT TABLES AND CROSS-TABULATIONS
+[ ] Use pivot_table() to calculate average marks by course and city.
+[ ] Create a pivot table showing student count by course and performance_category.
+[ ] Use margins=True to display row and column totals.
+[ ] Use fill_value=0 where appropriate.
+[ ] Use pd.crosstab() to count students by course and fee_status.
+[ ] Create another crosstab showing city against performance_category.
+[ ] Save each useful summary as a separate CSV file.
+
+H. MINI-PROJECT: STUDENT PERFORMANCE AND COURSE ANALYSIS REPORT
+Create a Python file named student_course_analysis.py.
+
+[ ] Load the student, course, and payment datasets.
+[ ] Create a course-wise performance summary.
+[ ] Create a city-wise student summary.
+[ ] Calculate average marks and attendance for each course.
+[ ] Identify the course with the highest average marks.
+[ ] Identify students scoring above their course average.
+[ ] Calculate total payment received for each course.
+[ ] List students with no payment record or a pending payment status.
+[ ] Create a pivot table for course-wise performance categories.
+[ ] Merge relevant datasets to create a combined student report.
+[ ] Export final_student_analysis.csv.
+[ ] Export course_performance_summary.csv.
+[ ] Export city_wise_summary.csv.
+[ ] Export course_payment_summary.csv.
+[ ] Export fee_pending_students.csv.
+[ ] Export course_performance_pivot.csv.
+[ ] Create day26_analysis_report.txt containing total students, total courses, overall average marks, course with the highest average marks, total payment received, number of students with pending or missing payment information, and three important findings.
+
+I. PRACTICE QUESTIONS
+Create a separate Python file for each question inside practice_questions.
+
+[ ] Question 1: Find the number of students in each course using groupby().
+[ ] Question 2: Calculate average, minimum, and maximum marks for each course using agg().
+[ ] Question 3: Find the average attendance for each city.
+[ ] Question 4: Add each student's course average to the original DataFrame using transform().
+[ ] Question 5: Merge students and courses, then identify students without a matching course.
+[ ] Question 6: Combine two student DataFrames using concat().
+[ ] Question 7: Create a pivot table showing average marks by course and city.
+[ ] Question 8: Use crosstab() to count Paid and Pending students in each course.
+
+J. FINAL REVIEW CHECKLIST
+[ ] I can explain what groupby() does.
+[ ] I can use agg() to calculate multiple summary statistics.
+[ ] I understand the difference between aggregation and transform().
+[ ] I can merge two DataFrames using a common key.
+[ ] I understand inner and left joins.
+[ ] I can concatenate DataFrames.
+[ ] I can create pivot tables and crosstabs.
+[ ] I can export analysis results to CSV files.
+[ ] My scripts run without errors.
+
+REQUIRED FILE STRUCTURE
+
+Python_Data_Analysis/
+|
+|-- day26_pandas_analysis.py
+|-- student_course_analysis.py
+|-- students.csv
+|-- courses.csv
+|-- payments.csv
+|-- students_transformed.csv
+|-- all_students.csv
+|-- student_course_payment_details.csv
+|-- final_student_analysis.csv
+|-- course_performance_summary.csv
+|-- city_wise_summary.csv
+|-- course_payment_summary.csv
+|-- fee_pending_students.csv
+|-- course_performance_pivot.csv
+|-- day26_analysis_report.txt
+|
+|-- practice_questions/
+|   |-- question_01.py
+|   |-- question_02.py
+|   |-- question_03.py
+|   |-- question_04.py
+|   |-- question_05.py
+|   |-- question_06.py
+|   |-- question_07.py
+|   |-- question_08.py
+|
+|-- Day26_Outputs/
+    |-- program_output_screenshots/
+
+RULES
+1. Use Pandas for all data manipulation and analysis.
+2. Do not overwrite the original Day 25 cleaned dataset.
+3. Use student_id and course_id carefully as merge keys.
+4. Check for missing values after merging datasets.
+5. Do not remove records simply because a merge produces missing values; investigate them.
+6. Add comments explaining important operations.
+7. Use meaningful variable and column names.
+8. Run the scripts and save screenshots of important outputs.
+9. Submit the complete Python_Data_Analysis folder.
