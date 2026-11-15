@@ -1,0 +1,153 @@
+EXPLORATORY DATA ANALYSIS (EDA) USING PANDAS
+Topics: Descriptive Statistics, Data Distributions, Correlation, and Outlier Detection
+
+OBJECTIVE
+Explore a dataset systematically, understand its structure and patterns, identify unusual values, and communicate findings using statistical summaries and Pandas.
+
+A. PREPARE THE PROJECT
+[ ] Create a folder named Python_Data_Analysis if it does not already exist.
+[ ] Create day27_eda.py.
+[ ] Import pandas as pd and numpy as np.
+[ ] Load the cleaned student dataset from Day 25 or the combined dataset from Day 26.
+[ ] If previous datasets are unavailable, create a sample dataset with at least 30 records.
+[ ] Include student_id, course, city, marks, attendance, age, and fee_status.
+[ ] Check that numeric columns contain valid numeric values.
+[ ] Keep the original input dataset unchanged.
+
+B. UNDERSTAND THE DATASET
+[ ] Read the dataset using pd.read_csv().
+[ ] Display the first five and last five rows using head() and tail().
+[ ] Display the number of rows and columns using shape.
+[ ] Display column names using columns.
+[ ] Inspect data types using dtypes and info().
+[ ] Use describe() to generate descriptive statistics.
+[ ] Use describe(include='all') to inspect numeric and categorical columns.
+[ ] Count unique values in each column using nunique().
+[ ] Display the frequency of course, city, and fee_status using value_counts().
+
+C. DESCRIPTIVE STATISTICS
+[ ] Calculate mean, median, and mode for marks.
+[ ] Calculate minimum, maximum, range, and standard deviation for marks.
+[ ] Calculate mean and median attendance.
+[ ] Calculate the 25th, 50th, and 75th percentiles of marks using quantile().
+[ ] Calculate average marks for each course.
+[ ] Compare average marks across cities.
+[ ] Explain what mean, median, standard deviation, and quartiles tell you about the dataset.
+
+D. ANALYSE DATA DISTRIBUTIONS
+[ ] Use value_counts() to examine course, city, and fee_status.
+[ ] Use pd.cut() to divide marks into performance ranges:
+    - 0–39: Needs Improvement
+    - 40–59: Average
+    - 60–74: Good
+    - 75–100: Excellent
+[ ] Create a frequency table for the performance ranges.
+[ ] Calculate the percentage of students in each performance range.
+[ ] Compare marks distributions across courses.
+[ ] Identify whether marks are concentrated in a particular range.
+[ ] Save the distribution summary as day27_performance_distribution.csv.
+
+E. STUDY RELATIONSHIPS AND CORRELATION
+[ ] Select numeric columns such as marks, attendance, and age.
+[ ] Create a correlation matrix using corr().
+[ ] Display the correlation between marks and attendance.
+[ ] Identify the pair of numeric variables with the strongest positive correlation.
+[ ] Identify the pair with the strongest negative correlation, if one exists.
+[ ] Use corr(method='pearson') and compare it with corr(method='spearman').
+[ ] Explain correlation values: close to +1 indicates a strong positive relationship; close to -1 indicates a strong negative relationship; close to 0 indicates a weak or no linear relationship.
+[ ] Remember: correlation does not prove that one variable causes another.
+[ ] Save the correlation matrix as day27_correlation_matrix.csv.
+
+F. DETECT OUTLIERS
+[ ] Select the marks column for outlier analysis.
+[ ] Calculate Q1 and Q3 using quantile().
+[ ] Calculate the interquartile range (IQR): Q3 - Q1.
+[ ] Calculate the lower boundary: Q1 - 1.5 * IQR.
+[ ] Calculate the upper boundary: Q3 + 1.5 * IQR.
+[ ] Identify records below the lower boundary or above the upper boundary.
+[ ] Display outlier records with student_id and marks.
+[ ] Repeat the IQR method for attendance.
+[ ] Count the outliers in each selected column.
+[ ] Save identified outliers as day27_outliers.csv.
+[ ] Do not automatically delete outliers. Explain why an unusual value should be investigated before changing or removing it.
+
+G. ASK AND ANSWER DATA QUESTIONS
+[ ] Which course has the highest average marks?
+[ ] Which course has the lowest average marks?
+[ ] What percentage of students scored at least 75 marks?
+[ ] Which city has the highest average attendance?
+[ ] How many students have attendance below 75%?
+[ ] Which fee_status occurs most frequently?
+[ ] Are marks and attendance positively or negatively correlated?
+[ ] How many outliers were detected in marks?
+[ ] Which records should be reviewed, and why?
+
+H. MINI-PROJECT: STUDENT PERFORMANCE EDA REPORT
+Create student_performance_eda.py.
+
+[ ] Load the dataset and perform an initial inspection.
+[ ] Generate a descriptive statistics summary.
+[ ] Create course-wise and city-wise performance summaries.
+[ ] Create a performance-range frequency and percentage table.
+[ ] Calculate and export the correlation matrix.
+[ ] Detect outliers in marks and attendance using the IQR method.
+[ ] Create a separate file containing records flagged as outliers.
+[ ] Answer all questions from Section G using code.
+[ ] Export day27_descriptive_summary.csv.
+[ ] Export day27_course_summary.csv.
+[ ] Export day27_city_summary.csv.
+[ ] Export day27_performance_distribution.csv.
+[ ] Export day27_correlation_matrix.csv.
+[ ] Export day27_outliers.csv.
+[ ] Create day27_eda_report.txt containing dataset size and column information, overall average and median marks, highest and lowest average-performing courses, performance distribution percentages, correlation findings, number of outliers detected, at least five meaningful observations, and at least two recommendations based on the findings.
+
+I. PRACTICE QUESTIONS
+Create a separate Python file for each question inside practice_questions.
+
+[ ] Question 1: Generate descriptive statistics for the complete dataset.
+[ ] Question 2: Find the mean, median, and mode of marks.
+[ ] Question 3: Calculate the percentage of students in each performance range.
+[ ] Question 4: Find the course with the highest average marks.
+[ ] Question 5: Calculate and interpret the correlation between marks and attendance.
+[ ] Question 6: Create a correlation matrix for all numeric columns.
+[ ] Question 7: Detect marks outliers using the IQR method.
+[ ] Question 8: Export all records flagged as outliers to a CSV file.
+
+J. FINAL REVIEW CHECKLIST
+[ ] I can inspect a dataset using info(), describe(), and shape.
+[ ] I can calculate mean, median, mode, standard deviation, and quartiles.
+[ ] I can analyse categorical and numeric distributions.
+[ ] I can create performance ranges using pd.cut().
+[ ] I can calculate and interpret a correlation matrix.
+[ ] I understand that correlation does not prove causation.
+[ ] I can detect outliers using the IQR method.
+[ ] I know why outliers should be investigated before removing them.
+[ ] I can export EDA results and write evidence-based findings.
+[ ] My scripts run without errors.
+
+REQUIRED FILE STRUCTURE
+
+Python_Data_Analysis/
+|
+|-- day27_eda.py
+|-- student_performance_eda.py
+|-- day27_descriptive_summary.csv
+|-- day27_course_summary.csv
+|-- day27_city_summary.csv
+|-- day27_performance_distribution.csv
+|-- day27_correlation_matrix.csv
+|-- day27_outliers.csv
+|-- day27_eda_report.txt
+|
+|-- practice_questions/
+|   |-- question_01.py
+|   |-- question_02.py
+|   |-- question_03.py
+|   |-- question_04.py
+|   |-- question_05.py
+|   |-- question_06.py
+|   |-- question_07.py
+|   |-- question_08.py
+|
+|-- Day27_Outputs/
+    |-- program_output_screenshots/
