@@ -1,0 +1,165 @@
+DAY 28 — DATA VISUALIZATION WITH MATPLOTLIB
+Topics: Line Charts, Bar Charts, Histograms, Scatter Plots, and Chart Customization
+
+OBJECTIVE
+Learn to communicate data insights visually using Matplotlib. Create clear, correctly labelled charts and choose an appropriate chart type for different analytical questions.
+
+A. SET UP THE PROJECT
+[ ] Create day28_matplotlib.py.
+[ ] Import pandas as pd, numpy as np, and matplotlib.pyplot as plt.
+[ ] Load the cleaned student dataset from Day 25 or the combined dataset from Day 26.
+[ ] If previous datasets are unavailable, create a sample dataset with at least 30 student records.
+[ ] Include student_id, course, city, marks, attendance, and fee_status.
+[ ] Inspect the dataset using head(), info(), and describe().
+[ ] Check for missing values in columns you plan to visualize.
+[ ] Keep the original input dataset unchanged.
+
+B. MATPLOTLIB FUNDAMENTALS
+[ ] Create your first chart using plt.plot().
+[ ] Set figure size using plt.figure(figsize=(...)).
+[ ] Add a title using plt.title().
+[ ] Add x-axis and y-axis labels using plt.xlabel() and plt.ylabel().
+[ ] Add grid lines using plt.grid().
+[ ] Display the chart using plt.show().
+[ ] Save a chart using plt.savefig() before closing the figure.
+[ ] Use clear titles and labels so viewers can understand each chart.
+
+C. LINE CHART
+[ ] Create a line chart showing marks for students.
+[ ] Use student_id or student number on the x-axis and marks on the y-axis.
+[ ] Add a title and axis labels.
+[ ] Add markers to make individual data points visible.
+[ ] Create a second line chart comparing average marks across courses.
+[ ] Use a legend when displaying more than one line.
+[ ] Save as line_student_marks.png and line_course_average.png.
+
+D. BAR CHART
+[ ] Use groupby() to calculate average marks for each course.
+[ ] Create a vertical bar chart using plt.bar().
+[ ] Create a horizontal bar chart using plt.barh().
+[ ] Add suitable titles and axis labels.
+[ ] Create a chart showing the number of students in each course.
+[ ] Create a chart comparing average attendance across cities.
+[ ] Rotate x-axis labels when necessary using plt.xticks(rotation=...).
+[ ] Save as bar_course_average.png, bar_students_per_course.png, and bar_city_attendance.png.
+
+E. HISTOGRAM
+[ ] Create a histogram of student marks using plt.hist().
+[ ] Set a suitable number of bins.
+[ ] Add a title and axis labels.
+[ ] Create another histogram for attendance.
+[ ] Compare how marks and attendance are distributed.
+[ ] Explain what the histogram reveals about the data.
+[ ] Save as histogram_marks.png and histogram_attendance.png.
+
+F. SCATTER PLOT
+[ ] Create a scatter plot using plt.scatter().
+[ ] Display attendance on the x-axis and marks on the y-axis.
+[ ] Add a title and axis labels.
+[ ] Use the alpha parameter if points overlap.
+[ ] Create another scatter plot comparing age and marks if age is available.
+[ ] Observe whether variables appear to have a positive, negative, or weak relationship.
+[ ] Compare your visual observation with the correlation result from Day 27.
+[ ] Remember that a scatter plot or correlation does not prove causation.
+[ ] Save as scatter_attendance_marks.png and scatter_age_marks.png.
+
+G. PIE CHART AND CUSTOMIZATION
+[ ] Use value_counts() to count students by fee_status.
+[ ] Create a pie chart using plt.pie().
+[ ] Display category labels and percentage values using autopct.
+[ ] Use plt.axis('equal') to keep the pie chart circular.
+[ ] Customize chart size, title, labels, markers, line styles, and legends where appropriate.
+[ ] Use plt.tight_layout() to prevent labels from being cut off.
+[ ] Save as pie_fee_status.png.
+
+H. CREATE A MULTIPLE-CHART FIGURE
+[ ] Use plt.subplots() to create a figure containing at least four charts.
+[ ] Include a course-wise average marks bar chart.
+[ ] Include a marks histogram.
+[ ] Include an attendance-versus-marks scatter plot.
+[ ] Include a fee-status pie chart.
+[ ] Add a clear title to each subplot.
+[ ] Add an overall figure title using fig.suptitle().
+[ ] Adjust spacing using plt.tight_layout().
+[ ] Save as student_analysis_dashboard.png.
+[ ] Ensure every chart is readable and appropriately labelled.
+
+I. MINI-PROJECT: STUDENT PERFORMANCE VISUAL REPORT
+Create student_visual_report.py.
+
+[ ] Load the student dataset.
+[ ] Calculate average marks by course.
+[ ] Calculate student counts by course.
+[ ] Calculate average attendance by city.
+[ ] Calculate fee-status distribution.
+[ ] Create at least six individual charts using the chart types covered today.
+[ ] Create one combined figure containing at least four charts.
+[ ] Compare marks and attendance visually.
+[ ] Write at least five observations based on the charts.
+[ ] Export day28_course_visual_summary.csv.
+[ ] Export day28_city_visual_summary.csv.
+[ ] Export day28_fee_status_summary.csv.
+[ ] Save all charts inside a folder named charts/.
+[ ] Create day28_visual_analysis_report.txt containing the dataset overview, charts created, five findings, and two recommendations based on the findings.
+[ ] Explain what each important chart communicates.
+
+J. PRACTICE QUESTIONS
+Create a separate Python file for each question inside practice_questions.
+
+[ ] Question 1: Create a line chart showing marks for all students.
+[ ] Question 2: Create a bar chart showing average marks by course.
+[ ] Question 3: Create a horizontal bar chart showing student count by city.
+[ ] Question 4: Create a histogram showing the distribution of marks.
+[ ] Question 5: Create a scatter plot showing the relationship between attendance and marks.
+[ ] Question 6: Create a pie chart showing the distribution of fee_status.
+[ ] Question 7: Create a figure containing four different charts using subplots().
+[ ] Question 8: Save all charts as PNG files with meaningful filenames.
+
+K. FINAL REVIEW CHECKLIST
+[ ] I can create a chart using Matplotlib.
+[ ] I can add titles, axis labels, legends, and grid lines.
+[ ] I know when to use a line chart.
+[ ] I know when to use a bar chart.
+[ ] I can interpret a histogram.
+[ ] I can create and interpret a scatter plot.
+[ ] I can create a pie chart with percentage labels.
+[ ] I can arrange multiple charts using subplots().
+[ ] I can save charts as image files.
+[ ] I can write observations based on visual evidence.
+[ ] My scripts run without errors.
+
+REQUIRED FILE STRUCTURE
+
+Python_Data_Analysis/
+|
+|-- day28_matplotlib.py
+|-- student_visual_report.py
+|-- day28_course_visual_summary.csv
+|-- day28_city_visual_summary.csv
+|-- day28_fee_status_summary.csv
+|-- day28_visual_analysis_report.txt
+|
+|-- charts/
+|   |-- line_student_marks.png
+|   |-- line_course_average.png
+|   |-- bar_course_average.png
+|   |-- bar_students_per_course.png
+|   |-- bar_city_attendance.png
+|   |-- histogram_marks.png
+|   |-- histogram_attendance.png
+|   |-- scatter_attendance_marks.png
+|   |-- pie_fee_status.png
+|   |-- student_analysis_dashboard.png
+|
+|-- practice_questions/
+|   |-- question_01.py
+|   |-- question_02.py
+|   |-- question_03.py
+|   |-- question_04.py
+|   |-- question_05.py
+|   |-- question_06.py
+|   |-- question_07.py
+|   |-- question_08.py
+|
+|-- Day28_Outputs/
+    |-- program_output_screenshots/
