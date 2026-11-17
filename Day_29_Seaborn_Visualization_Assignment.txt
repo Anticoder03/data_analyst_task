@@ -1,0 +1,154 @@
+ADVANCED DATA VISUALIZATION WITH SEABORN
+Topics: Statistical Charts, Categorical Plots, Distribution Plots, and Heatmaps
+
+OBJECTIVE
+Use Seaborn to explore distributions, compare categories, identify relationships, and communicate findings through statistical visualizations.
+
+A. SET UP THE PROJECT
+[ ] Create day29_seaborn.py.
+[ ] Import pandas as pd, numpy as np, seaborn as sns, and matplotlib.pyplot as plt.
+[ ] Load the cleaned student dataset from Day 25 or the combined dataset from Day 26.
+[ ] If unavailable, create a sample dataset with at least 30 records.
+[ ] Include student_id, course, city, marks, attendance, age, and fee_status.
+[ ] Inspect the data using head(), info(), and describe().
+[ ] Check missing values in columns used for charts.
+[ ] Keep the original dataset unchanged.
+[ ] Set a consistent theme using sns.set_theme().
+
+B. UNDERSTAND SEABORN
+[ ] Create a basic chart using sns.histplot().
+[ ] Understand how Seaborn works with Pandas DataFrames.
+[ ] Compare Seaborn with Matplotlib.
+[ ] Practice data, x, y, hue, and palette parameters.
+[ ] Add titles and labels using Matplotlib functions.
+[ ] Save charts using plt.savefig().
+
+C. DISTRIBUTION PLOTS
+[ ] Create a marks histogram using sns.histplot().
+[ ] Add a KDE curve using kde=True.
+[ ] Create an attendance KDE plot using sns.kdeplot().
+[ ] Create a marks box plot using sns.boxplot().
+[ ] Create a marks violin plot using sns.violinplot().
+[ ] Compare marks distributions across courses.
+[ ] Explain what each chart reveals.
+[ ] Save as seaborn_marks_histogram.png, seaborn_attendance_kde.png, seaborn_marks_boxplot.png, and seaborn_marks_violinplot.png.
+
+D. CATEGORICAL PLOTS
+[ ] Create a course count plot using sns.countplot().
+[ ] Create a bar plot showing average marks by course using sns.barplot().
+[ ] Compare marks across courses using sns.boxplot().
+[ ] Compare marks across courses using sns.violinplot().
+[ ] Use hue to compare fee_status or another suitable category.
+[ ] Add clear titles, axis labels, and legends.
+[ ] Save as seaborn_course_count.png, seaborn_course_average_marks.png, seaborn_marks_by_course_boxplot.png, and seaborn_marks_by_course_violinplot.png.
+
+E. RELATIONSHIP AND REGRESSION PLOTS
+[ ] Create a scatter plot of attendance against marks using sns.scatterplot().
+[ ] Use hue to distinguish students by course.
+[ ] Create a regression plot using sns.regplot().
+[ ] Create a pair plot using sns.pairplot() for suitable numeric columns.
+[ ] Create a joint plot using sns.jointplot() for marks and attendance.
+[ ] Observe whether marks and attendance appear related.
+[ ] Compare the visual pattern with the correlation analysis from Day 27.
+[ ] Remember that correlation and regression plots do not prove causation.
+[ ] Save as seaborn_attendance_marks_scatter.png, seaborn_attendance_marks_regression.png, seaborn_numeric_pairplot.png, and seaborn_marks_attendance_jointplot.png.
+
+F. CORRELATION HEATMAP
+[ ] Select numeric columns from the dataset.
+[ ] Calculate the correlation matrix using corr().
+[ ] Create a heatmap using sns.heatmap().
+[ ] Display correlation values using annot=True.
+[ ] Use a suitable color map and set vmin=-1 and vmax=1.
+[ ] Add a meaningful chart title.
+[ ] Explain at least two relationships shown by the heatmap.
+[ ] Save as seaborn_correlation_heatmap.png.
+
+G. FACET GRID AND MULTIPLE VISUALIZATIONS
+[ ] Use sns.FacetGrid() to create separate plots for different courses or cities.
+[ ] Map a histogram or scatter plot to the grid.
+[ ] Use sns.pairplot() to compare multiple numeric variables.
+[ ] Create a Matplotlib figure with at least four Seaborn charts using plt.subplots().
+[ ] Include a course-wise average marks chart, marks distribution, attendance-versus-marks scatter plot, and fee-status count plot.
+[ ] Add clear titles to all charts and save as seaborn_student_analysis_dashboard.png.
+
+H. MINI-PROJECT: STUDENT PERFORMANCE VISUAL ANALYSIS
+Create student_seaborn_report.py.
+
+[ ] Load the student dataset.
+[ ] Calculate course-wise average marks and student counts using Pandas.
+[ ] Create distribution plots for marks and attendance.
+[ ] Compare marks across courses using box plots or violin plots.
+[ ] Create a scatter plot to study attendance versus marks.
+[ ] Create a correlation heatmap for numeric columns.
+[ ] Create categorical plots for course and fee_status.
+[ ] Create at least eight individual Seaborn visualizations.
+[ ] Create one combined dashboard containing at least four charts.
+[ ] Write at least five observations supported by the charts.
+[ ] Export day29_course_summary.csv, day29_correlation_matrix.csv, and day29_fee_status_summary.csv.
+[ ] Save all charts inside seaborn_charts/.
+[ ] Create day29_seaborn_analysis_report.txt containing the dataset overview, visualizations created, course-wise findings, distribution and outlier observations, correlation findings, at least five evidence-based observations, and at least two recommendations.
+
+I. PRACTICE QUESTIONS
+Create a separate Python file for each question inside practice_questions.
+
+[ ] Question 1: Create a histogram of marks with a KDE curve.
+[ ] Question 2: Create a box plot comparing marks across courses.
+[ ] Question 3: Create a count plot showing students in each course.
+[ ] Question 4: Create a bar plot showing average marks by course.
+[ ] Question 5: Create a scatter plot of attendance versus marks, using hue for course.
+[ ] Question 6: Create a regression plot for attendance and marks.
+[ ] Question 7: Create a correlation heatmap for all numeric columns.
+[ ] Question 8: Create a pair plot using suitable numeric columns.
+
+J. FINAL REVIEW CHECKLIST
+[ ] I understand the difference between Matplotlib and Seaborn.
+[ ] I can create histograms and KDE plots.
+[ ] I can create box plots and violin plots.
+[ ] I can compare categories using count plots and bar plots.
+[ ] I can use hue to compare groups.
+[ ] I can create scatter and regression plots.
+[ ] I can create pair plots and joint plots.
+[ ] I can calculate and visualize a correlation matrix using a heatmap.
+[ ] I can create FacetGrid visualizations.
+[ ] I can save charts and write findings based on visual evidence.
+[ ] My scripts run without errors.
+
+REQUIRED FILE STRUCTURE
+
+Python_Data_Analysis/
+|
+|-- day29_seaborn.py
+|-- student_seaborn_report.py
+|-- day29_course_summary.csv
+|-- day29_correlation_matrix.csv
+|-- day29_fee_status_summary.csv
+|-- day29_seaborn_analysis_report.txt
+|
+|-- seaborn_charts/
+|   |-- seaborn_marks_histogram.png
+|   |-- seaborn_attendance_kde.png
+|   |-- seaborn_marks_boxplot.png
+|   |-- seaborn_marks_violinplot.png
+|   |-- seaborn_course_count.png
+|   |-- seaborn_course_average_marks.png
+|   |-- seaborn_marks_by_course_boxplot.png
+|   |-- seaborn_marks_by_course_violinplot.png
+|   |-- seaborn_attendance_marks_scatter.png
+|   |-- seaborn_attendance_marks_regression.png
+|   |-- seaborn_numeric_pairplot.png
+|   |-- seaborn_marks_attendance_jointplot.png
+|   |-- seaborn_correlation_heatmap.png
+|   |-- seaborn_student_analysis_dashboard.png
+|
+|-- practice_questions/
+|   |-- question_01.py
+|   |-- question_02.py
+|   |-- question_03.py
+|   |-- question_04.py
+|   |-- question_05.py
+|   |-- question_06.py
+|   |-- question_07.py
+|   |-- question_08.py
+|
+|-- Day29_Outputs/
+    |-- program_output_screenshots/
