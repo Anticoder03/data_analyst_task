@@ -1,0 +1,162 @@
+DATA VISUALIZATION MINI-PROJECT
+Project: Complete Student Performance Dashboard Using Pandas, Matplotlib, and Seaborn
+
+OBJECTIVE
+Combine the data analysis and visualization skills learned so far to build a complete student performance dashboard. Prepare the data, calculate key metrics, create meaningful charts, and write an analytical report.
+
+A. PROJECT SETUP AND DATA PREPARATION
+[ ] Create a folder named Day30_Student_Performance_Dashboard inside Python_Data_Analysis.
+[ ] Create a Python file named dashboard.py.
+[ ] Import pandas, numpy, matplotlib.pyplot, and seaborn.
+[ ] Load the cleaned student dataset from Day 25 or the combined dataset from Day 26.
+[ ] If unavailable, create a sample dataset with at least 30 student records.
+[ ] Include student_id, student_name, course, city, marks, attendance, fee_status, and age where possible.
+[ ] Inspect the dataset using head(), info(), describe(), and shape.
+[ ] Check for missing values and duplicate records.
+[ ] Confirm marks and attendance are numeric and within the expected range of 0–100.
+[ ] Handle issues that affect analysis and document the changes.
+[ ] Keep the original dataset unchanged.
+
+B. CREATE KEY PERFORMANCE INDICATORS (KPIs)
+Calculate these metrics using Pandas:
+[ ] Total number of students.
+[ ] Total number of courses.
+[ ] Overall average marks.
+[ ] Highest marks.
+[ ] Lowest marks.
+[ ] Average attendance percentage.
+[ ] Number of students who passed (marks >= 40).
+[ ] Number of students who failed (marks < 40).
+[ ] Pass percentage.
+[ ] Number of students with Paid and Pending fee status.
+[ ] Store the metrics in a DataFrame.
+[ ] Export the KPI summary as dashboard_kpis.csv.
+[ ] Display all KPI values clearly in the terminal.
+
+C. COURSE-WISE PERFORMANCE ANALYSIS
+[ ] Calculate the number of students in each course.
+[ ] Calculate average marks for each course.
+[ ] Calculate minimum and maximum marks for each course.
+[ ] Calculate average attendance for each course.
+[ ] Identify the course with the highest average marks.
+[ ] Identify the course with the lowest average marks.
+[ ] Create a course-wise summary DataFrame.
+[ ] Export it as course_performance_summary.csv.
+
+D. STUDENT PERFORMANCE ANALYSIS
+[ ] Create a performance_category column:
+    - Marks 75 and above: Excellent
+    - Marks 60–74: Good
+    - Marks 40–59: Average
+    - Marks below 40: Needs Improvement
+[ ] Count students in each performance category.
+[ ] Calculate the percentage of students in each category.
+[ ] Identify the top five students based on marks.
+[ ] Identify students with attendance below 75%.
+[ ] Identify students scoring below 40.
+[ ] Export performance_category_summary.csv.
+[ ] Export top_five_students.csv.
+[ ] Export students_requiring_review.csv.
+
+E. FEE AND ATTENDANCE ANALYSIS
+[ ] Count students by fee_status.
+[ ] Calculate the percentage of Paid and Pending students.
+[ ] Calculate average attendance by course.
+[ ] Calculate average attendance by city.
+[ ] Identify students with low attendance and pending fees.
+[ ] Export fee_status_summary.csv.
+[ ] Export attendance_summary.csv.
+
+F. CREATE THE DASHBOARD VISUALIZATIONS
+Use Matplotlib and Seaborn to create the following charts:
+[ ] Chart 1: Display KPI values as text or metric cards in the dashboard figure.
+[ ] Chart 2: Bar chart showing average marks by course.
+[ ] Chart 3: Bar chart showing the number of students in each course.
+[ ] Chart 4: Pie chart showing the distribution of performance categories.
+[ ] Chart 5: Histogram showing the distribution of student marks.
+[ ] Chart 6: Box plot comparing marks across courses.
+[ ] Chart 7: Scatter plot showing the relationship between attendance and marks.
+[ ] Chart 8: Bar or count plot showing Paid versus Pending fee status.
+[ ] Chart 9: Heatmap showing correlations among numeric columns.
+[ ] Chart 10: Bar chart showing average attendance by city.
+[ ] Add a meaningful title to every chart.
+[ ] Add axis labels wherever applicable.
+[ ] Add legends where necessary.
+[ ] Use readable labels and avoid overcrowding.
+[ ] Use a consistent visual theme.
+[ ] Arrange charts into a single dashboard using plt.subplots().
+[ ] Save the complete dashboard as student_performance_dashboard.png.
+[ ] Save individual charts inside the charts/ folder.
+
+G. WRITE THE ANALYTICAL REPORT
+Create dashboard_analysis_report.txt.
+[ ] Write a short overview of the dataset.
+[ ] Include all important KPIs.
+[ ] Mention the courses with the highest and lowest average marks.
+[ ] Explain the student performance category distribution.
+[ ] Mention the percentage of students with pending fees.
+[ ] Explain the attendance findings.
+[ ] Describe at least three patterns visible in the charts.
+[ ] Write at least five evidence-based insights.
+[ ] Provide at least three practical recommendations.
+[ ] Support every conclusion with calculated values.
+
+H. DASHBOARD QUALITY CHECK
+[ ] Confirm that all charts display the correct data.
+[ ] Confirm that titles and labels are readable.
+[ ] Confirm that no chart is empty because of missing or incorrectly selected data.
+[ ] Confirm that KPI values match the exported CSV summary.
+[ ] Confirm that output files are saved in the correct folders.
+[ ] Run dashboard.py from beginning to end.
+[ ] Fix errors that affect the final output.
+
+I. PRACTICE AND REFLECTION
+Create day30_reflection.txt.
+[ ] Explain which chart was most useful for comparing courses and why.
+[ ] Explain what the marks histogram reveals.
+[ ] Explain what the correlation heatmap reveals.
+[ ] Mention one limitation of the dataset.
+[ ] Mention two additional KPIs that could improve the dashboard.
+[ ] Explain how a college or training institute could use this dashboard.
+
+J. FINAL REVIEW CHECKLIST
+[ ] I can load and prepare a dataset using Pandas.
+[ ] I can calculate KPIs and grouped summaries.
+[ ] I can create performance categories.
+[ ] I can build charts using Matplotlib and Seaborn.
+[ ] I can arrange multiple charts into one dashboard.
+[ ] I can export summary data to CSV files.
+[ ] I can write an analytical report based on data.
+[ ] My dashboard runs without errors.
+[ ] My dashboard is readable and communicates useful information.
+
+REQUIRED FILE STRUCTURE
+
+Python_Data_Analysis/
+|
+|-- Day30_Student_Performance_Dashboard/
+|   |-- dashboard.py
+|   |-- dashboard_kpis.csv
+|   |-- course_performance_summary.csv
+|   |-- performance_category_summary.csv
+|   |-- top_five_students.csv
+|   |-- students_requiring_review.csv
+|   |-- fee_status_summary.csv
+|   |-- attendance_summary.csv
+|   |-- student_performance_dashboard.png
+|   |-- dashboard_analysis_report.txt
+|   |-- day30_reflection.txt
+|   |
+|   |-- charts/
+|       |-- course_average_marks.png
+|       |-- students_per_course.png
+|       |-- performance_categories.png
+|       |-- marks_distribution.png
+|       |-- marks_by_course_boxplot.png
+|       |-- attendance_vs_marks.png
+|       |-- fee_status_distribution.png
+|       |-- correlation_heatmap.png
+|       |-- average_attendance_by_city.png
+|
+|-- Day30_Outputs/
+    |-- program_output_screenshots/
