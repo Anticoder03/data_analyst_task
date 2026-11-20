@@ -1,0 +1,142 @@
+INTRODUCTION TO SQL FOR DATA ANALYSIS
+Topics: Database Concepts, Tables, Keys, SELECT, WHERE, ORDER BY, and LIMIT
+
+OBJECTIVE
+Understand how relational databases store information and learn to retrieve, filter, sort, and limit records using SQL. Use a student database as the practical dataset.
+
+A. SET UP THE SQL ENVIRONMENT
+[ ] Install or open MySQL Community Server and MySQL Workbench (or use the SQL environment provided by your trainer).
+[ ] Connect to the local MySQL server.
+[ ] Create a folder named SQL_Data_Analysis inside your main training folder.
+[ ] Create a file named day31_sql_practice.sql.
+[ ] Create a text file named day31_notes.txt.
+[ ] Write down the database name, connection method, and SQL tool used.
+[ ] Do not share or include database passwords in submitted files.
+
+B. UNDERSTAND DATABASE FUNDAMENTALS
+[ ] Explain what a database is.
+[ ] Explain what a relational database is.
+[ ] Understand the meaning of a table, row, column, record, and field.
+[ ] Understand the purpose of a primary key.
+[ ] Understand the purpose of a foreign key.
+[ ] Explain the difference between SQL and MySQL.
+[ ] Write short definitions for each concept in day31_notes.txt.
+
+C. CREATE A DATABASE AND TABLES
+[ ] Create a database named student_analysis_db.
+[ ] Select the database using USE.
+[ ] Create a table named students with these columns:
+    - student_id: INT, PRIMARY KEY, AUTO_INCREMENT
+    - student_name: VARCHAR(100)
+    - age: INT
+    - city: VARCHAR(60)
+    - course_id: INT
+    - marks: DECIMAL(5,2)
+    - attendance: DECIMAL(5,2)
+    - fee_status: VARCHAR(20)
+[ ] Create a table named courses with these columns:
+    - course_id: INT, PRIMARY KEY, AUTO_INCREMENT
+    - course_name: VARCHAR(100)
+    - course_fee: DECIMAL(10,2)
+    - instructor: VARCHAR(100)
+[ ] Use SHOW DATABASES to list databases.
+[ ] Use SHOW TABLES to list tables in the selected database.
+[ ] Use DESCRIBE students and DESCRIBE courses to inspect table structures.
+
+D. INSERT SAMPLE DATA
+[ ] Insert at least 5 course records into the courses table.
+[ ] Insert at least 20 student records into the students table.
+[ ] Include students from at least 4 different cities.
+[ ] Include different courses and both Paid and Pending fee statuses.
+[ ] Include a range of marks and attendance values.
+[ ] Use INSERT INTO to add records.
+[ ] Use SELECT * to verify that records were inserted correctly.
+[ ] Ensure every student course_id refers to an existing course.
+
+E. RETRIEVE DATA USING SELECT
+[ ] Display all columns from students using SELECT *.
+[ ] Display all columns from courses.
+[ ] Select only student_name and marks from students.
+[ ] Select student_name, city, and course_id.
+[ ] Rename selected columns using aliases with AS.
+[ ] Use DISTINCT to display unique cities.
+[ ] Use DISTINCT to display unique fee statuses.
+[ ] Explain the difference between SELECT * and selecting specific columns.
+
+F. FILTER RECORDS USING WHERE
+[ ] Display students who scored more than 75 marks.
+[ ] Display students who scored less than 40 marks.
+[ ] Display students whose attendance is at least 75%.
+[ ] Display students from a chosen city.
+[ ] Display students whose fee_status is Paid.
+[ ] Display students whose fee_status is Pending.
+[ ] Use >, <, >=, and = operators.
+[ ] Use AND to filter students who scored at least 60 and have attendance of at least 75%.
+[ ] Use OR to filter students from either of two cities.
+[ ] Use NOT to exclude a selected fee status.
+[ ] Use BETWEEN to find students with marks in a specified range.
+[ ] Use IN to filter students from a list of cities.
+[ ] Use LIKE to find student names beginning with a selected letter.
+[ ] Use LIKE to find student names containing a chosen character sequence.
+[ ] Use IS NULL to check for missing values if any are present.
+
+G. SORT RECORDS USING ORDER BY
+[ ] Display students ordered by marks from highest to lowest.
+[ ] Display students ordered by marks from lowest to highest.
+[ ] Display students ordered alphabetically by student_name.
+[ ] Display students ordered by city and then marks.
+[ ] Display courses ordered by course_fee from highest to lowest.
+[ ] Understand ASC and DESC.
+[ ] Explain why sorting does not permanently change the stored table order.
+
+H. LIMIT THE RESULTS
+[ ] Display the first 5 student records using LIMIT.
+[ ] Display the top 3 students based on marks.
+[ ] Display the 5 students with the lowest marks.
+[ ] Use LIMIT with ORDER BY to retrieve a meaningful result.
+[ ] Try LIMIT with an offset to skip records.
+[ ] Explain the difference between LIMIT 5 and LIMIT 5 OFFSET 5.
+
+I. PRACTICAL SQL QUESTIONS
+Write and execute a SQL query for each task in day31_sql_practice.sql.
+
+[ ] Question 1: Display all students.
+[ ] Question 2: Display only student_name, city, and marks.
+[ ] Question 3: Display all unique cities.
+[ ] Question 4: Find students who scored more than 80 marks.
+[ ] Question 5: Find students whose attendance is between 60 and 80.
+[ ] Question 6: Find students from either of two selected cities.
+[ ] Question 7: Find students whose names start with the letter A.
+[ ] Question 8: Display all students ordered by marks from highest to lowest.
+[ ] Question 9: Display the top 5 students based on marks.
+[ ] Question 10: Display students with Pending fee status ordered by name.
+[ ] Question 11: Display courses ordered by course_fee from highest to lowest.
+[ ] Question 12: Display the first 5 students after skipping the first 5 records.
+
+J. FINAL REVIEW CHECKLIST
+[ ] I understand databases, tables, rows, and columns.
+[ ] I can explain primary keys and foreign keys.
+[ ] I can create a database and tables.
+[ ] I can insert records into a table.
+[ ] I can retrieve selected columns using SELECT.
+[ ] I can remove duplicate results using DISTINCT.
+[ ] I can filter data using WHERE.
+[ ] I can combine conditions using AND, OR, and NOT.
+[ ] I can use BETWEEN, IN, LIKE, and IS NULL.
+[ ] I can sort results using ORDER BY.
+[ ] I can limit results using LIMIT and OFFSET.
+[ ] I can execute my SQL file without errors.
+
+REQUIRED FILE STRUCTURE
+
+SQL_Data_Analysis/
+|
+|-- day31_sql_practice.sql
+|-- day31_notes.txt
+|-- screenshots/
+    |-- database_created.png
+    |-- tables_created.png
+    |-- sample_records.png
+    |-- select_queries.png
+    |-- where_queries.png
+    |-- order_by_limit_queries.png
