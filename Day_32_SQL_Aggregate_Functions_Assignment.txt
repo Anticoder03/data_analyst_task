@@ -1,0 +1,147 @@
+SQL AGGREGATE FUNCTIONS AND GROUPED ANALYSIS
+Topics: COUNT, SUM, AVG, MIN, MAX, GROUP BY, HAVING, and Built-in Functions
+
+OBJECTIVE
+Learn to summarize and analyse relational data using SQL. Use aggregate functions to calculate metrics, group records into categories, filter grouped results, and apply common string and numeric functions.
+
+A. CONTINUE THE DAY 31 DATABASE
+[ ] Open your MySQL environment.
+[ ] Select the student_analysis_db database using USE.
+[ ] Confirm that the students and courses tables exist.
+[ ] Review table structures using DESCRIBE.
+[ ] Check records using SELECT *.
+[ ] If Day 31 is incomplete, create the database and tables and insert sample data before continuing.
+[ ] Create day32_aggregate_analysis.sql.
+[ ] Keep your Day 31 SQL file unchanged.
+
+B. AGGREGATE FUNCTIONS
+[ ] Use COUNT(*) to calculate total students.
+[ ] Use COUNT(course_id) to count non-NULL course IDs.
+[ ] Use COUNT(DISTINCT city) to count unique cities.
+[ ] Use AVG(marks) to calculate average marks.
+[ ] Use SUM(marks) to calculate total marks.
+[ ] Use MIN(marks) to find the lowest marks.
+[ ] Use MAX(marks) to find the highest marks.
+[ ] Use AVG(attendance) to calculate average attendance.
+[ ] Use SUM(course_fee) to calculate total listed course fees.
+[ ] Use COUNT(*) to calculate total courses.
+[ ] Give calculated columns meaningful aliases using AS.
+[ ] Write a short note explaining why aggregate functions return summary values.
+
+C. GROUP DATA USING GROUP BY
+[ ] Count students in each city.
+[ ] Count students in each course_id.
+[ ] Calculate average marks for each course_id.
+[ ] Calculate highest and lowest marks for each course_id.
+[ ] Calculate average attendance for each city.
+[ ] Count Paid and Pending students separately.
+[ ] Calculate average marks for each fee_status.
+[ ] Group records by both city and fee_status.
+[ ] Group records by course_id and fee_status.
+[ ] Use ORDER BY to sort grouped results.
+[ ] Add comments explaining how GROUP BY works.
+
+D. FILTER GROUPED RESULTS USING HAVING
+[ ] Display courses with more than 3 students.
+[ ] Display courses whose average marks are greater than 70.
+[ ] Display cities with at least 4 students.
+[ ] Display fee statuses with a student count greater than 5.
+[ ] Display courses whose average attendance is below 75%.
+[ ] Combine GROUP BY and HAVING in multiple queries.
+[ ] Use WHERE before GROUP BY to filter individual rows.
+[ ] Compare WHERE and HAVING with a practical example.
+[ ] Explain why aggregate conditions are generally written in HAVING rather than WHERE.
+
+E. STRING FUNCTIONS
+[ ] Use UPPER() to display student names in uppercase.
+[ ] Use LOWER() to display student names in lowercase.
+[ ] Use LENGTH() to calculate each student name's length.
+[ ] Use CONCAT() to combine student_name and city into one display column.
+[ ] Use TRIM() to remove extra spaces from a text value.
+[ ] Use SUBSTRING() to extract part of a student name.
+[ ] Use REPLACE() to replace a selected text value in a query result.
+[ ] Use these functions in SELECT statements without permanently changing stored records.
+[ ] Add aliases to make output columns readable.
+
+F. NUMERIC AND NULL FUNCTIONS
+[ ] Use ROUND() to display average marks rounded to two decimal places.
+[ ] Use CEIL() and FLOOR() on suitable numeric values.
+[ ] Use ABS() to calculate the absolute difference between two numeric values.
+[ ] Use COALESCE() to display a fallback value when a column is NULL.
+[ ] Use IFNULL() to replace NULL values in a query result.
+[ ] Use NULLIF() to return NULL when two expressions are equal.
+[ ] Explain the difference between NULL and zero.
+[ ] Check how NULL values affect COUNT(column_name), SUM(), and AVG().
+
+G. DATE AND CONDITIONAL FUNCTIONS
+[ ] Practise CURDATE() to display the current date.
+[ ] Practise NOW() to display the current date and time.
+[ ] Use YEAR() and MONTH() on a date column if available.
+[ ] Use DATEDIFF() to calculate the difference between two dates if a date column is available.
+[ ] Use CASE to classify marks:
+    - 75 and above: Excellent
+    - 60–74: Good
+    - 40–59: Average
+    - Below 40: Needs Improvement
+[ ] Create a query displaying student_name, marks, and performance_category.
+[ ] Use CASE to label attendance as Satisfactory or Low Attendance.
+[ ] Use CASE to label fee_status as Fee Cleared or Payment Pending.
+
+H. PRACTICAL SQL ANALYSIS
+Write and execute each query in day32_aggregate_analysis.sql.
+
+[ ] Question 1: Find the total number of students.
+[ ] Question 2: Find the average, maximum, and minimum marks.
+[ ] Question 3: Count students in each city.
+[ ] Question 4: Calculate average marks for every course.
+[ ] Question 5: Find courses with more than 3 students.
+[ ] Question 6: Find courses whose average marks are above 70.
+[ ] Question 7: Count Paid and Pending students.
+[ ] Question 8: Find cities with average attendance below 75%.
+[ ] Question 9: Display student names in uppercase and their name lengths.
+[ ] Question 10: Display marks rounded to one decimal place.
+[ ] Question 11: Classify every student into a performance category using CASE.
+[ ] Question 12: Display student count and average marks for each course, ordered by average marks from highest to lowest.
+
+I. MINI-PROJECT: COURSE PERFORMANCE SUMMARY REPORT
+Create day32_course_performance_report.sql.
+
+[ ] Generate a summary containing course_id, course_name, student_count, average_marks, highest_marks, lowest_marks, and average_attendance.
+[ ] Join students and courses using their related course_id columns.
+[ ] Group results by course.
+[ ] Sort courses by average marks from highest to lowest.
+[ ] Use HAVING to show only courses with at least 2 students.
+[ ] Create a separate city-wise student summary.
+[ ] Create a separate fee-status summary.
+[ ] Create a performance-category summary using CASE and GROUP BY.
+[ ] Save output screenshots or export results if your SQL tool supports it.
+[ ] Create day32_analysis_notes.txt containing total students, overall average marks, course with the highest average marks, city with the most students, number of Paid and Pending students, and three observations based on your query results.
+
+J. FINAL REVIEW CHECKLIST
+[ ] I can use COUNT(), SUM(), AVG(), MIN(), and MAX().
+[ ] I can group records using GROUP BY.
+[ ] I can filter grouped results using HAVING.
+[ ] I understand the difference between WHERE and HAVING.
+[ ] I can use common string functions.
+[ ] I can use numeric and NULL-handling functions.
+[ ] I can use CASE to classify records.
+[ ] I can combine aggregate functions with JOINs.
+[ ] I can interpret grouped SQL results.
+[ ] All my SQL queries execute without errors.
+
+REQUIRED FILE STRUCTURE
+
+SQL_Data_Analysis/
+|
+|-- day32_aggregate_analysis.sql
+|-- day32_course_performance_report.sql
+|-- day32_analysis_notes.txt
+|
+|-- screenshots/
+    |-- aggregate_functions.png
+    |-- group_by_analysis.png
+    |-- having_queries.png
+    |-- string_functions.png
+    |-- numeric_and_null_functions.png
+    |-- case_queries.png
+    |-- course_performance_report.png
