@@ -1,0 +1,144 @@
+SQL JOINS AND SUBQUERIES
+Topics: INNER JOIN, LEFT JOIN, RIGHT JOIN, CROSS JOIN, SELF JOIN, and Nested Queries
+
+OBJECTIVE
+Learn how to retrieve and analyse information stored across multiple related tables. Practise SQL joins, understand unmatched records, and use subqueries to answer more complex data questions.
+
+A. CONTINUE THE STUDENT DATABASE
+[ ] Open your MySQL environment.
+[ ] Select student_analysis_db using USE.
+[ ] Confirm that students and courses tables exist.
+[ ] Review both table structures using DESCRIBE.
+[ ] Check existing records using SELECT *.
+[ ] Create day33_joins_subqueries.sql.
+[ ] Create day33_joins_notes.txt.
+[ ] Keep previous SQL assignment files unchanged.
+
+B. UNDERSTAND TABLE RELATIONSHIPS
+[ ] Identify the primary key in students.
+[ ] Identify the primary key in courses.
+[ ] Identify the course_id column connecting the two tables.
+[ ] Explain how a foreign key represents a relationship.
+[ ] Draw a simple relationship diagram for students and courses.
+[ ] Explain why related information is often stored in separate tables.
+[ ] Write your explanations in day33_joins_notes.txt.
+
+C. INNER JOIN
+[ ] Display student names with course names using INNER JOIN.
+[ ] Display student_name, course_name, marks, and attendance.
+[ ] Use table aliases to make queries easier to read.
+[ ] Join using the matching course_id columns.
+[ ] Sort the joined result by marks from highest to lowest.
+[ ] Filter the joined result to show students scoring above 70.
+[ ] Use a WHERE condition with an INNER JOIN.
+[ ] Explain why INNER JOIN returns only matching records.
+
+D. LEFT JOIN
+[ ] Display all students with their course names using LEFT JOIN.
+[ ] Identify students whose course information does not match any course record.
+[ ] Use IS NULL to find unmatched course records.
+[ ] Compare the number of rows returned by INNER JOIN and LEFT JOIN.
+[ ] Display all courses and matching students with courses as the left table.
+[ ] Explain why unmatched rows from the left table are retained.
+
+E. RIGHT JOIN
+[ ] Display all courses and their matching students using RIGHT JOIN.
+[ ] Identify courses that do not have enrolled students.
+[ ] Use IS NULL to find courses without matching student records.
+[ ] Compare RIGHT JOIN with LEFT JOIN.
+[ ] Rewrite one RIGHT JOIN query as an equivalent LEFT JOIN by changing table order.
+[ ] Explain when RIGHT JOIN can be useful.
+
+F. CROSS JOIN AND SELF JOIN
+[ ] Use CROSS JOIN to combine every student with every course.
+[ ] Display the total number of rows produced by the CROSS JOIN.
+[ ] Explain why CROSS JOIN can produce a large result.
+[ ] Create a self-join example using a suitable table.
+[ ] If students has a mentor_id column, display each student with their mentor using a self join.
+[ ] If mentor_id is unavailable, create employees with employee_id, employee_name, and manager_id.
+[ ] Use a self join on employees to display employee names alongside manager names.
+[ ] Use aliases to distinguish the two copies of the same table.
+
+G. SUBQUERIES
+[ ] Find students whose marks are greater than the overall average marks using a subquery.
+[ ] Find students who scored the highest marks using a subquery.
+[ ] Find students who scored below average marks.
+[ ] Find courses whose course_fee is greater than the average course fee.
+[ ] Find students enrolled in a specific course using a subquery.
+[ ] Use IN with a subquery to find students belonging to courses matching a condition.
+[ ] Use EXISTS to check whether a course has at least one student.
+[ ] Use NOT EXISTS to find courses with no enrolled students.
+[ ] Write one example of a subquery in the FROM clause.
+[ ] Explain the difference between a subquery and a JOIN.
+
+H. MULTIPLE TABLE ANALYSIS
+[ ] Join students and courses to display student and course details.
+[ ] Use GROUP BY with a JOIN to calculate the number of students in each course.
+[ ] Calculate average marks for each course using a JOIN.
+[ ] Use HAVING to show courses with an average mark above 70.
+[ ] Combine JOIN and WHERE to find Paid students enrolled in a selected course.
+[ ] Use a subquery to find students whose marks are above their own course average.
+[ ] Compare a JOIN-based query and a subquery-based query where both are suitable.
+
+I. PRACTICAL SQL QUESTIONS
+Write and execute each query in day33_joins_subqueries.sql.
+
+[ ] Question 1: Display each student's name and course name using INNER JOIN.
+[ ] Question 2: Display all students, including those without matching course information, using LEFT JOIN.
+[ ] Question 3: Find students whose course information is missing.
+[ ] Question 4: Display all courses, including courses without enrolled students, using RIGHT JOIN.
+[ ] Question 5: Find courses that have no enrolled students.
+[ ] Question 6: Create a CROSS JOIN between students and courses and count the resulting rows.
+[ ] Question 7: Find students whose marks are above the overall average.
+[ ] Question 8: Find students who achieved the highest marks.
+[ ] Question 9: Find courses whose course fee is above the average course fee.
+[ ] Question 10: Find courses that have at least one enrolled student using EXISTS.
+[ ] Question 11: Find students whose marks are above their own course average.
+[ ] Question 12: Create a self join to display employees and their managers.
+
+J. MINI-PROJECT: COURSE ENROLLMENT AND PERFORMANCE REPORT
+Create day33_course_enrollment_report.sql.
+
+[ ] Display every student with course name, marks, attendance, and fee status.
+[ ] Generate a course-wise student count using JOIN and GROUP BY.
+[ ] Calculate average, highest, and lowest marks for every course.
+[ ] Identify courses with no enrolled students.
+[ ] Identify students whose marks are above their course average.
+[ ] Identify students whose marks are below the overall average.
+[ ] Display courses with average marks above 70.
+[ ] Display Paid and Pending student counts for each course.
+[ ] Use at least one LEFT JOIN, one INNER JOIN, and two subqueries in the report.
+[ ] Save important query results using screenshots or export them if your SQL tool supports it.
+[ ] Create day33_analysis_report.txt containing total students, total courses, courses without students, course with the highest average marks, students above the overall average, and three useful observations.
+
+K. FINAL REVIEW CHECKLIST
+[ ] I understand why tables are related.
+[ ] I can use INNER JOIN to retrieve matching records.
+[ ] I can use LEFT JOIN to retain all left-table records.
+[ ] I can use RIGHT JOIN to retain all right-table records.
+[ ] I understand CROSS JOIN.
+[ ] I can create a self join using table aliases.
+[ ] I can write scalar and multi-row subqueries.
+[ ] I can use IN, EXISTS, and NOT EXISTS with subqueries.
+[ ] I can combine JOIN, GROUP BY, and HAVING.
+[ ] I can explain when a JOIN or subquery is appropriate.
+[ ] All my SQL queries execute without errors.
+
+REQUIRED FILE STRUCTURE
+
+SQL_Data_Analysis/
+|
+|-- day33_joins_subqueries.sql
+|-- day33_course_enrollment_report.sql
+|-- day33_joins_notes.txt
+|-- day33_analysis_report.txt
+|
+|-- screenshots/
+    |-- inner_join.png
+    |-- left_join.png
+    |-- right_join.png
+    |-- cross_join.png
+    |-- self_join.png
+    |-- subquery_analysis.png
+    |-- multi_table_analysis.png
+    |-- course_enrollment_report.png
