@@ -1,0 +1,117 @@
+SQL DATA MODIFICATION AND DATABASE DESIGN
+
+A. Prepare Your SQL Workspace
+[ ] Continue using the MySQL database `student_analysis_db` created on Day 31.
+[ ] Review your Day 31–33 SQL files and confirm that the students and courses tables are available.
+[ ] Create `day34_data_modification.sql`, `day34_database_design.sql` and `day34_sql_notes.txt`.
+[ ] Do not drop or overwrite your existing database or tables. Use new practice tables for schema changes.
+
+B. Practice INSERT Statements
+[ ] Insert at least 5 new student records into a practice students table.
+[ ] Specify column names explicitly in INSERT statements.
+[ ] Insert multiple rows using a single INSERT statement.
+[ ] Insert a course record into a practice courses table.
+[ ] Verify inserted records using SELECT.
+[ ] Try inserting a record with a missing required value and observe the constraint error.
+
+C. Practice UPDATE Statements
+[ ] Update the city of one student using their student ID.
+[ ] Update the fee status of selected students using a WHERE condition.
+[ ] Update the fee amount for one practice course.
+[ ] Run SELECT before and after each UPDATE to verify the change.
+[ ] Practise updating multiple matching rows with a clear WHERE condition.
+
+D. Practice DELETE Statements
+[ ] Delete one test record using its unique ID.
+[ ] Delete records matching a specific condition from a practice table.
+[ ] Run SELECT before and after each DELETE to verify affected rows.
+[ ] Demonstrate a safe workflow: SELECT the target rows first, then execute DELETE.
+[ ] Never run DELETE without a WHERE clause on a table containing useful data.
+
+E. Modify Table Structures with ALTER TABLE
+[ ] Add a `phone_number` column to a practice students table.
+[ ] Add a `created_at` column with an appropriate date/time data type.
+[ ] Change the data type or size of a suitable practice column.
+[ ] Rename a column using syntax supported by your MySQL version.
+[ ] Rename a practice table.
+[ ] Use DESCRIBE or SHOW COLUMNS to verify structural changes.
+[ ] Practise dropping a column only from a temporary practice table after confirming it contains no required data.
+
+F. Apply SQL Constraints
+[ ] Create a practice table with a PRIMARY KEY.
+[ ] Create a table with NOT NULL and UNIQUE constraints.
+[ ] Add a DEFAULT value to a suitable column.
+[ ] Add a CHECK constraint, such as marks being between 0 and 100.
+[ ] Create a FOREIGN KEY referencing a primary key in another table.
+[ ] Test valid inserts and observe what happens when you try invalid values.
+[ ] Explain PRIMARY KEY, FOREIGN KEY, NOT NULL, UNIQUE, DEFAULT and CHECK in your notes.
+
+G. Learn Transactions
+[ ] Practise START TRANSACTION.
+[ ] Make a test UPDATE and use ROLLBACK to undo it.
+[ ] Start another transaction, make a safe test change and use COMMIT.
+[ ] Verify the final data using SELECT.
+[ ] Explain the difference between COMMIT and ROLLBACK.
+[ ] Perform transaction exercises on tables using a transaction-safe engine such as InnoDB.
+
+H. Understand Database Normalization
+[ ] Learn why normalization reduces duplicate data and update anomalies.
+[ ] Study First Normal Form (1NF): each field contains a single value and rows can be uniquely identified.
+[ ] Study Second Normal Form (2NF): satisfy 1NF and remove partial dependency on part of a composite key.
+[ ] Study Third Normal Form (3NF): satisfy 2NF and remove transitive dependencies.
+[ ] Write one simple example of a table that violates 1NF, 2NF or 3NF.
+[ ] Explain how splitting data into related tables can reduce duplication.
+
+I. Database Design Practical
+Design a normalized student course enrollment database using new practice tables.
+[ ] Create `design_students` with student ID, name, email and city.
+[ ] Create `design_courses` with course ID, course name and course fee.
+[ ] Create `design_enrollments` with enrollment ID, student ID, course ID, enrollment date and fee status.
+[ ] Define suitable primary keys and foreign keys.
+[ ] Add appropriate NOT NULL, UNIQUE and DEFAULT constraints.
+[ ] Insert at least 5 students, 3 courses and 8 enrollment records.
+[ ] Write a JOIN query to display student name, course name, enrollment date and fee status.
+[ ] Write a GROUP BY query to count enrollments for each course.
+[ ] Verify that invalid foreign-key values are rejected.
+[ ] Explain why enrollment information belongs in a separate table.
+
+J. Practical SQL Questions
+[ ] Insert a new student into your practice table.
+[ ] Insert two courses in one statement.
+[ ] Update a student's city using their ID.
+[ ] Update the fee status of matching unpaid test records.
+[ ] Delete one test enrollment using its enrollment ID.
+[ ] Add an email column to a practice table.
+[ ] Add a UNIQUE constraint to the email column.
+[ ] Create a table with a primary key and a foreign key.
+[ ] Demonstrate ROLLBACK with a test update.
+[ ] Demonstrate COMMIT with a test update.
+[ ] Display the structure of all three normalized design tables.
+[ ] Join the normalized tables to produce an enrollment report.
+
+K. Final Submission Checklist
+[ ] `day34_data_modification.sql` contains INSERT, UPDATE, DELETE, ALTER TABLE and constraint exercises.
+[ ] `day34_database_design.sql` contains the normalized database design and its queries.
+[ ] `day34_sql_notes.txt` explains constraints, transactions and 1NF, 2NF and 3NF.
+[ ] Include screenshots of successful INSERT, UPDATE, DELETE, ALTER TABLE, constraint tests and transaction results.
+[ ] Include screenshots of the three normalized tables and the final JOIN report.
+[ ] Ensure all SQL statements execute successfully, except intentional invalid-input tests demonstrating constraints.
+
+REQUIRED FILE STRUCTURE
+
+SQL_Data_Analysis/
+|
+|-- day31_introduction_to_sql.sql
+|-- day32_aggregate_functions.sql
+|-- day33_joins_subqueries.sql
+|
+|-- Day34/
+|   |-- day34_data_modification.sql
+|   |-- day34_database_design.sql
+|   |-- day34_sql_notes.txt
+|   |-- screenshots/
+|       |-- insert_update_delete.png
+|       |-- alter_table_constraints.png
+|       |-- transaction_results.png
+|       |-- normalized_table_structure.png
+|       |-- enrollment_join_report.png
