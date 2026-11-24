@@ -1,0 +1,117 @@
+SQL VIEWS, INDEXES AND QUERY OPTIMIZATION
+
+A. Prepare Your SQL Workspace
+[ ] Continue using the MySQL database `student_analysis_db`.
+[ ] Review your Day 31–34 SQL files and confirm your student, course and enrollment practice tables are available.
+[ ] Create `day35_views.sql`, `day35_indexes_optimization.sql` and `day35_query_analysis_notes.txt`.
+[ ] Use practice tables where needed. Do not remove important existing data.
+
+B. Understand SQL Views
+[ ] Learn what a SQL VIEW is and why it is useful.
+[ ] Create `student_course_view` to display student details with course details.
+[ ] Create `course_summary_view` to display course-wise student count and average marks.
+[ ] Retrieve data from each view using SELECT.
+[ ] Filter and sort data from a view.
+[ ] Learn the difference between a regular table and a view.
+[ ] Practise replacing a view using CREATE OR REPLACE VIEW, where supported.
+[ ] Drop only a practice view and verify that the underlying tables remain unchanged.
+
+C. Create Reporting Views
+[ ] Create a view showing students whose marks are above a selected threshold.
+[ ] Create a view showing students with unpaid fees.
+[ ] Create a view showing course-wise enrollment counts.
+[ ] Create a view combining student, course and enrollment information.
+[ ] Write at least 3 SELECT queries using your views.
+[ ] Explain how views simplify repeated reporting queries.
+
+D. Understand SQL Indexes
+[ ] Learn what an index is and how it can improve data retrieval.
+[ ] Learn the difference between primary key, unique and regular indexes.
+[ ] Use SHOW INDEX to inspect indexes on your tables.
+[ ] Create a regular index on a frequently searched practice column such as `city`.
+[ ] Create an index on a frequently filtered column such as `fee_status`.
+[ ] Create a composite index on two suitable columns, such as `course_id` and `marks`.
+[ ] Create a UNIQUE index on a suitable column such as email, if there are no duplicates.
+[ ] Use SHOW INDEX again to verify the indexes.
+
+E. Practise Index Management
+[ ] Drop a practice index using DROP INDEX.
+[ ] Verify that table data remains unchanged after dropping an index.
+[ ] Explain why too many indexes can slow down INSERT, UPDATE and DELETE operations.
+[ ] Explain why indexes are useful for columns frequently used in WHERE, JOIN and ORDER BY clauses.
+
+F. Explore Query Execution Plans
+[ ] Learn the purpose of EXPLAIN.
+[ ] Run EXPLAIN on a query that filters students by city.
+[ ] Run EXPLAIN on a query that joins students and courses.
+[ ] Run EXPLAIN on a query that filters by two columns.
+[ ] Identify the table, access type, possible keys, selected key and estimated rows in the output.
+[ ] Learn the basic difference between a full table scan and index-based lookup.
+[ ] Use EXPLAIN after creating an index and compare the execution plan.
+[ ] Do not claim a query is faster based only on an estimated plan; record actual timing only if measured consistently.
+
+G. Query Optimization Practice
+[ ] Select only the required columns instead of using SELECT *.
+[ ] Practise filtering rows with WHERE.
+[ ] Check that JOIN columns have suitable indexes.
+[ ] Avoid applying functions to indexed columns in WHERE conditions when a direct range condition can be used.
+[ ] Use LIMIT when only a small number of rows are required.
+[ ] Compare a subquery with an equivalent JOIN where appropriate.
+[ ] Use EXPLAIN to inspect at least 3 queries.
+[ ] Explain what you changed and why.
+
+H. Practical SQL Questions
+[ ] Create a view that displays student names and course names.
+[ ] Create a view that displays course-wise average marks.
+[ ] Retrieve all rows from one of your views.
+[ ] Filter a view to display only unpaid students.
+[ ] Display all indexes on your practice students table.
+[ ] Create an index on a frequently searched column.
+[ ] Create a composite index on two relevant columns.
+[ ] Create a UNIQUE index on a suitable column.
+[ ] Drop one practice index and verify the table data.
+[ ] Use EXPLAIN on a WHERE query and a JOIN query.
+[ ] Compare execution plans before and after adding an index.
+
+I. Mini-Project — Student Database Reporting and Optimization
+[ ] Create at least 3 useful SQL views for student, course and enrollment reporting.
+[ ] Create a course performance view with student count, average marks, highest marks and lowest marks.
+[ ] Create a fee-status view showing paid and unpaid student records.
+[ ] Add suitable indexes to practice tables based on your reporting queries.
+[ ] Use EXPLAIN on at least 3 important queries.
+[ ] Record an execution plan before and after adding an index for at least one query.
+[ ] Write 5 business questions that can be answered using your views.
+[ ] Answer all 5 questions using SELECT statements on the views.
+[ ] Write a short report describing the views, indexes and query-plan observations.
+
+J. Final Submission Checklist
+[ ] `day35_views.sql` contains view creation and querying exercises.
+[ ] `day35_indexes_optimization.sql` contains index creation, inspection, removal and EXPLAIN exercises.
+[ ] `day35_query_analysis_notes.txt` explains views, indexes and query optimization.
+[ ] Include screenshots of created views and their output.
+[ ] Include screenshots of SHOW INDEX and EXPLAIN results.
+[ ] Include the mini-project report and the 5 business questions with SQL answers.
+[ ] Ensure scripts run in a logical order and do not remove original tables or useful records.
+
+REQUIRED FILE STRUCTURE
+
+SQL_Data_Analysis/
+|
+|-- day31_introduction_to_sql.sql
+|-- day32_aggregate_functions.sql
+|-- day33_joins_subqueries.sql
+|-- Day34/
+|   |-- day34_data_modification.sql
+|   |-- day34_database_design.sql
+|   |-- day34_sql_notes.txt
+|-- Day35/
+    |-- day35_views.sql
+    |-- day35_indexes_optimization.sql
+    |-- day35_query_analysis_notes.txt
+    |-- day35_mini_project_report.txt
+    |-- screenshots/
+        |-- views_output.png
+        |-- show_index_output.png
+        |-- explain_before_index.png
+        |-- explain_after_index.png
+        |-- optimized_queries.png
