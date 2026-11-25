@@ -1,0 +1,111 @@
+SQL STORED PROCEDURES, FUNCTIONS AND TRIGGERS
+
+A. Prepare Your SQL Workspace
+[ ] Continue using the MySQL database `student_analysis_db`.
+[ ] Review your Day 31–35 SQL files and confirm your student, course and enrollment practice tables are available.
+[ ] Create `day36_stored_procedures.sql`, `day36_functions.sql`, `day36_triggers.sql` and `day36_routines_notes.txt`.
+[ ] Use practice tables for changes and automation exercises. Protect important existing records.
+
+B. Understand Stored Procedures
+[ ] Learn what a stored procedure is and why it is useful.
+[ ] Learn CREATE PROCEDURE and CALL syntax.
+[ ] Create `GetAllStudents` to display all students from a practice table.
+[ ] Create `GetStudentsByCity` with an IN parameter for city.
+[ ] Create `GetStudentById` with an IN parameter for student ID.
+[ ] Call each procedure with different input values and verify the output.
+[ ] Learn how to inspect and drop a practice procedure.
+[ ] Explain when a stored procedure is useful.
+
+C. Practise Procedure Parameters
+[ ] Learn the difference between IN, OUT and INOUT parameters.
+[ ] Create a procedure that accepts a course ID and returns matching enrollment information.
+[ ] Create a procedure with an OUT parameter that returns the total number of students.
+[ ] Call the procedure and display the OUT parameter value.
+[ ] Create a procedure using an INOUT parameter for a simple calculation or counter.
+[ ] Test procedures with valid and invalid input values.
+[ ] Use clear parameter names that do not conflict with column names.
+
+D. Understand Stored Functions
+[ ] Learn what a stored function is and how it differs from a stored procedure.
+[ ] Learn CREATE FUNCTION, RETURNS and RETURN syntax.
+[ ] Create `GetGrade` that accepts marks and returns a grade.
+[ ] Use the function inside a SELECT statement.
+[ ] Create `CalculatePercentage` that accepts obtained marks and maximum marks.
+[ ] Test functions with different inputs, including boundary values.
+[ ] Handle invalid inputs safely, such as a zero maximum-marks value.
+[ ] Learn how to inspect and drop a practice function.
+
+E. Understand SQL Triggers
+[ ] Learn what a trigger is and when automatic database actions are useful.
+[ ] Learn BEFORE and AFTER triggers.
+[ ] Learn INSERT, UPDATE and DELETE trigger events.
+[ ] Create a practice table named `student_audit` to store audit information.
+[ ] Create an AFTER INSERT trigger that records a student's ID and insertion time.
+[ ] Create an AFTER UPDATE trigger that records the student ID and update time.
+[ ] Create a BEFORE INSERT trigger that validates a practice value, such as marks being within the valid range.
+[ ] Insert and update test records, then verify trigger output in `student_audit`.
+[ ] Learn how to inspect and drop a practice trigger.
+
+F. Trigger Safety and Behaviour
+[ ] Understand that triggers execute automatically when their table event occurs.
+[ ] Verify which event activates each trigger.
+[ ] Avoid triggers that attempt prohibited modifications to the same table.
+[ ] Do not assume trigger execution order unless explicitly defined and supported.
+[ ] Explain why audit logs are useful.
+[ ] Explain the difference between a trigger and a stored procedure.
+
+G. Practical SQL Questions
+[ ] Create and call a procedure that displays all students.
+[ ] Create and call a procedure that filters students by city.
+[ ] Create a procedure that accepts a student ID and displays that student.
+[ ] Create a procedure with an OUT parameter to return a student count.
+[ ] Create a function that converts marks into a grade.
+[ ] Use the grade function inside a SELECT query.
+[ ] Create a function that calculates a percentage safely.
+[ ] Create an audit table for student changes.
+[ ] Create an AFTER INSERT trigger that writes to the audit table.
+[ ] Create an AFTER UPDATE trigger that writes to the audit table.
+[ ] Verify audit records after inserting and updating test students.
+[ ] Document how to remove practice procedures, functions and triggers.
+
+H. Mini-Project — Student Database Automation
+Use separate practice tables for this project.
+[ ] Create `GetStudentReport` accepting a student ID and returning student details with course information.
+[ ] Create `GetCourseEnrollmentCount` accepting a course ID and returning enrollment count.
+[ ] Create `CalculateGrade` returning a grade based on marks.
+[ ] Create `CalculatePercentage` safely calculating a percentage.
+[ ] Create a `student_audit` table to record student insert and update events.
+[ ] Create an AFTER INSERT trigger to record new student entries.
+[ ] Create an AFTER UPDATE trigger to record student changes.
+[ ] Insert and update test records to verify the workflow.
+[ ] Write a report explaining each procedure, function and trigger.
+[ ] Include sample CALL statements and SELECT queries demonstrating results.
+
+I. Final Submission Checklist
+[ ] `day36_stored_procedures.sql` contains procedure creation, calls and parameter exercises.
+[ ] `day36_functions.sql` contains function creation and testing queries.
+[ ] `day36_triggers.sql` contains audit table and trigger exercises.
+[ ] `day36_routines_notes.txt` explains procedures, parameters, functions and triggers.
+[ ] Include screenshots of procedure calls and output.
+[ ] Include screenshots of function results and trigger-generated audit records.
+[ ] Ensure scripts run in a logical order and use practice data for testing.
+[ ] Include the mini-project report.
+
+REQUIRED FILE STRUCTURE
+
+SQL_Data_Analysis/
+|
+|-- Day34/
+|-- Day35/
+|-- Day36/
+    |-- day36_stored_procedures.sql
+    |-- day36_functions.sql
+    |-- day36_triggers.sql
+    |-- day36_routines_notes.txt
+    |-- day36_mini_project_report.txt
+    |-- screenshots/
+        |-- procedure_output.png
+        |-- function_output.png
+        |-- trigger_audit_insert.png
+        |-- trigger_audit_update.png
+        |-- mini_project_report.png
