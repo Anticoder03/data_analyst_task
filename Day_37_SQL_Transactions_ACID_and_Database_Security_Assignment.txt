@@ -1,0 +1,124 @@
+SQL TRANSACTIONS, ACID PROPERTIES AND DATABASE SECURITY
+
+A. Prepare Your SQL Workspace
+[ ] Continue using the MySQL database `student_analysis_db`.
+[ ] Review your Day 31–36 SQL files, especially database design and stored routine exercises.
+[ ] Create `day37_transactions.sql`, `day37_database_security.sql` and `day37_notes.txt`.
+[ ] Create separate practice tables for transaction and security demonstrations.
+[ ] Confirm that transaction practice tables use the InnoDB storage engine.
+
+B. Understand Database Transactions
+[ ] Learn what a database transaction is and why transactions are important.
+[ ] Understand START TRANSACTION (or BEGIN).
+[ ] Practise COMMIT to save a transaction.
+[ ] Practise ROLLBACK to undo changes made in a transaction.
+[ ] Use SAVEPOINT to mark a point within a transaction.
+[ ] Use ROLLBACK TO SAVEPOINT to undo part of a transaction.
+[ ] Use RELEASE SAVEPOINT where supported.
+[ ] Verify every transaction result using SELECT.
+
+C. Practise Transaction Scenarios
+[ ] Create a practice table named `bank_accounts` with account ID, account holder and balance.
+[ ] Insert at least 3 sample accounts.
+[ ] Begin a transaction and transfer an amount between two accounts using two UPDATE statements.
+[ ] Verify both account balances before committing.
+[ ] Commit the transaction and verify the saved balances.
+[ ] Perform another test transfer, use ROLLBACK and verify both balances return to their previous values.
+[ ] Create a SAVEPOINT during a transaction, make multiple test changes, and roll back to the savepoint.
+[ ] Explain why both sides of a transfer must succeed or fail together.
+
+D. Learn ACID Properties
+[ ] Study Atomicity: a transaction is treated as one complete unit.
+[ ] Study Consistency: a transaction preserves database rules and constraints.
+[ ] Study Isolation: concurrent transactions should not interfere improperly.
+[ ] Study Durability: committed changes persist.
+[ ] Define each ACID property in your notes.
+[ ] Give one practical banking or student-fee example for each property.
+[ ] Explain how transactions and constraints help maintain reliable data.
+
+E. Understand Transaction Isolation
+[ ] Learn what a dirty read is.
+[ ] Learn what a non-repeatable read is.
+[ ] Learn what a phantom read is.
+[ ] Study READ UNCOMMITTED, READ COMMITTED, REPEATABLE READ and SERIALIZABLE.
+[ ] Check the current isolation level using the appropriate MySQL command.
+[ ] Learn how to set the transaction isolation level for a session.
+[ ] If you have access to two MySQL sessions, observe simple transaction behaviour.
+[ ] Do not change global isolation settings on a shared or production database.
+
+F. Understand Database Users and Privileges
+[ ] Learn why applications should not use unrestricted administrator accounts.
+[ ] Learn the purpose of CREATE USER.
+[ ] Create a local practice user with a strong password in your local MySQL environment.
+[ ] Learn the purpose of GRANT.
+[ ] Grant SELECT permission on a practice database or table to the practice user.
+[ ] Connect as the practice user and verify permitted SELECT queries work.
+[ ] Attempt an operation for which the user has no permission and observe the result.
+[ ] Learn REVOKE and remove the practice user's granted permission.
+[ ] Use SHOW GRANTS to inspect permissions.
+[ ] Drop only the practice user after completing the exercise, if no longer needed.
+
+G. Apply Database Security Best Practices
+[ ] Follow the principle of least privilege: give users only the permissions they need.
+[ ] Understand database authentication and authorization.
+[ ] Never store database passwords directly in source code or submitted SQL files.
+[ ] Learn why application accounts should not receive unnecessary DROP, ALTER or GRANT privileges.
+[ ] Learn why parameterized queries help prevent SQL injection.
+[ ] Write an example of an unsafe query pattern and explain why parameterized queries are safer.
+[ ] Explain why production credentials must not appear in screenshots or reports.
+
+H. Practical SQL Questions
+[ ] Demonstrate START TRANSACTION, UPDATE and COMMIT.
+[ ] Demonstrate START TRANSACTION, UPDATE and ROLLBACK.
+[ ] Demonstrate SAVEPOINT and ROLLBACK TO SAVEPOINT.
+[ ] Complete a two-account money transfer using a single transaction.
+[ ] Verify a rolled-back transfer does not leave an incomplete balance change.
+[ ] Display the current transaction isolation level.
+[ ] Explain all four ACID properties with examples.
+[ ] Create a practice database user.
+[ ] Grant SELECT permission on a practice table.
+[ ] Verify the permission by connecting as that user.
+[ ] Revoke the permission and verify the result.
+[ ] Display the user's grants using SHOW GRANTS.
+
+I. Mini-Project — Safe Student Fee Payment System
+Use practice tables only.
+[ ] Create `fee_accounts` with student ID, student name and outstanding fee.
+[ ] Create `fee_payments` with payment ID, student ID, amount and payment date.
+[ ] Add suitable primary keys, foreign keys, NOT NULL and CHECK constraints where supported.
+[ ] Insert at least 5 sample students with outstanding fees.
+[ ] Write a transaction that records a payment and reduces the student's outstanding fee.
+[ ] Ensure the payment record and balance update are committed together.
+[ ] Demonstrate a rollback scenario where both the payment record and balance update are undone.
+[ ] Use SELECT queries to verify balances and payment history.
+[ ] Create a restricted practice user with only the permissions required to view the fee report.
+[ ] Write a report explaining transaction safety, ACID properties and user permissions.
+
+J. Final Submission Checklist
+[ ] `day37_transactions.sql` contains transaction, savepoint and ACID practice queries.
+[ ] `day37_database_security.sql` contains user, GRANT, REVOKE and SHOW GRANTS exercises.
+[ ] `day37_notes.txt` explains transactions, ACID properties, isolation levels and security practices.
+[ ] Include screenshots of COMMIT, ROLLBACK and SAVEPOINT results.
+[ ] Include screenshots of the fee payment workflow and final balances.
+[ ] Include screenshots of user privileges before and after REVOKE.
+[ ] Include the mini-project report.
+[ ] Remove or securely handle temporary credentials; do not include passwords in the submission.
+
+REQUIRED FILE STRUCTURE
+
+SQL_Data_Analysis/
+|
+|-- Day34/
+|-- Day35/
+|-- Day36/
+|-- Day37/
+    |-- day37_transactions.sql
+    |-- day37_database_security.sql
+    |-- day37_notes.txt
+    |-- day37_mini_project_report.txt
+    |-- screenshots/
+        |-- transaction_commit.png
+        |-- transaction_rollback.png
+        |-- savepoint_result.png
+        |-- fee_payment_report.png
+        |-- user_privileges.png
